@@ -29,6 +29,20 @@
       font-size: large;
       font-weight: bold;
     }
+    .membersearch__member_box{
+        margin-top: 50px;
+        margin-left: 100px;
+        display: flex;
+    }
+    .membersearch__member_detail_box{
+        width: 500px;
+        height: 500px;
+        background-color: black;
+    }
+
+    .membersearch__member_edit_box{
+        margin-left: 100px;
+    }
   </style>
   <body>
     <div class="btn-group maxsizing" role="group" aria-label="Basic example">
@@ -51,6 +65,35 @@
         <input type="search" class="membersearch--input" />
         <input type="submit" value="검색" />
       </form>
+    </div>
+
+    <div class="membersearch__member_box">
+      <div class="membersearch__member_detail_box"></div>
+      <div class="membersearch__member_edit_box">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="비밀번호 변경" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon2">EDIT</button>
+            </div>
+      </div>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="포인트 변경" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2">EDIT</button>
+        </div>
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="회원 쿠폰 설정" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon2">EDIT</button>
+            </div>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="블랙리스트 설정" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">EDIT</button>
+                </div>
+                </div>
     </div>
   </body>
 </html>
