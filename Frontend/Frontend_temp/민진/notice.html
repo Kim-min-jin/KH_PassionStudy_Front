@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../CSS/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <style>
+        .tabtype { 
+        margin: 50px 0 50px 0;
+        
+    }
+    .tabtype_wrapper{
+        width: 1000px;
+        margin: 0 auto;
+    }
+    .tabtype .tabtype_wrapper li {
+        display: inline-block;
+        width: 30%; 
+        
+       
+    }
+    .tabtype .tabtype_wrapper button {
+        width: 100%;
+        height: 40px;
+        box-shadow: 0 20px 40px rgba(17, 20, 39, 0.10);
+        background-color: #fff;
+        border: 0;
+        font-weight: 900;
+        font-family: 'Montserrat', Noto Sans KR, sans-serif;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    .tabtype .tabtype_wrapper li a{
+        text-decoration: none;
+    }
+    .tabtype .tabtype_wrapper button:hover{
+        background-color: #ffcc00;
+        color: white;
+    }
+    .tabtype button.on {
+        background-color: #202020;
+        color: #ffffff;
+    }
+    /* 부메뉴 css*/
+
+
+    
+    .snb_left {
+    float: left;
+    width: 230px;
+    height:1000px;
+    margin-right: 1px;
+    padding-top: 37px;
+    }
+
+    .snb_right {
+      float: right;
+      width:150px;
+      height:1000px;
+    }
+
+    .noticeboard{
+      float:left;
+      width:900px;
+      
+    }
+
+    a{
+      background-color: powderblue;
+      text-decoration:none;
+      color:inherit;
+      text-align:center;
+
+    }
+    .table{
+      text-align: center;
+    }
+
+    
+
+  </style>
+    <div class="tabtype">
+      <div class="tabtype_wrapper">
+          <ul>
+              <li>
+                  <a href=""><button class="btn3">공지사항</button></a>
+              </li>
+              <li>
+                  <a href=""><button class="btn4">자주하는 질문</button></a>
+              </li>
+              <li>
+                  <a href=""><button class="btn5">1:1문의</button></a>
+              </li>
+          </ul>
+      </div>
+  </div>  
+<!-- 부메뉴 -->
+
+  </head>
+  <body>
+    <main>
+        <content>
+                <!-- 왼쪽 사이드 -->
+            <nav class='snb_left'>
+              <h2 class='leftside'>왼쪽사이드</h2>
+              <a href=''>
+                <span class='kakaotalk_inquiry'>
+                  카카오톡 문의하기
+                </span>
+              </a>
+            </nav>
+
+          <!-- 메인 페이지-->
+          <div class='community_notice_page'>
+            <div class='noticeboard'>
+            <div class='page_section'>
+              <form name='frmList' action=''> 
+                <table class='table' width='70%'>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <thead>
+                          <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>작성자</th>
+                            <th>작성일</th>
+                            <th>조회</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr></tr>
+                        </tbody>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </form>
+            </div>
+            </div>
+          </div>
+            <!-- 오른쪽 사이드 -->
+            <aside class='snb_right'>
+              <h2 class='rightside'>오른쪽사이드</h2>
+            </aside>
+
+          <!-- 검색창-->
+          <div class='search'>
+            <table class='search_text'>
+              <tbody>
+                <tr>
+                  <td class='search_select'>
+                        <label>
+                          <input type='checkbox' name='search[name]'/>
+                           이름
+                        </label>
+                     
+                      
+                        <label>
+                          <input type='checkbox' name='search[title]'/>
+                           제목
+                        </label>
+                   
+                        <label>
+                          <input type='checkbox' name='search[contents]'/>
+                          내용
+                        </label>
+                  </td>
+                  <td>
+                      <input type='text' class='input_text' />
+                      <button type='submit' class='sch_smit'>검색
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </content>
+      </main>
+  </body>
+</html>
