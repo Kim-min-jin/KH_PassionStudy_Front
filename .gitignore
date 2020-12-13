@@ -1,4 +1,15 @@
-.vscode/
+
+# Created by https://www.toptal.com/developers/gitignore/api/vscode
+# Edit at https://www.toptal.com/developers/gitignore?templates=vscode
+
+### vscode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
 # Created by https://www.toptal.com/developers/gitignore/api/intellij+all,java,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=intellij+all,java,windows
 
