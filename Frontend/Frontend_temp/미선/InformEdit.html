@@ -1,66 +1,73 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <link rel = "stylesheet" href="../../css/styles.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-      <style>
-        .edit-user {
-            height: 1000px;
-            margin: 0 auto;
-
-        }
-       .edit-user-info {
-           border: 1px solid #d6d5d5;
-       }
-       .edit-user-header {
-           padding: 25px 20px;
-       }
-       .edit-user-header_title {
-           display: inline-block;
-           font-weight: bolder;
-           font-size: 2rem;
-       }
-       .edit-user-header_withdrawal {
-           float: right;
-           padding-bottom: 20ps;
-           color: #d6d5d5;
-           text-decoration: underline;
-       }
-       .edit-user-form {
-           margin: 25px;
-       }
-       .edit-user-form_name-text {
-           margin-left: 80px;
-           width: 500px; height: 40px;
-           border: solid 1px #d6d5d5;
-       }
-       .edit-user-form_email-text1 {
-            margin-left: 60px;
-            width: 300px; height: 40px;
-            border: solid 1px #d6d5d5;
-       }
-       .edit-user-form_email-text2 {
-            width: 300px; height: 40px;
-            border: solid 1px #d6d5d5;
-       }
-       .edit-user-form_phone-text {
-            margin-left: 60px;
-            width: 500px; height: 40px;
-            border: solid 1px #d6d5d5;
-       }
-       .ad_option-email {
-            margin-right: 40px;
-        }
-        .edit-user-form_button {
-            width: 800px; height: 40px;
-            background-color: #5da6e2;
-            color: white;
-            font-weight: bolder;
-            border: none;
-            border-radius: 6px;
-        }
-      </style>
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+      .edit-user {
+        height: 1000px;
+        margin: 0 auto;
+      }
+      .edit-user-info {
+        border: 1px solid #d6d5d5;
+      }
+      .edit-user-header {
+        padding: 25px 20px;
+      }
+      .edit-user-header_title {
+        display: inline-block;
+        font-weight: bolder;
+        font-size: 2rem;
+      }
+      .edit-user-header_withdrawal {
+        float: right;
+        padding-bottom: 20px;
+        color: #d6d5d5;
+        text-decoration: underline;
+      }
+      .edit-user-form {
+        margin: 25px;
+      }
+      .edit-user-form_name-text {
+        margin-left: 80px;
+        width: 500px;
+        height: 40px;
+        border: solid 1px #d6d5d5;
+      }
+      .edit-user-form_email-text1 {
+        margin-left: 60px;
+        width: 300px;
+        height: 40px;
+        border: solid 1px #d6d5d5;
+      }
+      .edit-user-form_email-text2 {
+        width: 300px;
+        height: 40px;
+        border: solid 1px #d6d5d5;
+      }
+      .edit-user-form_phone-text {
+        margin-left: 60px;
+        width: 500px;
+        height: 40px;
+        border: solid 1px #d6d5d5;
+      }
+      .ad_option-email {
+        margin-right: 40px;
+      }
+      .edit-user-form_button {
+        width: 800px;
+        height: 40px;
+        background-color: #5da6e2;
+        color: white;
+        font-weight: bolder;
+        border: none;
+        border-radius: 6px;
+      }
+    </style>
   </head>
 
   <body>
@@ -101,161 +108,160 @@
     </header>
     <!-- 회원정보수정 html -->
     <div class="edit-user">
+      <nav class="edit-user-nav">
+        <ul>
+          <li><a href="#회원정보수정">회원정보수정</a></li>
+          <li><a href="#비밀번호변경">비밀번호 변경</a></li>
+        </ul>
+      </nav>
 
-        <nav class="edit-user-nav">
-            <ul>
-                <li><a href="#회원정보수정">회원정보수정</a></li>
-                <li><a href="#비밀번호변경">비밀번호 변경</a></li>
-            </ul>
-        </nav>
-        
-        <div class="edit-user-info">
-            <div class="edit-user-header">
-                <div class="edit-user-header_title">회원정보수정</div>
-                <a class="edit-user-header_withdrawal" href="#탈퇴">탈퇴하기</a>
-            </div>
-            
-            <form action="#" method="POST" name="form-tag">
-                <div class="edit-user-form">
-                    <label class="edit-user-form_name">이름</label>
-                    <input class="edit-user-form_name-text" type="text">
-                </div>
-                <div class="edit-user-form">
-                    <label class="edit-user-form_email">이메일</label>
-                    <input class="edit-user-form_email-text1" type="text"> @
-                    <input class="edit-user-form_email-text2" type="text">   
-                </div>
-                <div class="edit-user-form">
-                    <label>휴대폰번호</label>
-                    <input class="edit-user-form_phone-text" type="text">
-                </div>
-                <div class="edit-user-form">
-                    <p class="edit-user-form_ad">광고성 정보 수신 동의</p>
-                    <label class="ad_option-email"><input type="checkbox">Email</label>
-                    <label class="ad_option-sms"><input type="checkbox">SMS</label>
-                </div>
-            
-                <div class="edit-user-form">
-                    <button class="edit-user-form_button" type="submit">회원 정보 수정</button>
-                </div>
-            
-            </form>
+      <div class="edit-user-info">
+        <div class="edit-user-header">
+          <div class="edit-user-header_title">회원정보수정</div>
+          <a class="edit-user-header_withdrawal" href="#탈퇴">탈퇴하기</a>
         </div>
-            
+
+        <form action="#" method="POST" name="form-tag">
+          <div class="edit-user-form">
+            <label class="edit-user-form_name">이름</label>
+            <input class="edit-user-form_name-text" type="text" />
+          </div>
+          <div class="edit-user-form">
+            <label class="edit-user-form_email">이메일</label>
+            <input class="edit-user-form_email-text1" type="text" /> @
+            <input class="edit-user-form_email-text2" type="text" />
+          </div>
+          <div class="edit-user-form">
+            <label>휴대폰번호</label>
+            <input class="edit-user-form_phone-text" type="text" />
+          </div>
+          <div class="edit-user-form">
+            <p class="edit-user-form_ad">광고성 정보 수신 동의</p>
+            <label class="ad_option-email"
+              ><input type="checkbox" />Email</label
+            >
+            <label class="ad_option-sms"><input type="checkbox" />SMS</label>
+          </div>
+
+          <div class="edit-user-form">
+            <button class="edit-user-form_button" type="submit">
+              회원 정보 수정
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
 
-
-
     <footer class="pc">
-        <div class="wrapper">
-          <div class="left-section">
-            <div>
-              <span class="normal">상호명 :</span>
-              <span class="bold">열정스터디</span>
-              <span class="divide">|</span>
-              <span class="normal">대표 :</span>
-              <span class="bold">최주영</span>
-              <span class="dovide">|</span>
-              <span class="normal">Tel :</span>
-              <span class="bold">010-****-****</span>
-            </div>
-            <div>
-              <span class="normal">사업자등록번호 :</span>
-              <span class="bold">123-45-67890</span>
-              <span class="divide">|</span>
-              <span class="normal">통신판매업 신고번호 :</span>
-              <span class="bold">제 2017-서울종로-0105호</span>
-            </div>
-            <div>
-              <span class="normal">개인정보관리처리자 :</span>
-              <span class="bold">최주빵</span>
-              <span class="divide">|</span>
-              <span class="normal">Email</span>
-              <span class="bold">wndud0159@naver.com</span>
-            </div>
-            <div>
-              <span class="normal">직업정보제공사업 신고번호 :</span>
-              <span class="bold">서울청 제2017-1호</span>
-            </div>
-            <div>
-              <span class="normal">Address :</span>
-              <span class="bold address"
-                >서울특별시 영등포구 선유동2로 57 이레빌딩(구관) 19F
-                열정스터디</span
-              >
-            </div>
-            <div>
-              <p>.</p>
-              <p>.</p>
-            </div>
-            <div>
-              <span class="copyright"
-                >copyright 2019 PASSIONSTUDY. ALL Rights Reserved.</span
-              >
-            </div>
+      <div class="wrapper">
+        <div class="left-section">
+          <div>
+            <span class="normal">상호명 :</span>
+            <span class="bold">열정스터디</span>
+            <span class="divide">|</span>
+            <span class="normal">대표 :</span>
+            <span class="bold">최주영</span>
+            <span class="dovide">|</span>
+            <span class="normal">Tel :</span>
+            <span class="bold">010-****-****</span>
           </div>
-
-          <div class="right-section">
-            <ul class="menu">
-              <li class="product">
-                <a href="">Space</a>
-                <ul class="sub-depth">
-                  <li>
-                    <a href="">여기</a>
-                  </li>
-                  <li>
-                    <a href="">에</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <a href="">Mentoring</a>
-                <ul class="sub-depth">
-                  <li>
-                    <a href="">무</a>
-                  </li>
-                  <li>
-                    <a href="">엇</a>
-                  </li>
-                  <li>
-                    <a href="">을</a>
-                  </li>
-                  <li>
-                    <a href="">?</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <a href="">Connect</a>
-                <ul class="sub-depth">
-                  <li>
-                    <a href="">넣</a>
-                  </li>
-                  <li>
-                    <a href="">을</a>
-                  </li>
-                  <li>
-                    <a href="">까</a>
-                  </li>
-                  <li>
-                    <a href="">요</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-
-            <div class="family_site">
-              <select class="passionstudy_site">
-                <option>Passion Family</option>
-                <option value="">강미선, 김민진</option>
-                <option value="">김종구, 정우혁</option>
-                <option value="">차예진, 최주영, 한아현</option>
-              </select>
-            </div>
+          <div>
+            <span class="normal">사업자등록번호 :</span>
+            <span class="bold">123-45-67890</span>
+            <span class="divide">|</span>
+            <span class="normal">통신판매업 신고번호 :</span>
+            <span class="bold">제 2017-서울종로-0105호</span>
+          </div>
+          <div>
+            <span class="normal">개인정보관리처리자 :</span>
+            <span class="bold">최주빵</span>
+            <span class="divide">|</span>
+            <span class="normal">Email</span>
+            <span class="bold">wndud0159@naver.com</span>
+          </div>
+          <div>
+            <span class="normal">직업정보제공사업 신고번호 :</span>
+            <span class="bold">서울청 제2017-1호</span>
+          </div>
+          <div>
+            <span class="normal">Address :</span>
+            <span class="bold address"
+              >서울특별시 영등포구 선유동2로 57 이레빌딩(구관) 19F
+              열정스터디</span
+            >
+          </div>
+          <div>
+            <p>.</p>
+            <p>.</p>
+          </div>
+          <div>
+            <span class="copyright"
+              >copyright 2019 PASSIONSTUDY. ALL Rights Reserved.</span
+            >
           </div>
         </div>
+
+        <div class="right-section">
+          <ul class="menu">
+            <li class="product">
+              <a href="">Space</a>
+              <ul class="sub-depth">
+                <li>
+                  <a href="">여기</a>
+                </li>
+                <li>
+                  <a href="">에</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="">Mentoring</a>
+              <ul class="sub-depth">
+                <li>
+                  <a href="">무</a>
+                </li>
+                <li>
+                  <a href="">엇</a>
+                </li>
+                <li>
+                  <a href="">을</a>
+                </li>
+                <li>
+                  <a href="">?</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="">Connect</a>
+              <ul class="sub-depth">
+                <li>
+                  <a href="">넣</a>
+                </li>
+                <li>
+                  <a href="">을</a>
+                </li>
+                <li>
+                  <a href="">까</a>
+                </li>
+                <li>
+                  <a href="">요</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="family_site">
+            <select class="passionstudy_site">
+              <option>Passion Family</option>
+              <option value="">강미선, 김민진</option>
+              <option value="">김종구, 정우혁</option>
+              <option value="">차예진, 최주영, 한아현</option>
+            </select>
+          </div>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

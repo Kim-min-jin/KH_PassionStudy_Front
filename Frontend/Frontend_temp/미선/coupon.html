@@ -1,107 +1,109 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <link rel = "stylesheet" href="../../css/styles.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-      <style>
-        .coupon-feed {
-          width: 1500px;
-          height: 1000px;
-          margin: 60px auto;
-        }
-      
-        /* .coupon-feed-container {
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+      .coupon-feed {
+        width: 1500px;
+        height: 1000px;
+        margin: 60px auto;
+      }
+
+      /* .coupon-feed-container {
           
         } */
-        .coupon-feed_title {
-          font-weight: bolder;
-          margin: 0 auto;
-        }
-        .coupon-feed-register {
-          margin-top: 30px;
-          margin-bottom: 20px;
-          padding: 40px;
-          border-top: solid 1px #d6d5d5;
-          border-bottom: solid 1px #d6d5d5;
-          text-align: center;
-        }
-        .coupon-feed-register > h3 {
-          display: inline-block;
-        }
+      .coupon-feed_title {
+        font-weight: bolder;
+        margin: 0 auto;
+      }
+      .coupon-feed-register {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        padding: 40px;
+        border-top: solid 1px #d6d5d5;
+        border-bottom: solid 1px #d6d5d5;
+        text-align: center;
+      }
+      .coupon-feed-register > h3 {
+        display: inline-block;
+      }
 
-        .coupon-feed-register-title {
-          font-weight: bolder;
-          
-        }
-        .coupon-feed-register-input {
-          width: 400px;
-          height: 50px;
-          border: 1px solid  rgb(204, 204, 204);
-          margin: 0 10px 0 20px;
-        }
+      .coupon-feed-register-title {
+        font-weight: bolder;
+      }
+      .coupon-feed-register-input {
+        width: 400px;
+        height: 50px;
+        border: 1px solid rgb(204, 204, 204);
+        margin: 0 10px 0 20px;
+      }
 
-        .coupon-feed-register-input::placeholder {
-          color: rgb(204, 204, 204);
-          font-weight: bolder;
-        }
+      .coupon-feed-register-input::placeholder {
+        color: rgb(204, 204, 204);
+        font-weight: bolder;
+      }
 
-        .coupon-feed-register-button {
-          width: 120px; height: 50px;
-          border-radius: 6px;
-          background-color: rgb(91, 92, 92);
-          border: none;
-          color: white;
-          font-weight: bolder;
-          font-size: 1.2rem;
-        }
+      .coupon-feed-register-button {
+        width: 120px;
+        height: 50px;
+        border-radius: 6px;
+        background-color: rgb(91, 92, 92);
+        border: none;
+        color: white;
+        font-weight: bolder;
+        font-size: 1.2rem;
+      }
 
-        .frame {
-          width: 100%;
-        }
-        
-        .coupon-item {
-          background-color:#dfdede;
-          width: 345px;
-          height: 100%;
-          padding: 25px 20px;
-          border-radius: 6px;
-          float: left;
-          margin: 15px;
-        }
+      .frame {
+        width: 100%;
+      }
 
-        .coupon-item_title {
-          /* width: 200px; */
-          font-weight: bolder;
-          font-size: 1.6rem;
-        }
-        .coupon-item_price {
-          /* width: 150px; */
-          font-size: 3rem;
-          font-weight: bolder;
-        }
-        .coupon-item_due-date {
-          font-size: 1.1rem;
-          margin-bottom: 15px;
-          
-        }
-        .coupon-item_studyroom-list {
-          padding: 10px 0;
-          font-size: 1.2rem;
-          font-weight: bolder;
-        }
-        .coupon-item_status-get {
-          width: 300px; height: 50px;
-          line-height: 50px;
-          background-color: #5da6e2;
-          color: white;
-          text-align: center;
-          font-weight: bolder;
-          border-radius: 6px;
-          margin-top: 20px;
-        }
+      .coupon-item {
+        background-color: #dfdede;
+        width: 345px;
+        height: 100%;
+        padding: 25px 20px;
+        border-radius: 6px;
+        float: left;
+        margin: 15px;
+      }
 
-      </style>
+      .coupon-item_title {
+        /* width: 200px; */
+        font-weight: bolder;
+        font-size: 1.6rem;
+      }
+      .coupon-item_price {
+        /* width: 150px; */
+        font-size: 3rem;
+        font-weight: bolder;
+      }
+      .coupon-item_due-date {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+      }
+      .coupon-item_studyroom-list {
+        padding: 10px 0;
+        font-size: 1.2rem;
+        font-weight: bolder;
+      }
+      .coupon-item_status-get {
+        width: 300px;
+        height: 50px;
+        line-height: 50px;
+        background-color: #5da6e2;
+        color: white;
+        text-align: center;
+        font-weight: bolder;
+        border-radius: 6px;
+        margin-top: 20px;
+      }
+    </style>
   </head>
 
   <body>
@@ -141,186 +143,188 @@
       </div>
     </header>
     <!-- 쿠폰 html -->
-      <div class="coupon-feed">
-        <div class="coupon-feed-container">
-          <h1 class="coupon-feed_title">쿠폰</h1>
-          <div class="coupon-feed-register">
-            <h3 class="coupon-feed-register-title">쿠폰등록</h3>
-            <input class="coupon-feed-register-input" type="text" placeholder="쿠폰 코드를 입력해주세요.">
-            <button class="coupon-feed-register-button" type="submit">등록</button>
-          </div>
-          <div class="frame">
-            <div class="coupon-mold">
-              <div class="coupon-item">
-                <div class="coupon-item_title">스터디룸명 5,000원 할인쿠폰</div>
-                <div class="coupon-item_price">
-                  <span class="coupon-item_price-number">5,000</span>
-                  <span class="coupon-item_price-won">원</span>
-                </div>
-                <div class="coupon-item_due-date">
-                  <span>·2020년 12월 19일까지</span>
-                </div>
-                <a class="coupon-item_studyroom-list" href="#">적용상품 보기 ></a>
-                <div class="coupon-item_status-get">받기</div>
+    <div class="coupon-feed">
+      <div class="coupon-feed-container">
+        <h1 class="coupon-feed_title">쿠폰</h1>
+        <div class="coupon-feed-register">
+          <h3 class="coupon-feed-register-title">쿠폰등록</h3>
+          <input
+            class="coupon-feed-register-input"
+            type="text"
+            placeholder="쿠폰 코드를 입력해주세요."
+          />
+          <button class="coupon-feed-register-button" type="submit">
+            등록
+          </button>
+        </div>
+        <div class="frame">
+          <div class="coupon-mold">
+            <div class="coupon-item">
+              <div class="coupon-item_title">스터디룸명 5,000원 할인쿠폰</div>
+              <div class="coupon-item_price">
+                <span class="coupon-item_price-number">5,000</span>
+                <span class="coupon-item_price-won">원</span>
               </div>
-
-              <div class="coupon-item">
-                <div class="coupon-item_title">스터디룸명 5,000원 할인쿠폰</div>
-                <div class="coupon-item_price">
-                  <span class="coupon-item_price-number">5,000</span>
-                  <span class="coupon-item_price-won">원</span>
-                </div>
-                <div class="coupon-item_due-date">
-                  <span>·2020년 12월 19일까지</span>
-                </div>
-                <a class="coupon-item_studyroom-list" href="#">적용상품 보기 ></a>
-                <div class="coupon-item_status-get">받기</div>
+              <div class="coupon-item_due-date">
+                <span>·2020년 12월 19일까지</span>
               </div>
+              <a class="coupon-item_studyroom-list" href="#">적용상품 보기 ></a>
+              <div class="coupon-item_status-get">받기</div>
+            </div>
 
-              <div class="coupon-item">
-                <div class="coupon-item_title">스터디룸명 5,000원 할인쿠폰</div>
-                <div class="coupon-item_price">
-                  <span class="coupon-item_price-number">5,000</span>
-                  <span class="coupon-item_price-won">원</span>
-                </div>
-                <div class="coupon-item_due-date">
-                  <span>·2020년 12월 19일까지</span>
-                </div>
-                <a class="coupon-item_studyroom-list" href="#">적용상품 보기 ></a>
-                <div class="coupon-item_status-get">받기</div>
+            <div class="coupon-item">
+              <div class="coupon-item_title">스터디룸명 5,000원 할인쿠폰</div>
+              <div class="coupon-item_price">
+                <span class="coupon-item_price-number">5,000</span>
+                <span class="coupon-item_price-won">원</span>
               </div>
-
-              <div class="coupon-item">
-                <div class="coupon-item_title">스터디룸명 5,000원 할인쿠폰</div>
-                <div class="coupon-item_price">
-                  <span class="coupon-item_price-number">5,000</span>
-                  <span class="coupon-item_price-won">원</span>
-                </div>
-                <div class="coupon-item_due-date">
-                  <span>·2020년 12월 19일까지</span>
-                </div>
-                <a class="coupon-item_studyroom-list" href="#">적용상품 보기 ></a>
-                <div class="coupon-item_status-get">받기</div>
+              <div class="coupon-item_due-date">
+                <span>·2020년 12월 19일까지</span>
               </div>
+              <a class="coupon-item_studyroom-list" href="#">적용상품 보기 ></a>
+              <div class="coupon-item_status-get">받기</div>
+            </div>
 
+            <div class="coupon-item">
+              <div class="coupon-item_title">스터디룸명 5,000원 할인쿠폰</div>
+              <div class="coupon-item_price">
+                <span class="coupon-item_price-number">5,000</span>
+                <span class="coupon-item_price-won">원</span>
+              </div>
+              <div class="coupon-item_due-date">
+                <span>·2020년 12월 19일까지</span>
+              </div>
+              <a class="coupon-item_studyroom-list" href="#">적용상품 보기 ></a>
+              <div class="coupon-item_status-get">받기</div>
+            </div>
+
+            <div class="coupon-item">
+              <div class="coupon-item_title">스터디룸명 5,000원 할인쿠폰</div>
+              <div class="coupon-item_price">
+                <span class="coupon-item_price-number">5,000</span>
+                <span class="coupon-item_price-won">원</span>
+              </div>
+              <div class="coupon-item_due-date">
+                <span>·2020년 12월 19일까지</span>
+              </div>
+              <a class="coupon-item_studyroom-list" href="#">적용상품 보기 ></a>
+              <div class="coupon-item_status-get">받기</div>
             </div>
           </div>
-
         </div>
-
       </div>
-       
-    
+    </div>
+
     <footer class="pc">
-        <div class="wrapper">
-          <div class="left-section">
-            <div>
-              <span class="normal">상호명 :</span>
-              <span class="bold">열정스터디</span>
-              <span class="divide">|</span>
-              <span class="normal">대표 :</span>
-              <span class="bold">최주영</span>
-              <span class="dovide">|</span>
-              <span class="normal">Tel :</span>
-              <span class="bold">010-****-****</span>
-            </div>
-            <div>
-              <span class="normal">사업자등록번호 :</span>
-              <span class="bold">123-45-67890</span>
-              <span class="divide">|</span>
-              <span class="normal">통신판매업 신고번호 :</span>
-              <span class="bold">제 2017-서울종로-0105호</span>
-            </div>
-            <div>
-              <span class="normal">개인정보관리처리자 :</span>
-              <span class="bold">최주빵</span>
-              <span class="divide">|</span>
-              <span class="normal">Email</span>
-              <span class="bold">wndud0159@naver.com</span>
-            </div>
-            <div>
-              <span class="normal">직업정보제공사업 신고번호 :</span>
-              <span class="bold">서울청 제2017-1호</span>
-            </div>
-            <div>
-              <span class="normal">Address :</span>
-              <span class="bold address"
-                >서울특별시 영등포구 선유동2로 57 이레빌딩(구관) 19F
-                열정스터디</span
-              >
-            </div>
-            <div>
-              <p>.</p>
-              <p>.</p>
-            </div>
-            <div>
-              <span class="copyright"
-                >copyright 2019 PASSIONSTUDY. ALL Rights Reserved.</span
-              >
-            </div>
+      <div class="wrapper">
+        <div class="left-section">
+          <div>
+            <span class="normal">상호명 :</span>
+            <span class="bold">열정스터디</span>
+            <span class="divide">|</span>
+            <span class="normal">대표 :</span>
+            <span class="bold">최주영</span>
+            <span class="dovide">|</span>
+            <span class="normal">Tel :</span>
+            <span class="bold">010-****-****</span>
           </div>
-
-          <div class="right-section">
-            <ul class="menu">
-              <li class="product">
-                <a href="">Space</a>
-                <ul class="sub-depth">
-                  <li>
-                    <a href="">여기</a>
-                  </li>
-                  <li>
-                    <a href="">에</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <a href="">Mentoring</a>
-                <ul class="sub-depth">
-                  <li>
-                    <a href="">무</a>
-                  </li>
-                  <li>
-                    <a href="">엇</a>
-                  </li>
-                  <li>
-                    <a href="">을</a>
-                  </li>
-                  <li>
-                    <a href="">?</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <a href="">Connect</a>
-                <ul class="sub-depth">
-                  <li>
-                    <a href="">넣</a>
-                  </li>
-                  <li>
-                    <a href="">을</a>
-                  </li>
-                  <li>
-                    <a href="">까</a>
-                  </li>
-                  <li>
-                    <a href="">요</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-
-            <div class="family_site">
-              <select class="passionstudy_site">
-                <option>Passion Family</option>
-                <option value="">강미선, 김민진</option>
-                <option value="">김종구, 정우혁</option>
-                <option value="">차예진, 최주영, 한아현</option>
-              </select>
-            </div>
+          <div>
+            <span class="normal">사업자등록번호 :</span>
+            <span class="bold">123-45-67890</span>
+            <span class="divide">|</span>
+            <span class="normal">통신판매업 신고번호 :</span>
+            <span class="bold">제 2017-서울종로-0105호</span>
+          </div>
+          <div>
+            <span class="normal">개인정보관리처리자 :</span>
+            <span class="bold">최주빵</span>
+            <span class="divide">|</span>
+            <span class="normal">Email</span>
+            <span class="bold">wndud0159@naver.com</span>
+          </div>
+          <div>
+            <span class="normal">직업정보제공사업 신고번호 :</span>
+            <span class="bold">서울청 제2017-1호</span>
+          </div>
+          <div>
+            <span class="normal">Address :</span>
+            <span class="bold address"
+              >서울특별시 영등포구 선유동2로 57 이레빌딩(구관) 19F
+              열정스터디</span
+            >
+          </div>
+          <div>
+            <p>.</p>
+            <p>.</p>
+          </div>
+          <div>
+            <span class="copyright"
+              >copyright 2019 PASSIONSTUDY. ALL Rights Reserved.</span
+            >
           </div>
         </div>
+
+        <div class="right-section">
+          <ul class="menu">
+            <li class="product">
+              <a href="">Space</a>
+              <ul class="sub-depth">
+                <li>
+                  <a href="">여기</a>
+                </li>
+                <li>
+                  <a href="">에</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="">Mentoring</a>
+              <ul class="sub-depth">
+                <li>
+                  <a href="">무</a>
+                </li>
+                <li>
+                  <a href="">엇</a>
+                </li>
+                <li>
+                  <a href="">을</a>
+                </li>
+                <li>
+                  <a href="">?</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="">Connect</a>
+              <ul class="sub-depth">
+                <li>
+                  <a href="">넣</a>
+                </li>
+                <li>
+                  <a href="">을</a>
+                </li>
+                <li>
+                  <a href="">까</a>
+                </li>
+                <li>
+                  <a href="">요</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="family_site">
+            <select class="passionstudy_site">
+              <option>Passion Family</option>
+              <option value="">강미선, 김민진</option>
+              <option value="">김종구, 정우혁</option>
+              <option value="">차예진, 최주영, 한아현</option>
+            </select>
+          </div>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
