@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가입</title>
+    <link rel="stylesheet" href="../../CSS/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <style>
+      * {
+          padding: 0;
+          margin: 0;
+      }
+
+      .join_wrap {
+          overflow: hidden;
+          max-width: 400px;
+          margin: 0 auto 200px;
+      }
+
+      h2 {
+          display: block;
+          margin-block-start: 0.83em;
+          margin-block-end: 0.83em;
+          margin-inline-start: 0px;
+          margin-inline-end: 0px;
+          margin-bottom: 34px;
+          font-weight: 600;
+          font-size: 44px;
+          text-align: center;
+      }
+
+      .signup_step>li, .step_wrap {
+          position: relative;
+      }
+
+      div {
+        display: block;
+      }
+
+      .step_wrap i{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 20%;
+          height: 4px;
+          background: #000;
+          transition: width .2s;
+          z-index: 1;
+      }
+
+      i {
+          font-style: italic;
+      }
+      .signup_step {
+          display: flex;
+          margin-block-start: 1em;
+          margin-block-end: 1em;
+          margin-inline-start: 0px;
+          margin-inline-end: 0px;
+          padding-inline-start: 40px;
+      }
+
+      .signup_step>li, .step_wrap {
+          position: relative;
+      }
+
+      .signup_step>li {
+          -webkit-box-flex: 1;
+          flex: 1 0 100%;
+          padding-top: 18px;
+          border-top: 4px solid #f4f4f4;
+      }
+
+      li {
+          display: list-item;
+          text-align: -webkit-match-parent;
+      }
+
+      li, ol, ul {
+          list-style: none;
+      }
+
+      .signup_step h3 {
+          margin-bottom: 20px;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 28px;
+      }
+
+      .signup_step .allclick {
+          margin-bottom: 15px;
+          padding: 22px 0;
+          border-bottom: 1px solid #f4f4f4;
+      }
+
+      .allclick span {
+          display: inline-block;
+          position: relative;
+          vertical-align: top;
+          min-width: 20px;
+          min-height: 20px;
+          line-height: 20px;
+      }
+
+      input, span {
+          overflow: hidden;
+      }
+
+      .allclick input {
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          z-index: -1;
+          width: 14px;
+          height: 14px;
+          border: 0;
+          background: transparent;
+      }
+
+      input, textarea {
+          appearance: none;
+          border-radius: 0;
+          background: transparent;
+          border: 0;
+      }
+
+      label {
+          display: inline-block;
+          position: relative;
+          z-index: 10;
+          color: #303033;
+          box-sizing: border-box;
+          cursor: pointer;
+          vertical-align: top;
+      }
+
+      label:before, label:after {
+          position: absolute;
+          content: "";
+      }
+
+      label:before {
+          top: 0;
+          left: 0;
+          background: #fff;
+          border: 1px solid #d4d4d4;
+          border-radius: 2px;
+          text-align: center;
+          box-sizing: border-box;
+      }
+
+      label:after {
+          border: 1px solid #d4d4d4;
+          border-width: 0 1px 1px 0;
+          transform: rotate(45deg);
+      }
+
+      .signup_step .cklist {
+          margin-bottom: 34px;
+      }
+
+      .ckjoin label {
+          padding: 5px 0 5px 26px;
+          font-size: 14px;
+          line-height: 26px;
+      }
+
+      .ckjoin label:after {
+          top: 50%;
+          left: 6px;
+          width: 6px;
+          height: 11px;
+          margin-top: -8px;
+      }
+
+      .signup_step .cklist .btn_check {
+          padding: 9px 5px;
+          font-size: 14px;
+          color: #303033;
+          text-decoration: underline;
+      }
+
+      a, button {
+          outline: none;
+      }
+
+      button {
+          border: 0;
+          background: transparent;
+          cursor: pointer;
+          appearance: button;
+          -webkit-writing-mode: horizontal-tb !important;
+          text-rendering: auto;
+          letter-spacing: normal;
+          word-spacing: normal;
+          text-transform: none;
+          text-indent: 0px;
+          text-shadow: none;
+          display: inline-block;
+          text-align: center;
+          align-items: flex-start;
+          box-sizing: border-box;
+          font: 400 13.333px Arial;
+      }
+
+      .signup_step .cklist span {
+          display: block;
+      }
+
+      .ckjoin input {
+          visibility: hidden;
+      }
+
+      .signup_step .btn_fix {
+          width: 100%;
+          height: 48px;
+          background: #c4c4c4;
+          font-size: 14px;
+          color: #fff;
+      }
+
+
+
+
+
+
+  </style>
+  <body>
+    <div class="join_wrap">
+        <form class="signupbox">
+            <h2>간편가입</h2>
+            <div class="step_wrap">
+                <i class="step0"></i>
+                <ul class="signup_step">
+                    <li class="stepbox">
+                        <h3>열정스터디 카페 서비스 
+                            <br>
+                            이용약관에 동의해주세요.
+                        </h3>
+                        <div class="allclick">
+                            <ruler-checkbox label="모두 동의 (선택 정보 포함)">
+                                <span class="ckbox">
+                                    <input type="checkbox"/>
+                                    <label title="모두 동의 (선택 정보 포함)">
+                                        ::before
+                                        "모두 동의 (선택 정보 포함)"
+                                        ::after
+                                    </label>
+                                </span>
+                            </ruler-checkbox>
+                        </div>
+                        <div class="cklist">
+                            <span class="ckjoin">
+                                <ruler-checkbox label="[필수] 만 14세 이상">
+                                    <span>
+                                        <input type="checkbox"/>
+                                        <label title="[필수] 만 14세 이상">
+                                            ::after
+                                        </label>
+                                    </span>
+                                </ruler-checkbox>
+                            </span>
+                            <span>
+                                <ruler-checkbox label="[필수] 이용약관 동의">
+                                    <span class="ckjoin">
+                                        <input type="checkbox"/>
+                                        <label title="[필수] 이용약관 동의">
+                                            ::after
+                                        </label>
+                                    </span>
+                                </ruler-checkbox>
+                                <button type="button" class="btn_check">보기</button>
+                            </span>
+                            <span>
+                                <ruler-checkbox label="[필수] 개인정보 처리방침 동의">
+                                    <span class="ckjoin">
+                                        <input type="checkbox"/>
+                                        <label title="[필수] 개인정보 처리방침 동의">
+                                            ::after
+                                        </label>
+                                    </span>
+                                </ruler-checkbox>
+                                <button type="button" class="btn_check">보기</button>
+                            </span>
+                            <span>
+                                <ruler-checkbox label="[선택] 광고성 정보 수신 및 마케팅 활용 동의">
+                                    <span class="ckjoin">
+                                        <input type="checkbox"/>
+                                        <label title="[선택] 광고성 정보 수신 및 마케팅 활용 동의">
+                                            ::after
+                                        </label>
+                                    </span>
+                                </ruler-checkbox>
+                                <button type="button" class="btn_check">보기</button>
+                                <input type="hidden" formcontrolname="receive_sms" value="F"/>
+                                <input type="hidden" formcontrolname="receive_eamil" value="F"/>
+                            </span>
+                        </div>
+                        <button type="button" class="btn_fix">동의하고 가입하기</button>
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+  </body>
+</html>
