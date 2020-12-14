@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-.vscode/
-=======
 
 # Created by https://www.toptal.com/developers/gitignore/api/vscode
 # Edit at https://www.toptal.com/developers/gitignore?templates=vscode
@@ -13,7 +10,8 @@
 !.vscode/extensions.json
 *.code-workspace
 
->>>>>>> eafc581639409cdac675d58a9f3e5eb54e13fcb0
+=======
+
 # Created by https://www.toptal.com/developers/gitignore/api/intellij+all,java,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=intellij+all,java,windows
 
