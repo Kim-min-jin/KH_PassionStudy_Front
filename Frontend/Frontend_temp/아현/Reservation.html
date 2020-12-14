@@ -5,7 +5,119 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
       <title>예약/결제</title>
+      <script src="https://code.jquery.com/jquery-3.5.1.js" 
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+      crossorigin="anonymous"></script>
+      <script>    
+        /****헤더 마우스따라 움직이는 바****/
+        function headerBar(){
+          var onMenu = $('header #menu li.on').offset().left
+                                      
+          $('.floting_bar').offset( { left: onMenu } );
+      
+          $('header #menu li').on('mouseenter', function () {
+        var a = $(this).offset().left
+        $('.floting_bar').offset( { left: a } );
+
+          })
+          $('header #menu li').on('mouseleave', function () {
+        $('.floting_bar').offset( { left: onMenu } );
+          });	
+        };
+
+        function checkWindowWidth() {
+          var windowWidth = $(window).width();
+          if (windowWidth < 1000) {
+        //창 가로 크기가 1000 미만일 경우
+        $('header #menu li.pc').removeClass('on');
+        if($("header #menu li.job.mo").length == 0) {
+          $('#menu-main .job.mo').addClass('on');
+        }
+          } else {
+        //창 가로 크기가 1000보다 클 경우
+        $('header #menu li.mo').removeClass('on');
+        if($("header #menu li.pc").length == 0) {
+          $('header #menu li.pc').addClass('on');
+        }
+          }
+        };
+
+        /****웹 로드시 작동****/
+        $(function () {
+      
+          //checkWindowWidth();
+          headerBar();
+      
+          /****헤더클릭 페이지 바로가기+중앙배치****/
+          $('header #menu li a.pagemove').click(function () {
+        var makeCenter = ($(window).height() - $(this.hash).outerHeight()) / 2
+        $('html,body').animate({
+          scrollTop: $(this.hash).offset().top - makeCenter
+        }, 400);
+          });
+
+        });
+
+        /****창크기 변화 감지 후 작동****/
+        $(window).resize(function() {
+      
+          //checkWindowWidth();	
+          headerBar();
+      
+        });
+      </script>
       <style>
+        
+        .cont_header{
+            background:  #202020;
+            line-height: 7;
+
+        }
+        .cont_header .cont_wrapper{
+            width: 1200px;
+            margin: 0 auto;
+            font-family: 'Montserrat', Noto Sans KR, sans-serif;
+            text-align: center;
+            color: #fff;
+        }
+
+
+      
+      
+        .tabtype { 
+            margin: 50px 0 50px 0;
+        }
+        .tabtype_wrapper{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .tabtype .tabtype_wrapper li {
+            display: inline-block;
+            width: 33%;
+        }
+        .tabtype .tabtype_wrapper button {
+            width: 100%;
+            height: 40px;
+            /* box-shadow: 0 20px 40px rgba(17, 20, 39, 0.10); */
+            background-color: #fff;
+            border: 0;
+            font-weight: 900;
+            font-family: 'Montserrat', Noto Sans KR, sans-serif;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .tabtype .tabtype_wrapper li a{
+            text-decoration: none;
+        }
+        .tabtype .tabtype_wrapper button:hover{
+            background-color: #ffcc00;
+            color: white;
+        }
+        .tabtype button.on {
+            background-color: #202020;
+            color: #ffffff;
+        }
+      
         section .container {
           max-width: 1200px;
           height: 800px;
@@ -74,34 +186,58 @@
         </div>
         <div class="menu_wrapper">
           <nav id="menu">
-            <ul id="" class="menu menu-main">
-              <li class="">
-                <a href=""><span>메인</span></a>
-              </li>
-              <li class="">
-                <a href=""><span>시설소개</span></a>
-              </li>
-              <li class="">
-                <a href=""><span>이용방법</span></a>
-              </li>
-              <li class="">
-                <a href=""><span>예약/결제</span></a>
-              </li>
-              <li class="">
-                <a href=""><span>커뮤니티</span></a>
-              </li>
-              <li class="">
-                <a href=""><span>마이페이지</span></a>
-              </li>
-              <li class="">
-                <a href=""><span>로그인</span></a>
-              </li>
+            <ul id="menu-main" class="menu menu-main">
+                <li class="main">
+                    <a href=""><span>메인</span></a>
+                </li>
+                <li class="roomlist">
+                    <a href=""><span>시설소개</span></a>
+                </li>
+                <li class="guide">
+                    <a href=""><span>이용안내</span></a>
+                </li>
+                <li class="reserve on">
+                    <a href=""><span>예약/결제</span></a>
+                </li>
+                <li class="community">
+                    <a href=""><span>커뮤니티</span></a>
+                </li>
+                <li class="mypage">
+                    <a href=""><span>마이페이지</span></a>
+                </li>
+                <li class="login">
+                    <a href=""><span>로그인</span></a>
+                </li>
+                <div class="floting_bar" style="left: 400px;"></div>
             </ul>
           </nav>
         </div>
       </div>
     </header>
 
+    <div class="cont_header">
+      <div class="cont_wrapper">
+          <h1>예약 / 결제</h1>
+      </div>
+    </div>
+
+  
+    <div class="tabtype">
+        <div class="tabtype_wrapper">
+            <ul>
+                <li>
+                    <a href=""><button class="btn1 on">예약하기</button></a>
+                </li>
+                <li>
+                    <a href=""><button class="btn2">예약자 정보 입력</button></a>
+                </li>
+                <li>
+                    <a href=""><button class="btn3">결제하기</button></a>
+                </li>
+            </ul>
+        </div>
+    </div>  
+    
     <section>
       <div class="container">
         <div class="container_room">
