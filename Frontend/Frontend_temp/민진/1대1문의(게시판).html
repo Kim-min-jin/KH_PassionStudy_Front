@@ -84,7 +84,10 @@
     .input_text {
       padding-left: 10px;
     }
-
+    
+    .table_titlename {
+        inline-size: 65%;
+    }
     
 
   </style>
@@ -127,58 +130,32 @@
             <div class='page_section'>
               <form name='frmList' action=''> 
                 <table class='table' width='70%'>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <thead>
-                          <tr>
-                            <th>번호</th>
-                            <th>제목</th>
-                            <th>작성자</th>
-                            <th>작성일</th>
-                            <th>조회</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr></tr>
-                        </tbody>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                    <th>번호</th>
+                    <th class="table_titlename">제목</th>
+                    <th>작성자</th>
+                    <th>작성일</th>
+                      <tr><!-- 첫번째 줄 시작-->
+                        <td>2</td>
+                        <td>단체예약 문의드립니다.</td>
+                        <td>김열정</td>
+                        <td>2020-12-25</td>
+                      </tr><!-- 첫번째 줄 끝-->
+                      <tr><!-- 두번째 줄 시작-->
+                        <td>1</td>
+                        <td><img src="https://www.kurly.com/shop/data/skin/designgj/img/common/myqna_answer.gif">안녕하세요 고객님, 답변드립니다.</td>
+                        <td>관리자</td>
+                        <td>2020-12-25</td>
+                      </tr>      
+                  </table>
               </form>
             </div>
             </div>
-          </div>
-          <!-- 검색창-->
-          <div class='search'>
-            <table class='search_text'>
-              <tbody>
-                <tr>
-                  <td class='search_select'>
-                        <label>
-                          <input type='checkbox' name='search[name]'/>
-                           이름
-                        </label>
-                        <label>
-                          <input type='checkbox' name='search[title]'/>
-                           제목
-                        </label>
-                   
-                        <label>
-                          <input type='checkbox' name='search[contents]'/>
-                          내용
-                        </label>
-                  </td>
-                  <td>
-                      <input type='text' class='input_text' />
-                      <button type='submit' class='sch_smit'>검색
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          </div> 
         </content>
       </main>
   </body>
+  <script>
+      $('#kakaotalk_inquiry').draggable();
+      /* 드래그 해보려했는데 안되네 */
+  </script>
 </html>
