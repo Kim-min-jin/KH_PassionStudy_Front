@@ -1,34 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <title>Welcome Passion StudyCafe~!</title>
     <link rel="stylesheet" href="../../css/styles.css" />
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="../../JS/menubar.js"></script>
   </head>
-  <style>
-    .maxsizing {
-      width: 100%;
-    }
-    .manager-manubar__text {
-      color: black;
-    }
-  </style>
+
   <body>
     <header class="PassionStudy_header">
       <div class="header_inner">
         <div class="logo_img">
           <!-- <img src="https://yt3.ggpht.com/a/AATXAJxe0JQTxF0Apn4-OyQ_wCwQ2mB6OGzZdc7_dpsJCw=s900-c-k-c0x00ffffff-no-rj" onclick="">
-				 --><a href="">🔥 열정 스터디</a>
+            --><a href="">🔥 열정 스터디</a>
         </div>
+
         <div class="menu_wrapper">
-          <nav id="menu">
+          <nav id="PassionStudy_header_menu">
             <ul id="menu-main" class="menu menu-main">
               <li class="main">
                 <a href="../index.html"><span>메인</span></a>
@@ -50,10 +49,12 @@
                 <a href=""><span>커뮤니티</span></a>
               </li>
               <li class="mypage">
-                <a href=""><span>마이페이지</span></a>
+                <a href="회원관리.html"><span>관리자페이지</span></a>
+                <!-- 자바스크립트를 통해, 관리자가 로그인일 경우에만 tag를 바꿔줘야하는 부분-->
               </li>
               <li class="login">
-                <a href=""><span>로그인</span></a>
+                <a href=""><span>로그아웃</span></a>
+                <!--로그인으로 되어있으므로 로그아웃 처리해줘야한다.-->
               </li>
               <div class="floting_bar" style="left: 400px"></div>
             </ul>
@@ -61,7 +62,12 @@
         </div>
       </div>
     </header>
-    <div class="btn-group maxsizing" role="group" aria-label="Basic example">
+
+    <div
+      class="btn-group btn_maxsizing"
+      role="group"
+      aria-label="Basic example"
+    >
       <button type="button" class="btn btn-secondary btn-lg">
         <a href="회원관리.html" class="manager-manubar__text">회원 관리</a>
       </button>
@@ -72,6 +78,89 @@
         <a href="상품관리.html" class="manager-manubar__text">상품 관리</a>
       </button>
     </div>
+
+    <!-- 매출 관리와 관련된 박스-->
+
+    <div class="membersearch__member_box">
+      <div class="membersearch__member_detail_box"></div>
+      <div class="membersearch__member_edit_box">
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="비밀번호 변경"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+          />
+          <div class="input-group-append">
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="button-addon2"
+            >
+              EDIT
+            </button>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="포인트 변경"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+          />
+          <div class="input-group-append">
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="button-addon2"
+            >
+              EDIT
+            </button>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="회원 쿠폰 설정"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+          />
+          <div class="input-group-append">
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="button-addon2"
+            >
+              EDIT
+            </button>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="블랙리스트 설정"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+          />
+          <div class="input-group-append">
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="button-addon2"
+            >
+              EDIT
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 끝나는 부분 -->
+
     <footer class="pc">
       <div class="wrapper">
         <div class="left-section">
@@ -105,8 +194,8 @@
           </div>
           <div>
             <span class="normal">Address :</span>
-            <span class="bold address">
-              서울특별시 영등포구 선유동2로 57 이레빌딩(구관) 19F
+            <span class="bold address"
+              >서울특별시 영등포구 선유동2로 57 이레빌딩(구관) 19F
               열정스터디</span
             >
           </div>
