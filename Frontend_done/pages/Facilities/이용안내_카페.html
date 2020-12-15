@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <title>Welcome Passion StudyCafe~!</title>
     <link rel="stylesheet" href="../../css/styles.css" />
-    <link rel="stylesheet" href="매니저.css" />
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
     <script
@@ -12,12 +11,8 @@
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
       crossorigin="anonymous"
     ></script>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    />
+    <script src="../../JS/menubar.js"></script>
   </head>
-
   <body>
     <header class="PassionStudy_header">
       <div class="header_inner">
@@ -32,15 +27,11 @@
               <li class="main">
                 <a href="../index.html"><span>메인</span></a>
               </li>
-              <li class="roomlist on">
-                <a href="../Facilities/시설소개_라운지.html"
-                  ><span>시설소개</span></a
-                >
+              <li class="roomlist">
+                <a href="시설소개_라운지.html"><span>시설소개</span></a>
               </li>
-              <li class="guide">
-                <a href="../Facilities/이용안내_카페.html"
-                  ><span>이용안내</span></a
-                >
+              <li class="guide on">
+                <a href="이용안내_카페.html"><span>이용안내</span></a>
               </li>
               <li class="reserve">
                 <a href=""><span>예약/결제</span></a>
@@ -49,12 +40,10 @@
                 <a href=""><span>커뮤니티</span></a>
               </li>
               <li class="mypage">
-                <a href="회원관리.html"><span>관리자페이지</span></a>
-                <!-- 자바스크립트를 통해, 관리자가 로그인일 경우에만 tag를 바꿔줘야하는 부분-->
+                <a href=""><span>마이페이지</span></a>
               </li>
               <li class="login">
-                <a href=""><span>로그아웃</span></a>
-                <!--로그인으로 되어있으므로 로그아웃 처리해줘야한다.-->
+                <a href=""><span>로그인</span></a>
               </li>
               <div class="floting_bar" style="left: 400px"></div>
             </ul>
@@ -63,114 +52,61 @@
       </div>
     </header>
 
-    <div
-      class="btn-group btn_maxsizing"
-      role="group"
-      aria-label="Basic example"
-    >
-      <button type="button" class="btn btn-secondary btn-lg">
-        <a href="회원관리.html" class="manager-manubar__text">회원 관리</a>
-      </button>
-      <button type="button" class="btn btn-secondary btn-lg">
-        <a href="매출관리.html" class="manager-manubar__text">매출 관리</a>
-      </button>
-      <button type="button" class="btn btn-secondary btn-lg">
-        <a href="상품관리.html" class="manager-manubar__text">상품 관리</a>
-      </button>
-    </div>
-
-    <!-- 회원 관리와 관련된 박스-->
-
-    <div class="membersearch-box">
-      <form class="membersearch">
-        <label for="membersearch--input" class="membersearch--label"
-          >이름 또는 전화번호 4자리</label
-        >
-        <br />
-        <input type="search" class="membersearch--input" />
-        <input type="submit" value="검색" />
-      </form>
-    </div>
-
-    <div class="membersearch__member_box">
-      <div class="membersearch__member_detail_box"></div>
-      <div class="membersearch__member_edit_box">
-        <div class="input-group mb-3">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="비밀번호 변경"
-            aria-label="Recipient's username"
-            aria-describedby="button-addon2"
-          />
-          <div class="input-group-append">
-            <button
-              class="btn btn-outline-secondary"
-              type="button"
-              id="button-addon2"
-            >
-              EDIT
-            </button>
-          </div>
-        </div>
-        <div class="input-group mb-3">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="포인트 변경"
-            aria-label="Recipient's username"
-            aria-describedby="button-addon2"
-          />
-          <div class="input-group-append">
-            <button
-              class="btn btn-outline-secondary"
-              type="button"
-              id="button-addon2"
-            >
-              EDIT
-            </button>
-          </div>
-        </div>
-        <div class="input-group mb-3">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="회원 쿠폰 설정"
-            aria-label="Recipient's username"
-            aria-describedby="button-addon2"
-          />
-          <div class="input-group-append">
-            <button
-              class="btn btn-outline-secondary"
-              type="button"
-              id="button-addon2"
-            >
-              EDIT
-            </button>
-          </div>
-        </div>
-        <div class="input-group mb-3">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="블랙리스트 설정"
-            aria-label="Recipient's username"
-            aria-describedby="button-addon2"
-          />
-          <div class="input-group-append">
-            <button
-              class="btn btn-outline-secondary"
-              type="button"
-              id="button-addon2"
-            >
-              EDIT
-            </button>
-          </div>
-        </div>
+    <div class="cont_header">
+      <div class="cont_wrapper">
+        <h1>이용안내</h1>
       </div>
     </div>
 
-    <!-- 끝나는 부분 -->
+    <div class="tabtype">
+      <div class="tabtype_wrapper">
+        <ul>
+          <li>
+            <a href="이용안내_카페.html"
+              ><button class="btn1 on">스터디카페 이용안내</button></a
+            >
+          </li>
+          <li>
+            <a href="이용안내_룸.html"
+              ><button class="btn2">스터디룸 이용안내</button></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="passion_notice">
+      <div class="section-header">
+        <p>
+          스터디카페는 도서관보다는 자유롭게 일반 카페보다는 조용하게 개인공부
+          또는 개인 노트북 동영상 시청 등에 맞는 공간입니다.
+        </p>
+        <p>대화불가 & 문서작업을 위한 키보드와 마우스 사용은 안됩니다.</p>
+        <p>
+          독립된 스터디룸으로 이용 원하시면 스터디룸 이용 안내를 참고해주세요
+        </p>
+      </div>
+      <div class="section-body">
+        <img
+          src="https://lh3.googleusercontent.com/proxy/zzmxCqp2Uy6zGI_gS31HtCpvfGPVGLuR7FtPWoIeTsnbnZAP1NItsbPGYUYXc4PGUZHmanEaMDHBvtgEVbE9JHHR1dN1KaOFzouQKSNHKVpY0PFuqdu3pQ"
+          alt=""
+        />
+      </div>
+      <div class="section-foot-left">
+        <h2>운영시간</h2>
+        <p>연중무휴</p>
+        <p>월 ~ 일 8:00~24:00</p>
+        <p>★대학교 시험기간 24시간 운영</p>
+        <p>(시험기간은 추후 홈페이지 공지)</p>
+      </div>
+      <div class="section-foot-right">
+        <h2>주의사항</h2>
+        <p>스터디카페는 무인 시스템으로 별도 예약을 받지 않습니다.</p>
+        <p>얼음, 믹스커피, 녹차, 둥글레 차 등 티백음료 무료입니다.</p>
+        <p>스터디카페에서는 문서작업을 위한 키보드와 마우스 사용은 안됩니다.</p>
+        <p>콘센트 충분 (평균 1인 2개씩 사용 가능)</p>
+      </div>
+    </section>
 
     <footer class="pc">
       <div class="wrapper">

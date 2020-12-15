@@ -4,7 +4,7 @@
       <link rel = "stylesheet" href="../../css/headfoot.css">
       <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
-      <title>예약/결제</title>
+      <title>마이페이지</title>
       <script src="https://code.jquery.com/jquery-3.5.1.js" 
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
       crossorigin="anonymous"></script>
@@ -93,7 +93,7 @@
         }
         .tabtype .tabtype_wrapper li {
             display: inline-block;
-            width: 32.9%;
+            width: 24.5%;
         }
         .tabtype .tabtype_wrapper button {
             width: 100%;
@@ -152,7 +152,7 @@
         .container .container_room button a {
           color: black;
         }
-        .container .container_room button:hover {
+        .container .container_room button:hover{
           background-color: lightslategrey;
           color: white;
         }
@@ -175,14 +175,16 @@
         .container .container_room_button ul {
           margin: 0 0 50px 0;
         } 
-        .container .container_room_button ul .second_room {
-          margin: 0 15px 0 150px;
+        .container .container_room_button ul .second_room, 
+        .container .container_room_button ul .third_room
+         {
+          margin: 0 0 0 65px;
         } 
-      
+        
         .container .container_room_button li {
           display: inline-block;
           width: 100px;
-          margin: 0px 15px 0 75px;
+          margin: 0px 10px 0 22px;
         }
         
         .container .container_room_button button {
@@ -202,10 +204,51 @@
         .container .container_room_button button a {
           color: black;
         }
-        .container .container_room_button button:hover {
+        .container .container_room_button button:hover{
           background-color: lightslategrey;
           color: white;
         }
+        /* section .con
+        tainer {
+          width: 1200px;
+          height: 800px;
+        } */
+        /* section .container .container_room {
+          width: 1200px;
+          height: 150px;
+          border: 1px solid goldenrod;
+          padding: 30px 200px 30px 260px;
+        } */
+        /* section .container .container_room button {
+          width: 100px;
+          height: 40px;
+          margin: 30px 50px 10px 30px;
+        } */
+
+        /* section .container .container_room_img {
+          width: 1200px;
+          height: 650px;
+          border: 1px solid indianred;
+          padding: 0 150px 0 150px;
+        }
+        section .container .container_room_img div {
+          width: 290px;
+          height: 600px;
+          float: left;
+          padding: 100px 0 100px 30px;
+        }
+        section .container .container_room_img div button {
+          width: 70px;
+          height: 25px;
+          font-size: 10px;
+          margin: 20px 10px 20px 30px;
+        } */
+        /* section .container .container_room_button{
+          width: 1200px;
+          height: 250px;
+          border: 1px solid steelblue ;
+          padding: 0 150px 0 150px;
+        } */
       </style>
   </head>
 
@@ -228,13 +271,13 @@
                 <li class="guide">
                     <a href=""><span>이용안내</span></a>
                 </li>
-                <li class="reserve on">
+                <li class="reserve">
                     <a href=""><span>예약/결제</span></a>
                 </li>
                 <li class="community">
                     <a href=""><span>커뮤니티</span></a>
                 </li>
-                <li class="mypage">
+                <li class="mypage on">
                     <a href=""><span>마이페이지</span></a>
                 </li>
                 <li class="login">
@@ -249,7 +292,7 @@
 
     <div class="cont_header">
       <div class="cont_wrapper">
-          <h1>예약 / 결제</h1>
+          <h1>마이페이지</h1>
       </div>
     </div>
 
@@ -258,13 +301,16 @@
         <div class="tabtype_wrapper">
             <ul>
                 <li>
-                    <a href=""><button class="btn1 on">예약하기</button></a>
+                    <a href=""><button class="btn1 on">나의 정보</button></a>
                 </li>
                 <li>
-                    <a href=""><button class="btn2">예약자 정보 입력</button></a>
+                    <a href=""><button class="btn2">나의 예약 관리</button></a>
                 </li>
                 <li>
-                    <a href=""><button class="btn3">결제하기</button></a>
+                    <a href=""><button class="btn3">나의 활동</button></a>
+                </li>
+                <li>
+                    <a href=""><button class="btn4">설정</button></a>
                 </li>
             </ul>
         </div>
@@ -275,26 +321,23 @@
         <div class="container_room">
           <ul>
             <li>
-              <button class="room_one"><a href="Reservation_ChooseRoom01.html"> 3~5인실 </a></button>
+              <button class="room_one on"> 회원정보수정 </button>
             </li>
             <li>
-              <button class="room_two on"> 4~6인실 </button>
-            </li>
-            <li>
-              <button class="room_three"><a href="Reservation_ChooseRoom03.html"> 6~8인실 </a></button>
-            </li>
-            <li>
-              <button class="room_four"><a href="Reservation_ChooseRoom04.html"> 12인실 </a></button>
+              <button class="room_two"><a href="Reservation_ChooseRoom02.html"> 비밀번호변경 </a></button>
             </li>
           </ul>
         </div>
         <div class="container_room_img">
           <ul>
             <li>
-              <img src="room_img.jpeg" width="457px" height="300px">
+              <img src="room_img.jpeg" width="299px" height="300px">
             </li>
             <li>
-              <img src="room_img.jpeg" width="457px" height="300px">
+              <img src="room_img.jpeg" width="299px" height="300px">
+            </li>
+            <li>
+              <img src="room_img.jpeg" width="299px" height="300px">
             </li>
           </ul>
         </div>
@@ -307,6 +350,12 @@
               <button class="room_reservation"><a href="Reservation.html">예약하기</a></button>
             </li>
             <li class="second_room">
+              <button class="facilities_introduction"><a href="">시설소개</a></button>
+            </li>
+            <li> 
+              <button class="room_reservation"><a href="Reservation.html">예약하기</a></button>
+            </li>
+            <li class="third_room">
               <button class="facilities_introduction"><a href="">시설소개</a></button>
             </li>
             <li> 

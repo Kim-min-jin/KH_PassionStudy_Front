@@ -1,0 +1,50 @@
+/* 공통적으로 사용되는 코드*/
+.btn_maxsizing {
+  width: 100%;
+}
+
+/* 회원 관리용 CSS코드 */
+.manager-manubar__text {
+  color: black;
+}
+.membersearch--input {
+  width: 200px;
+}
+.membersearch-box {
+  margin-top: 40px;
+  margin-left: 40%;
+}
+.membersearch--label {
+  font-size: large;
+  font-weight: bold;
+}
+.membersearch__member_box {
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-bottom: 200px;
+  display: flex;
+}
+.membersearch__member_detail_box {
+  width: 500px;
+  height: 500px;
+  background-color: black;
+}
+
+.membersearch__member_edit_box {
+  margin-left: 100px;
+}
+
+/* 상품 관리용 CSS코드*/
+
+.product_title_box {
+  text-align: center;
+  margin-top: 30px;
+}
+.product_table_Box {
+  margin-top: 40px;
+  margin-left: 10%;
+  width: 80%;
+  margin-bottom: 50px;
+}
+
+/* 매출 관리용 CSS코드 */

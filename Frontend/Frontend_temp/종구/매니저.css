@@ -1,4 +1,4 @@
-.maxsizing {
+.btn_maxsizing {
   width: 100%;
 }
 .manager-manubar__text {
@@ -18,6 +18,7 @@
 .membersearch__member_box {
   margin-top: 50px;
   margin-left: 100px;
+  margin-bottom: 200px;
   display: flex;
 }
 .membersearch__member_detail_box {

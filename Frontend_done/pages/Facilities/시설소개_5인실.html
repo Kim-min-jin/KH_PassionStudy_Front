@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <title>Welcome Passion StudyCafe~!</title>
     <link rel="stylesheet" href="../../css/styles.css" />
-    <link rel="stylesheet" href="매니저.css" />
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
     <script
@@ -12,12 +11,8 @@
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
       crossorigin="anonymous"
     ></script>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    />
+    <script src="../../JS/menubar.js"></script>
   </head>
-
   <body>
     <header class="PassionStudy_header">
       <div class="header_inner">
@@ -33,14 +28,10 @@
                 <a href="../index.html"><span>메인</span></a>
               </li>
               <li class="roomlist on">
-                <a href="../Facilities/시설소개_라운지.html"
-                  ><span>시설소개</span></a
-                >
+                <a href="시설소개_라운지.html"><span>시설소개</span></a>
               </li>
               <li class="guide">
-                <a href="../Facilities/이용안내_카페.html"
-                  ><span>이용안내</span></a
-                >
+                <a href="이용안내_카페.html"><span>이용안내</span></a>
               </li>
               <li class="reserve">
                 <a href=""><span>예약/결제</span></a>
@@ -49,12 +40,10 @@
                 <a href=""><span>커뮤니티</span></a>
               </li>
               <li class="mypage">
-                <a href="회원관리.html"><span>관리자페이지</span></a>
-                <!-- 자바스크립트를 통해, 관리자가 로그인일 경우에만 tag를 바꿔줘야하는 부분-->
+                <a href=""><span>마이페이지</span></a>
               </li>
               <li class="login">
-                <a href=""><span>로그아웃</span></a>
-                <!--로그인으로 되어있으므로 로그아웃 처리해줘야한다.-->
+                <a href=""><span>로그인</span></a>
               </li>
               <div class="floting_bar" style="left: 400px"></div>
             </ul>
@@ -63,114 +52,144 @@
       </div>
     </header>
 
-    <div
-      class="btn-group btn_maxsizing"
-      role="group"
-      aria-label="Basic example"
-    >
-      <button type="button" class="btn btn-secondary btn-lg">
-        <a href="회원관리.html" class="manager-manubar__text">회원 관리</a>
-      </button>
-      <button type="button" class="btn btn-secondary btn-lg">
-        <a href="매출관리.html" class="manager-manubar__text">매출 관리</a>
-      </button>
-      <button type="button" class="btn btn-secondary btn-lg">
-        <a href="상품관리.html" class="manager-manubar__text">상품 관리</a>
-      </button>
-    </div>
-
-    <!-- 회원 관리와 관련된 박스-->
-
-    <div class="membersearch-box">
-      <form class="membersearch">
-        <label for="membersearch--input" class="membersearch--label"
-          >이름 또는 전화번호 4자리</label
-        >
-        <br />
-        <input type="search" class="membersearch--input" />
-        <input type="submit" value="검색" />
-      </form>
-    </div>
-
-    <div class="membersearch__member_box">
-      <div class="membersearch__member_detail_box"></div>
-      <div class="membersearch__member_edit_box">
-        <div class="input-group mb-3">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="비밀번호 변경"
-            aria-label="Recipient's username"
-            aria-describedby="button-addon2"
-          />
-          <div class="input-group-append">
-            <button
-              class="btn btn-outline-secondary"
-              type="button"
-              id="button-addon2"
-            >
-              EDIT
-            </button>
-          </div>
-        </div>
-        <div class="input-group mb-3">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="포인트 변경"
-            aria-label="Recipient's username"
-            aria-describedby="button-addon2"
-          />
-          <div class="input-group-append">
-            <button
-              class="btn btn-outline-secondary"
-              type="button"
-              id="button-addon2"
-            >
-              EDIT
-            </button>
-          </div>
-        </div>
-        <div class="input-group mb-3">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="회원 쿠폰 설정"
-            aria-label="Recipient's username"
-            aria-describedby="button-addon2"
-          />
-          <div class="input-group-append">
-            <button
-              class="btn btn-outline-secondary"
-              type="button"
-              id="button-addon2"
-            >
-              EDIT
-            </button>
-          </div>
-        </div>
-        <div class="input-group mb-3">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="블랙리스트 설정"
-            aria-label="Recipient's username"
-            aria-describedby="button-addon2"
-          />
-          <div class="input-group-append">
-            <button
-              class="btn btn-outline-secondary"
-              type="button"
-              id="button-addon2"
-            >
-              EDIT
-            </button>
-          </div>
-        </div>
+    <div class="cont_header">
+      <div class="cont_wrapper">
+        <h1>시설소개</h1>
       </div>
     </div>
 
-    <!-- 끝나는 부분 -->
+    <div class="tabtype">
+      <div class="tabtype_wrapper">
+        <ul>
+          <li>
+            <a href="시설소개_라운지.html"
+              ><button class="btn1">라운지</button></a
+            >
+          </li>
+          <li>
+            <a href="시설소개_5인실.html"
+              ><button class="btn2 on">3-5인실</button></a
+            >
+          </li>
+          <li>
+            <a href="시설소개_6인실.html"
+              ><button class="btn3">4-6인실</button></a
+            >
+          </li>
+          <li>
+            <a href="시설소개_8인실.html"
+              ><button class="btn4">6-8인실</button></a
+            >
+          </li>
+          <li>
+            <a href="시설소개_12인실.html"
+              ><button class="btn5">12인실</button></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="passion_facility">
+      <div class="section-left">
+        <div class="title">
+          <span>5인실 ROOM</span>
+        </div>
+        <ul>
+          <li class="people">
+            <strong>수용인원</strong>
+            <div class="pre_line">3-5인</div>
+          </li>
+        </ul>
+        <ul>
+          <li class="cost">
+            <strong>이용금액</strong>
+            <div class="pre_line">
+              주중 1,300원/1H (9시~19시) 주중 1,500원/1H (19시~22시) 주말
+              1,700원/1H 최소이용시간 : 2H
+            </div>
+          </li>
+        </ul>
+        <ul>
+          <li class="system">
+            <strong>시스템</strong>
+            <div class="pre_line">화이트보드</div>
+          </li>
+        </ul>
+      </div>
+      <div class="section-right">
+        <img
+          src="https://blog.kakaocdn.net/dn/NTN2O/btqB6JVB9ke/JVcDlBQWadHS6LtG7AUoYk/img.jpg"
+          alt=""
+        />
+      </div>
+
+      <div class="section-left">
+        <div class="title">
+          <span>5인실 ROOM</span>
+        </div>
+        <ul>
+          <li class="people">
+            <strong>수용인원</strong>
+            <div class="pre_line">3-5인</div>
+          </li>
+        </ul>
+        <ul>
+          <li class="cost">
+            <strong>이용금액</strong>
+            <div class="pre_line">
+              주중 1,300원/1H (9시~19시) 주중 1,500원/1H (19시~22시) 주말
+              1,700원/1H 최소이용시간 : 2H
+            </div>
+          </li>
+        </ul>
+        <ul>
+          <li class="system">
+            <strong>시스템</strong>
+            <div class="pre_line">화이트보드</div>
+          </li>
+        </ul>
+      </div>
+      <div class="section-right">
+        <img
+          src="https://blog.kakaocdn.net/dn/NTN2O/btqB6JVB9ke/JVcDlBQWadHS6LtG7AUoYk/img.jpg"
+          alt=""
+        />
+      </div>
+
+      <div class="section-left">
+        <div class="title">
+          <span>5인실 ROOM</span>
+        </div>
+        <ul>
+          <li class="people">
+            <strong>수용인원</strong>
+            <div class="pre_line">3-5인</div>
+          </li>
+        </ul>
+        <ul>
+          <li class="cost">
+            <strong>이용금액</strong>
+            <div class="pre_line">
+              주중 1,300원/1H (9시~19시) 주중 1,500원/1H (19시~22시) 주말
+              1,700원/1H 최소이용시간 : 2H
+            </div>
+          </li>
+        </ul>
+        <ul>
+          <li class="system">
+            <strong>시스템</strong>
+            <div class="pre_line">화이트보드</div>
+          </li>
+        </ul>
+      </div>
+      <div class="section-right">
+        <img
+          src="https://blog.kakaocdn.net/dn/NTN2O/btqB6JVB9ke/JVcDlBQWadHS6LtG7AUoYk/img.jpg"
+          alt=""
+        />
+      </div>
+    </section>
 
     <footer class="pc">
       <div class="wrapper">
