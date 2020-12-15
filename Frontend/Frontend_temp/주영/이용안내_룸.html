@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>Welcome Passion StudyCafe~!</title>
+  <link rel = "stylesheet" href="../../css/headfoot.css">
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
   <script src="https://code.jquery.com/jquery-3.5.1.js" 
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
   crossorigin="anonymous"></script>
@@ -66,81 +69,6 @@
     });
   </script>
   <style>
-    body, ul, li, ol, p, dl, dt, dd, h1, h2, h3, h4, h5, h6 {
-   	    margin: 0;
-        padding: 0;
-	}
-	header {
-        background: #202020;
-        position: relative;
-        /* top: 0; */
-        /* left: 0; */
-        width: 100%;
-        height: 82px;
-        /* background: rgba(0, 0, 0, 0); */
-        border-bottom: 2px solid #fff;
-        z-index: 9;
-	}
-	header .header_inner {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 1200px;
-        margin-top: -2.5px;
-        transform: translateX(-50%);
-	}
-	header .header_inner .logo_img {
-        /* display: inline-block; */
-        /* left: 0; */
-        float: left;
-        /* cursor: pointer; */
-	}
-	header .header_inner .logo_img img {    
-        width: 40px;
-        height: 21px;
-	}
-	header .header_inner .logo_img a {
-        font-size: 33px;
-        color: #fff;
-        text-decoration: none;
-        line-height: 0;
-        cursor: pointer;
-	}
-	header .header_inner .menu_wrapper {
-        float: right;
-	}
-	ul {
-        list-style: none;
-	}
-	header #menu li {
-        float: left;
-        width: 110px;
-        text-align: center;
-	}
-	header #menu li a {
-        font-size: 16px;
-        color: #fff;
-	    text-decoration: none;
-	}
-    header .floting_bar {
-        position: absolute;
-        top: 43px;
-        width: 110px;
-        height: 2px;
-        background: #ffcc00;
-        transition: 0.5s all;
-    }
-    header #menu li.on a {
-        color: #ffcc00;
-    }
-    header #menu li:hover a {
-        font-size: 1.1em;
-        font-weight: bold;
-        color: #ffcc00;
-    }
-  
-
- 
     .cont_header{
         background:  #202020;
         line-height: 7;
@@ -165,7 +93,7 @@
     }
     .tabtype .tabtype_wrapper li {
         display: inline-block;
-        width: 19.3%;
+        width: 49.3%;
     }
     .tabtype .tabtype_wrapper button {
         width: 100%;
@@ -194,140 +122,34 @@
     section{
         width: 1000px;
         margin: 0 auto;
-    }
-    section .section-left{
-        float: left;
-        line-height: 2;
-    }
-    section .section-left .title span{
-        font-size: 30px;
-        font-weight: 700;
-        line-height: 3;
-    }
-    section .section-left>ul>li strong{
-        float: left;
-        width: 90px;
-    }
-    section .section-left>ul>li .pre_line{
-        display: inline-block;
-        white-space: pre-line;
         color: #928989;
-        font-size: 13px;
+        font-size: 14px;
     }
-    section .section-right{
-        text-align: end;
+    section .section-header{
+        line-height: 2;
+        text-align: center;
         margin: 0 0 50px;
     }
-    section .section-right img{
-        width: 55%;
+    section .section-body img{
+        width: 100%;
+        height: unset;
     }
-  
-
-    footer {
-        background: #202020;
-        /* min-height: 200px; */
-    }
-    footer .wrapper {
-        /* position: relative; */
-        width: 1200px;
-        margin: 0 auto;
-        padding: 70px 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.3);
-    }
-    footer .wrapper::after {
-        content: "";
-        display: block;
-        clear: both;
-    }
-    footer .wrapper .right-section,
-    footer .wrapper .left-section {
+    section .section-foot-left{
+        text-align: center;
         float: left;
-        /* width: 50%; */
+        margin: 0px -19px;
     }
-    footer .wrapper .left-section span {
-        font-size: 13px;
-        color: #fff;
-        line-height: 26px;
-    }
-    footer .wrapper .left-section span.normal {
-        color: rgba(255, 255, 255, 0.75);
-    }
-    footer .wrapper .left-section span.copyright,
-    footer .wrapper .left-section span.normal {
-        font-weight: 300;
-        letter-spacing: 0.07em;
-    }
-    footer .wrapper .left-section span.bold {
-        padding-left: 5px;
-        font-weight: 200;
-        letter-spacing: 0.07em;
-        /* word-break: keep-all; */
-    }
-    footer .wrapper .left-section span.divide {
-        /* display: inline-block; */
-        margin: 0 5px;
-        color: rgba(255, 255, 255, 0.4);
-        font-weight: 100;
-    }
-    footer .wrapper .right-section {
-        float: right;
-        width: 37%;
-        /* vertical-align: top; */
-    }
-    footer .wrapper .right-section ul.menu > li {
-        display: inline-block;
-        padding-right: 50px;
-        vertical-align: top;
-        /* color: #fff; */
-    }
-    footer .wrapper .right-section ul.menu > li > ul {
-        padding-top: 20px;
-        list-style: none;
-    }
-    footer .wrapper .right-section ul.menu > li > a {
-        /* position: relative; */
-        font-size: 16px;
-        font-weight: 300;
-        /* z-index: 1; */
-    }
-    footer .wrapper .right-section li a {
-        color: #fff;
-        text-decoration: none;
-    }
-    footer .wrapper .right-section ul.menu > li > ul li a {
-        /* display: block; */
-        font-size: 13px;
-        color: rgba(255, 255, 255, 0.5);
-        font-weight: 200;
-        line-height: 24px;
-        /* transition: color 0.3s ease; */
-    }
-    footer .wrapper .right-section ul.menu > li > ul li a:hover {
-        color: #ffffff;
-    }
-    footer .wrapper .right-section .family_site {
-        margin-top: 20px;
-        text-align: right;
-    }
-    footer .wrapper .right-section select.passionstudy_site {
-        /* position: relative; */
-        width: 200px;
-        height: 35px;
-        padding: 0 15px;
-        background-color: transparent;
-        /* box-shadow: none !important; */
-        /* border-radius: 0; */
-        font-size: 13px;
-        color: #ffffff;
-        /* text-align: left; */
-        /* line-height: 35px; */
-    }
-    footer .wrapper .right-section select.passionstudy_site option {
-        /* width: 200px; */
-        /* height: 35px; */
-        /* font-size: 13px; */
+    section .section-foot-right{
+        text-align: center;
+        position: relative;
+        left: 60px;
+    }   
+    section .section-foot-left h2, section .section-foot-right h2{
         color: #202020;
-        /* line-height: 35px; */
+        margin: 25px 0 25px;
+    }
+    section .section-foot-left p, section .section-foot-right p{
+        margin: 0px 0 30px;
     }
   </style>
 </head>
@@ -346,11 +168,11 @@
                         <li class="main">
                             <a href=""><span>메인</span></a>
                         </li>
-                        <li class="roomlist on">
-                            <a href=""><span>시설소개</span></a>
+                        <li class="roomlist">
+                            <a href="시설소개_라운지.html"><span>시설소개</span></a>
                         </li>
-                        <li class="guide">
-                            <a href=""><span>이용안내</span></a>
+                        <li class="guide on">
+                            <a href="이용안내_카페.html"><span>이용안내</span></a>
                         </li>
                         <li class="reserve">
                             <a href=""><span>예약/결제</span></a>
@@ -374,7 +196,7 @@
     
     <div class="cont_header">
         <div class="cont_wrapper">
-            <h1>시설소개</h1>
+            <h1>이용안내</h1>
         </div>
     </div>
 
@@ -383,19 +205,10 @@
         <div class="tabtype_wrapper">
             <ul>
                 <li>
-                    <a href=""><button class="btn1">라운지</button></a>
+                    <a href="이용안내_카페.html"><button class="btn1">스터디카페 이용안내</button></a>
                 </li>
                 <li>
-                    <a href=""><button class="btn2">3-5인실</button></a>
-                </li>
-                <li>
-                    <a href=""><button class="btn3">4-6인실</button></a>
-                </li>
-                <li>
-                    <a href=""><button class="btn4 on">6-8인실</button></a>
-                </li>
-                <li>
-                    <a href=""><button class="btn5">12인실</button></a>
+                    <a href="이용안내_카페.html"><button class="btn2 on">스터디룸 이용안내</button></a>
                 </li>
             </ul>
         </div>
@@ -403,94 +216,35 @@
 
 
     <section>
-        <div class="section-left">
-            <div class="title">
-                <span>8인실 ROOM</span>
-            </div>
-            <ul>
-                <li class="people">
-                    <strong>수용인원</strong>
-                    <div class="pre_line">6-8인</div>
-                </li>
-            </ul>
-            <ul>
-                <li class="cost">
-                    <strong>이용금액</strong>
-                    <div class="pre_line">주중 1,300원/1H (9시~19시)
-                        주중 1,500원/1H (19시~22시)
-                        주말 1,700원/1H
-                        최소이용시간 : 2H</div>
-                </li>
-            </ul>
-            <ul>
-                <li class="system">
-                    <strong>시스템</strong>
-                    <div class="pre_line">화이트보드</div>
-                </li>
-            </ul>
+        <div class="section-header">
+            <p>3인실부터~12인실까지 "독립된  모임공간" (회의실, 스터디룸, 강의실,세미나실) 입니다.</p>
         </div>
-        <div class="section-right">
-            <img src="https://i.pinimg.com/originals/ea/1b/17/ea1b17ba839791cf9075f19cb98f08f1.jpg" alt="">
+        <div class="section-body">
+            <img src="https://i.pinimg.com/originals/7e/25/65/7e2565951387291c85127b653e4c9919.jpg" alt="">
         </div>
-
-        <div class="section-left">
-            <div class="title">
-                <span>8인실 ROOM</span>
-            </div>
-            <ul>
-                <li class="people">
-                    <strong>수용인원</strong>
-                    <div class="pre_line">6-8인</div>
-                </li>
-            </ul>
-            <ul>
-                <li class="cost">
-                    <strong>이용금액</strong>
-                    <div class="pre_line">주중 1,300원/1H (9시~19시)
-                        주중 1,500원/1H (19시~22시)
-                        주말 1,700원/1H
-                        최소이용시간 : 2H</div>
-                </li>
-            </ul>
-            <ul>
-                <li class="system">
-                    <strong>시스템</strong>
-                    <div class="pre_line">화이트보드</div>
-                </li>
-            </ul>
+        <div class="section-foot-left">
+            <h2>운영시간</h2>
+            <p>연중무휴  24시간</p>
+            <p>밤 21:00~다음날 오전 10:00 이용은 미리 예약 필수.</p>
+            <p>*심야시간은 예약 없이 당일 방문 이용 불가*</p>
+            <p>[열정 스탭 근무시간]</p>
+            <p>월~금 10:00~22:00</p>
+            <p>토, 일 10:00~21:00</p>
+            <p>스터디룸은 스탭 근무 시간에 미리 예약을 해주셔야 이용 가능합니다.</p>
         </div>
-        <div class="section-right">
-            <img src="https://i.pinimg.com/originals/ea/1b/17/ea1b17ba839791cf9075f19cb98f08f1.jpg" alt="">
-        </div>
-
-        <div class="section-left">
-            <div class="title">
-                <span>8인실 ROOM</span>
-            </div>
-            <ul>
-                <li class="people">
-                    <strong>수용인원</strong>
-                    <div class="pre_line">6-8인</div>
-                </li>
-            </ul>
-            <ul>
-                <li class="cost">
-                    <strong>이용금액</strong>
-                    <div class="pre_line">주중 1,300원/1H (9시~19시)
-                        주중 1,500원/1H (19시~22시)
-                        주말 1,700원/1H
-                        최소이용시간 : 2H</div>
-                </li>
-            </ul>
-            <ul>
-                <li class="system">
-                    <strong>시스템</strong>
-                    <div class="pre_line">화이트보드</div>
-                </li>
-            </ul>
-        </div>
-        <div class="section-right">
-            <img src="https://i.pinimg.com/originals/ea/1b/17/ea1b17ba839791cf9075f19cb98f08f1.jpg" alt="">
+        <div class="section-foot-right">
+            <h2>주의사항</h2>
+            <p>스터디룸은 10:00~21:00 사이에 예약 필수</p>
+            <p>얼음, 믹스커피, 녹차, 둥글레 차 등 티백음료 무료입니다.</p>
+            <p>최소 예약시간은 2시간이며  예약공간이 공실일 경우 10분 전부터 입실 가능합니다. </p>
+            <p>회의, 강의, 스터디, 세미나 모임을 위한 공간입니다. 대화, 토론, 발표 연습,<br>
+                동영상 시청 등 모두 가능하지만 발성연습, 단체리딩, 연기연습,<br>
+                친목모임 등의 큰 소리가 나거나 웃고 박수치며 소리지르는 모임은 이용이 제한됩니다.<br>
+                용도에 맞게 예약해주세요.</p>
+            <p>독립된 공간은 강의, 토론, 면접 연습 등 그룹 모임을 위한 공간으로<br>
+                옆 방이 조용한 모임이면 조용할 수 있지만 옆 방이 다소 큰 소리가 나는 면접 스터디<br>
+                등의 경우 조용히 이용하기는 힘듭니다.<br>
+                조용한 독립 공간을 원하시는 분들은 이 부분 참고하시고 예약해주세요. </p>
         </div>
     </section>
 
