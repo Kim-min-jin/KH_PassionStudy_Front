@@ -44,68 +44,71 @@
   color: #ffffff;
 }
 
-section {
+/*시설소개 부분 cs*/
+
+.passion_facility {
   width: 1000px;
   margin: 0 auto;
 }
-section .section-left {
+.passion_facility > .section-left {
   float: left;
   line-height: 2;
 }
-section .section-left .title span {
+.passion_facility > .section-left .title span {
   font-size: 30px;
   font-weight: 700;
   line-height: 3;
 }
-section .section-left > ul > li strong {
+.passion_facility > .section-left > ul > li strong {
   float: left;
   width: 90px;
 }
-section .section-left > ul > li .pre_line {
+.passion_facility > .section-left > ul > li .pre_line {
   display: inline-block;
   white-space: pre-line;
   color: #928989;
   font-size: 13px;
 }
-section .section-right {
+.passion_facility > .section-right {
   text-align: end;
   margin: 0 0 50px;
 }
-section .section-right img {
+.passion_facility > .section-right img {
   width: 55%;
 }
 
-.notice {
+/* 이용 안내 부분 CS */
+.passion_notice {
   width: 1000px;
   margin: 0 auto;
   color: #928989;
   font-size: 14px;
 }
-.notice .section-header {
+.passion_notice.section-header {
   line-height: 2;
   text-align: center;
   margin: 0 0 50px;
 }
-.notice .section-body img {
+.passion_notice .section-body img {
   width: 100%;
   height: unset;
 }
-.notice .section-foot-left {
+.passion_notice .section-foot-left {
   text-align: center;
   float: left;
   margin: 0px -19px;
 }
-.notice .section-foot-right {
+.passion_notice .section-foot-right {
   text-align: center;
   position: relative;
   left: 60px;
 }
-.notice .section-foot-left h2,
-.notice .section-foot-right h2 {
+.passion_notice .section-foot-left h2,
+.passion_notice .section-foot-right h2 {
   color: #202020;
   margin: 25px 0 25px;
 }
-.notice .section-foot-left p,
-.notice .section-foot-right p {
+.passion_notice .section-foot-left p,
+.passion_notice .section-foot-right p {
   margin: 0px 0 30px;
 }

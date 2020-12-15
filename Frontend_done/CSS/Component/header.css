@@ -1,4 +1,4 @@
-header {
+.PassionStudy_header {
   background: #202020;
   position: relative;
   /* top: 0; */
@@ -9,7 +9,7 @@ header {
   border-bottom: 2px solid #fff;
   z-index: 9;
 }
-header .header_inner {
+.PassionStudy_header > .header_inner {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -17,40 +17,40 @@ header .header_inner {
   margin-top: -2.5px;
   transform: translateX(-50%);
 }
-header .header_inner .logo_img {
+.PassionStudy_header > .header_inner .logo_img {
   /* display: inline-block; */
   /* left: 0; */
   float: left;
   /* cursor: pointer; */
 }
-header .header_inner .logo_img img {
+.PassionStudy_header > .header_inner .logo_img img {
   width: 40px;
   height: 21px;
 }
-header .header_inner .logo_img a {
+.PassionStudy_header > .header_inner .logo_img a {
   font-size: 33px;
   color: #fff;
   text-decoration: none;
   line-height: 0;
   cursor: pointer;
 }
-header .header_inner .menu_wrapper {
+.PassionStudy_header > .header_inner .menu_wrapper {
   float: right;
 }
 ul {
   list-style: none;
 }
-header #menu li {
+.PassionStudy_header #PassionStudy_header_menu li {
   float: left;
   width: 110px;
   text-align: center;
 }
-header #menu li a {
+.PassionStudy_header #PassionStudy_header_menu li a {
   font-size: 16px;
   color: #fff;
   text-decoration: none;
 }
-header .floting_bar {
+.PassionStudy_header .floting_bar {
   position: absolute;
   top: 43px;
   width: 110px;
@@ -58,10 +58,10 @@ header .floting_bar {
   background: #ffcc00;
   transition: 0.5s all;
 }
-header #menu li.on a {
+.PassionStudy_header #PassionStudy_header_menu li.on a {
   color: #ffcc00;
 }
-header #menu li:hover a {
+.PassionStudy_header #PassionStudy_header_menu li:hover a {
   font-size: 1.1em;
   font-weight: bold;
   color: #ffcc00;
