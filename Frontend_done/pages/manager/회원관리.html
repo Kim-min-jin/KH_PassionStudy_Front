@@ -81,6 +81,8 @@
 
     <!-- 회원 관리와 관련된 박스-->
 
+    <!-- 회원 검색과 관련된 박스-->
+
     <div class="membersearch-box">
       <form class="membersearch">
         <label for="membersearch--input" class="membersearch--label"
@@ -93,8 +95,23 @@
     </div>
 
     <div class="membersearch__member_box">
-      <div class="membersearch__member_detail_box"></div>
+      <!-- 검색이 완료되면 표시 되는 부분-->
+      <div class="membersearch__member_detail_box">
+        <div class="member-icon-box">🔥</div>
+        <!-- 블랙리스트면 '💀'로 표시-->
+        <h1 class="member_detail_name">이름 : 김떡만</h1>
+        <hr />
+        <h1 class="member_detail_point">Coupon: 2개</h1>
+        <hr />
+        <h1 class="member_detail_coupon">포인트 : 3000p</h1>
+        <hr />
+      </div>
+
+      <!-- 관리자가 설정하기 위한 부분-->
+
       <div class="membersearch__member_edit_box">
+        <!-- 비밀번호 변경 설정 -->
+
         <div class="input-group mb-3">
           <input
             type="text"
@@ -103,6 +120,7 @@
             aria-label="Recipient's username"
             aria-describedby="button-addon2"
           />
+
           <div class="input-group-append">
             <button
               class="btn btn-outline-secondary"
@@ -113,6 +131,9 @@
             </button>
           </div>
         </div>
+
+        <!-- 포인트 설정 -->
+
         <div class="input-group mb-3">
           <input
             type="text"
@@ -131,6 +152,9 @@
             </button>
           </div>
         </div>
+
+        <!-- 회원 쿠폰 설정 -->
+
         <div class="input-group mb-3">
           <input
             type="text"
@@ -149,6 +173,9 @@
             </button>
           </div>
         </div>
+
+        <!-- 블랙리스트 설정 -->
+
         <div class="input-group mb-3">
           <input
             type="text"
