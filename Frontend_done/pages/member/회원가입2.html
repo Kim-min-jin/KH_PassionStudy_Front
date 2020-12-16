@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>간편가입 아이디</title>
+    <link rel="stylesheet" href="../../CSS/styles.css" />
+    <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+
+        .signup_wrap_id {
+            overflow: hidden;
+            max-width: 400px;
+            margin: 0 auto 200px;
+        }
+
+        .form_wrap_id h2 {
+            margin-bottom: 34px;
+            font-weight: 600;
+            font-size: 44px;
+            text-align: center;
+            display: block;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .step_wrap_id {
+            position: relative;
+        }
+
+        .step_wrap_id i {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 35%;
+            height: 4px;
+            background: #000;
+            transition: width .2s;
+            z-index: 1;
+        }
+
+        .signup_step1 {
+            display: flex;
+        }
+
+        .signup_step1>li, .step_wrap {
+            position: relative;
+        }
+
+        .signup_step1>li {
+            -webkit-box-flex: 1;
+            flex: 1 0 100%;
+            padding-top: 18px;
+            border-top: 4px solid #f4f4f4;
+        }
+
+        .signup_step1 h3 {
+            margin-bottom: 20px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        .blind {
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 1px;
+            font-size: 1px;
+            line-height: 100px;
+            white-space: nowrap;
+        }
+
+        .signup_step1 .field {
+            overflow: hidden;
+            position: relative;
+        }
+            
+        .signup_step1 .inpbx_id {
+            margin-bottom: 40px;
+        }
+
+        .inpbx_id, .inpbx_id input {
+            vertical-align: top;
+            box-sizing: border-box;
+        }
+
+        .inpbx_id {
+            position: relative;
+            height: 48px;
+            background: #fff;
+        }
+
+        .signup_step1 .inpbx_id input {
+            font-weight: 500;
+            color: #000;
+            border-radius: 2px;
+        }
+
+
+
+        .inpbx_id input {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 0 14px;
+            font-size: 14px;
+            color: #1a1a1a;
+            border: 0;
+            background: transparent;
+            outline: none;
+            border: 1px solid #d4d4d4;
+        }
+
+        .inpbx_id, .inpbx_id input {
+            vertical-align: top;
+            box-sizing: border-box;
+        }
+
+        .signup_step1 .btn_next_step {
+            border-radius: 2px;
+            font-weight: 500;
+            width: 100%;
+            height: 48px;
+            background: #c4c4c4;
+            font-size: 14px;
+            color: #fff;
+            outline: none;
+        }
+
+        button {
+          border: 0;
+          background: transparent;
+          cursor: pointer;
+          appearance: button;
+          text-rendering: auto;
+          letter-spacing: normal;
+          word-spacing: normal;
+          text-transform: none;
+          text-indent: 0px;
+          text-shadow: none;
+          display: inline-block;
+          text-align: center;
+          align-items: flex-start;
+          box-sizing: border-box;
+          font: 400 13.333px Arial;
+      }
+
+
+
+    </style>
+    </head>
+    <body>
+        <div class="signup_wrap_id">
+            <form class="form_wrap_id">
+                <h2>간편가입</h2>
+                <div class="step_wrap_id">
+                    <i class="step1_id"></i>
+                    <ul class="signup_step1">
+                        <li>
+                            <h3>
+                                로그인에 사용할
+                                <br/>
+                                아이디를 입력해주세요.
+                            </h3>
+                            <div class="signup_step_box">
+                                <label for="userid" class="blind signup_step_box">아이디 (이메일) 입력</label>
+                                <div class="field signup_step_box">
+                                    <div class="inpbx_id">
+                                        <input type="text" id="userid" placeholder="아이디 (이메일) 입력" formcontrolname="userid"
+                                                autocorrect="off" autocapitalize="none" class="field_signupbox_id"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn_next_step">다음</button>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
