@@ -41,15 +41,69 @@
                 min-width: 1000px;
                
             }
-            .btn btn-primary {
-                size: 10px;
-                background-color:black;
-                color:white;
-            }
+          
             #buttons {
-                padding-left:730px;
-                padding-bottom:20px;
+                padding-left:600px;
+                padding-bottom:10px;
             }
+            #search-btn {
+                background-color: black;
+                color:white;
+                padding-inline: 10px;
+                border-radius: 3px;              
+            }
+            #search-btn:hover{
+                border: 1px solid #ffcc00;
+                background-color: #ffcc00;
+                color: white;
+            }
+            .write_btn {
+                width: 90px;
+                display: inline-block;
+                line-height: 30px;
+                text-align: center;
+                background-color: black;
+                border: 1px solid black;
+                color:#fff;
+                margin-left: 2px;
+                font-size: 13px;
+                border-radius: 3px;
+            }
+            .write_btn:hover{
+                border: 1px solid #ffcc00;
+                background-color: #ffcc00;
+                color: white;
+            }
+            .remove_btn {
+                width: 70px;
+                display: inline-block;
+                line-height: 30px;
+                text-align: center;
+                background-color: #d3d3d3;
+                border: 1px solid #d3d3d3;
+                color:#fff;
+                margin-left: 2px;
+                font-size: 13px;
+                border-radius: 3px;
+            }
+            .search-btn {
+                width: 50px;
+                display: inline-block;
+                line-height: 30px;
+                text-align: center;
+                background-color: black;
+                border: 1px solid black;
+                color:#fff;
+                margin-left: 2px;
+                font-size: 13px;
+                border-radius: 3px;
+            }
+            .search-btn:hover{
+                border: 1px solid #ffcc00;
+                background-color: #ffcc00;
+                color: white;
+            }
+
             </style>
 
     </head>
@@ -66,32 +120,42 @@
             </div>
             <div id='main_right' style="border:2px solid red; height:400px;">
                 <div id='buttons'>
-                    <button type="button" class="btn btn-primary btn-xs">글쓰기</button>
-                    <button type="button" class="btn btn-default btn-xs">삭제</button>
+                    <button type="button" class="write_btn yb" style="float:none;">글쓰기</button>
+                    <button type="button" class="remove_btn yb" style="float:none;">삭제</button>
+                    <select id="frequent_asked_select" name="Frequent_asked_select" title="문의선택" class="sel">
+                        <option value="member_inquiry">회원문의</option>
+                        <option value="reservation_inquiry">예약문의</option>
+                        <option value="payment_inquiry">결제문의</option>
+                        <option value="product_inquiry">상품문의</option>
+                        <option value="cancel_inquiry">취소문의</option>
+                    </select>
                 </div>
+                <div id="inquiry-select">
+                    
+                </div>    
                 <table class='table' width='50%'>
                     <th><input type="checkbox" class="checkbox"></th>
-                    <th>번호</th>
+                    <th>카테고리</th>
                     <th>제목</th>
-                    <th>작성자</th>
-                    <th>작성일</th>
-                    <th>조회</th>
+                    <th></th>
                         <tr><!-- 첫번째 줄 시작-->
                             <td><input type="checkbox" class="checkbox"></td>
-                            <td>공지</td>
-                            <td>개인정보처리방침 개정 내용 사전안내</td>
-                            <td>관리자</td>
-                            <td>2020-10-02</td>
-                            <td>1000</td>
+                            <td>회원문의</td>
+                            <td>아이디와 비밀번호는 어떻게 찾을 수 있나요?</td>
+                            <td></td>
                         </tr><!-- 첫번째 줄 끝-->
                         <tr><!-- 두번째 줄 시작-->
-                            <td><input type="checkbox" class="checkkbox"></td>
-                            <td>공지</td>
-                            <td>댓글 이벤트 당첨자 공지 </td>
-                            <td>관리자</td>
-                            <td>2020-10-03</td>
-                            <td>800</td>
-                        </tr><!-- 두번째 줄 끝-->      
+                            <td><input type="checkbox" class="checkbox"></td>
+                            <td>서비스 이용 및 기타</td>
+                            <td>결제내역을 어떻게 확인하나요?</td>
+                            <td></td>
+                        </tr><!-- 두번째 줄 끝-->
+                        <tr><!-- 세번째 줄 시작-->
+                            <td><input type="checkbox" class="checkbox"></td>
+                            <td>쿠폰/적립금</td>
+                            <td>적립금은 유효기간이 있나요?</td>
+                            <td></td>
+                        </tr><!-- 두번째 줄 끝-->       
                             
                   </table>
                   <div class='search'>
@@ -111,17 +175,19 @@
                                 <label>내용      </label>
                             </td>      
                           </td>
-                          <td>
+                          <td id="td-empty">
 
                           </td>
                           <td class='search_bar'>
-                              <input type='text' class='input_text' />
-                              <button type='submit' class='sch_smit'>검색
+                                <div id="search-form">
+                                    <input type="text" id="search-box">
+                                    <button type="button" class="search-btn yb" style="float:none;">검색</button>
+                                </div>
                           </td>
                         </tr>
                       </tbody>
                     </table>
-                  </div>
+                </div>
             </div>
         </div>
     </body>
