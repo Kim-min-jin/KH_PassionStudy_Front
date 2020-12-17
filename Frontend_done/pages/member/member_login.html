@@ -1,4 +1,4 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="../../CSS/styles.css" />
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <style>
-
       .login_wrap {
         max-width: 400px;
         margin: 0 auto 50px;
@@ -18,7 +18,7 @@
 
       .member_title {
         margin-bottom: 20px;
-        color:black;
+        color: black;
         font-size: 44px;
         font-weight: 500;
         text-align: center;
@@ -46,7 +46,8 @@
         margin-bottom: 8px;
       }
 
-      .inputbox, .inputbox input {
+      .inputbox,
+      .inputbox input {
         vertical-align: top;
         box-sizing: border-box;
       }
@@ -57,7 +58,8 @@
         background: #fff;
       }
 
-      .inputbox input[type=password], .inputbox input[type=text] {
+      .inputbox input[type="password"],
+      .inputbox input[type="text"] {
         border: 1px solid #d4d4d4;
         border-radius: 2px;
       }
@@ -73,7 +75,8 @@
         outline: none;
       }
 
-      input, textarea {
+      input,
+      textarea {
         appearance: none;
       }
 
@@ -88,7 +91,6 @@
         line-height: 56px;
         font-weight: 600;
         border: 1px solid #000;
-
       }
 
       .btn_login {
@@ -98,7 +100,8 @@
         cursor: pointer;
       }
 
-      .btn_login, .inputbox textaread {
+      .btn_login,
+      .inputbox textaread {
         outline: none;
         vertical-align: top;
         box-sizing: border-box;
@@ -127,14 +130,13 @@
         margin-right: -16px;
       }
 
-
       .login_wrap .member_go {
         display: block;
         height: 56px;
         border: 1px solid #5d5d5d;
         border-radius: 28px;
+        background-color: rgb(16, 166, 177);
         box-sizing: border-box;
-        background-color: #c4c4c4;
         font-weight: 600;
         font-size: 14px;
         color: #1d1d1d;
@@ -154,7 +156,9 @@
         padding: 20px 0;
       }
 
-      li, ol, ul {
+      li,
+      ol,
+      ul {
         list-style: none;
       }
 
@@ -170,10 +174,6 @@
         font-size: 12px;
         color: #5d5d5d;
       }
-
-
-
-
     </style>
   </head>
   <body>
@@ -182,12 +182,24 @@
       <div class="login_box">
         <form class="login_main">
           <div class="inputbox">
-            <input type="text" id="userid" formcontrolname="userid" placeholder="아이디 (이메일)" 
-                  autocorrect="off" autocapitalize="none" class="login_main"/>
+            <input
+              type="text"
+              id="userid"
+              formcontrolname="userid"
+              placeholder="아이디 (이메일)"
+              autocorrect="off"
+              autocapitalize="none"
+              class="login_main"
+            />
           </div>
           <div class="inputbox">
-            <input type="password" id="userpwd" formcontrolname="userpwd" placeholder="비밀번호"
-                  class="login_main"/>
+            <input
+              type="password"
+              id="userpwd"
+              formcontrolname="userpwd"
+              placeholder="비밀번호"
+              class="login_main"
+            />
           </div>
           <button type="submit" class="btn_login">로그인하기</button>
         </form>
@@ -196,9 +208,16 @@
           <h3>다른 방법으로 로그인하기</h3>
           <div class="sns_btn">
             <ruler-social-login-naver titletext="네이버로 로그인하기">
-              <div id="naverIdLogin" style="display: none;" class="image-inserted">
+              <div
+                id="naverIdLogin"
+                style="display: none"
+                class="image-inserted"
+              >
                 <a id="naverIdLogin_loginButton" href="#">
-                  <img src="https://static.nid.naver.com/oauth/big w.PNG?version=js-2.0.0" height="50">
+                  <img
+                    src="https://static.nid.naver.com/oauth/big w.PNG?version=js-2.0.0"
+                    height="50"
+                  />
                 </a>
               </div>
               <div class="container image-inserted">
@@ -212,13 +231,14 @@
             </ruler-sicial-login-kakao>
           </div>
         </div>
-        <a href="./회원가입1.html" class="member_go">계정이 없으신가요? 간편가입하기</a>
+        <a href="./회원가입1.html" class="member_go"
+          >계정이 없으신가요? 간편가입하기</a
+        >
         <ul class="linkarea">
           <li><a href="./find?findType=id">아이디 (이메일) 찾기</a></li>
           <li><a href="./find?findType=password">비밀번호 찾기</a></li>
         </ul>
       </div>
-
     </div>
   </body>
 </html>

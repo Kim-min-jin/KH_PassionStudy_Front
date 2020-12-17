@@ -3,21 +3,22 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>간편가입 정보</title>
+    <title>간편가입 비밀번호</title>
     <link rel="stylesheet" href="../../CSS/styles.css" />
     <link
         rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <style>
-        .signup_wrap_nm {
+
+        .signup_wrap_pwd {
             overflow: hidden;
             max-width: 400px;
             margin: 0 auto 200px;
             display: block;
         }
 
-        .signup_wrap_nm h2 {
+        .signup_wrap_pwd h2 {
             margin-bottom: 34px;
             font-weight: 600;
             font-size: 44px;
@@ -28,13 +29,13 @@
             margin-inline-start: 0px;
             margin-inline-end: 0px;
         }
-
+        
         .step_wrap {
             position: relative;
         }
 
-        .step_wrap .step2_id {
-            width: 50%;
+        .step_wrap .step3_pwd {
+            width: 65%;
         }
 
         .step_wrap i {
@@ -47,7 +48,7 @@
             z-index: 1;
         }
 
-        .signup_wrap_nm .signup_step {
+        .signup_wrap_pwd .signup_step {
             display: flex;
         }
 
@@ -77,8 +78,13 @@
             line-height: 100px;
             white-space: nowrap;
         }
+        
+        .signup_wrap_pwd .signup_step .field_signup_wrap_pwd {
+            overflow: hidden;
+            position: relative;
+        }
 
-        .signup_step .inpbx {
+        .signup_wrap_pwd .signup_step .inpbx {
             margin-bottom: 40px;
         }
 
@@ -105,16 +111,57 @@
             outline: none;
         }
 
-        .signup_step .inpbx input {
+        .signup_wrap_pwd .signup_step .inpbx input {
             font-weight: 500;
             color: #000;
         }
 
-        .signup_step .inpbx input {
+        .signup_wrap_pwd .signup_step .inpbx input {
             border-radius: 2px;
         }
 
-        .signup_step .btn_next {
+        .signup_wrap_pwd .signup_step .field_signup_wrap_pwd {
+            overflow: hidden;
+            position: relative;
+        }
+        .signup_wrap_pwd .signup_step .field_signup_wrap_pwd .field_vali {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 40px;
+            color: #ff4800;
+            font-size: 12px;
+            line-height: 40px;
+        }
+
+        .signup_wrap_pwd .signup_step p{
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .signup_wrap_pwd .signup_step .field_signup_wrap_pwd .field_vali span {
+            display: inline;
+            padding-right:  28px;
+            color: #c4c4c4;
+        }
+
+        <!--span after-->
+        .signup_wrap_pwd .signup_step .field_signup_wrap_pwd .field_vali span {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            width: 10px;
+            height: 6px;
+            border-bottom: 1px solid #c4c4c4;
+            border-left: 1px solid #c4c4c4;
+            transform: rotate(-45deg);
+        }
+
+        .signup_wrap_pwd .btn_next {
             margin-top: 40px;
             border-radius: 2px;
             font-weight: 500;
@@ -150,34 +197,43 @@
         padding-inline-start: 0px;
         }
 
-
     </style>
     </head>
     <body>
-        <div class="signup_wrap_nm">
-            <form class="form_wrap_nm">
+        <div class="signup_wrap_pwd">
+            <form class="form_wrap_pwd">
                 <h2 class="title_signup">간편가입</h2>
                 <div class="step_wrap">
-                    <i class="step2_id"></i>
+                    <i class="step3_pwd"></i>
                     <ul class="signup_step">
                         <li>
                             <h3>
-                                이름과 연락처를
+                                로그인에 사용할
                                 <br/>
-                                입력해주세요.
+                                비밀번호를 입력해주세요.
                             </h3>
                             <div>
-                                <label for="usernm" class="blind signup_wrap_nm"></label>
-                                <div class="inpbx">
-                                    <input rulerfocuson type="text" id="usernm" placeholder="이름" formcontrolname="usernm"/>
-                                    <!---->
+                                <label for="user_password" class="blind signup_wrap_pwd"></label>
+                                <div class="field_signup_wrap_pwd">
+                                    <div class="inpbx">
+                                        <input rulerfocuson type="password" id="user_password" placeholder="비밀번호 입력" formcontrolname="user_password"/>
+                                        <!---->
+                                    </div>
+                                    <p class="field_vali">
+                                        <span class="signup_wrap_pwd">영문포함</span>
+                                        <span class="signup_wrap_pwd">숫자포함</span>
+                                        <span class="signup_wrap_pwd">8~20자 이내</span>
+                                    </p>
                                 </div>
-                            </div>
-                            <div>
-                                <label for="userphnumber" class="blind signup_wrap_nm"></label>
-                                <div class="inpbx">
-                                    <input rulerfocuson type="text" id="userphnumber" placeholder="연락처 (전화번호)" formcontrolname="userphnumber"/>
-                                    <!---->
+                                <label for="confirm_password" class="blind signup_wrap_pwd"></label>
+                                <div class="field_signup_wrap_pwd">
+                                    <div class="inpbx">
+                                        <input rulerfocuson type="password" id="confirm_password" placeholder="비밀번호 확인" formcontrolname="confirm_password"/>
+                                        <!---->
+                                    </div>
+                                    <p class="field_vali">
+                                        <span class="signup_wrap_pwd">비밀번호 일치</span>
+                                    </p>
                                 </div>
                             </div>
                             <button type="button" class="btn_next">다음</button>

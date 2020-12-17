@@ -3,21 +3,20 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>간편가입 정보</title>
+    <title>간편가입 혜택</title>
     <link rel="stylesheet" href="../../CSS/styles.css" />
     <link
         rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <style>
-        .signup_wrap_nm {
+        .signup_wrap_event {
             overflow: hidden;
             max-width: 400px;
             margin: 0 auto 200px;
-            display: block;
         }
 
-        .signup_wrap_nm h2 {
+        .signup_wrap_event h2 {
             margin-bottom: 34px;
             font-weight: 600;
             font-size: 44px;
@@ -33,8 +32,8 @@
             position: relative;
         }
 
-        .step_wrap .step2_id {
-            width: 50%;
+        .step_wrap .step4_event {
+            width: 80%
         }
 
         .step_wrap i {
@@ -47,7 +46,7 @@
             z-index: 1;
         }
 
-        .signup_wrap_nm .signup_step {
+        .signup_wrap_event .signup_step {
             display: flex;
         }
 
@@ -59,63 +58,45 @@
             border-top: 4px solid #f4f4f4;
         }
 
-        .signup_step h3 {
-            margin-bottom: 20px;
-            font-weight: 500;
-            font-size: 20px;
+        .verify_info {
+            text-align: center;
+        }
+
+        .verify_info h3 {
+            margin: 20px 0 32px;
+            font-weight: 600;
+            font-size: 36px;
             line-height: 28px;
         }
 
-        .blind {
-            overflow: hidden;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 1px;
-            height: 1px;
-            font-size: 1px;
-            line-height: 100px;
-            white-space: nowrap;
-        }
-
-        .signup_step .inpbx {
-            margin-bottom: 40px;
-        }
-
-        .inpbx, .inpbx input {
-            vertical-align: top;
-            box-sizing: border-box;
-        }
-
-        .inpbx {
-            position: relative;
-            height: 48px;
-            background: #fff;
-            
-        }
-
-        .inpbx input {
+        .verify_info h3 span {
             display: block;
-            width: 100%;
-            height: 100%;
-            padding: 0 14px;
-            font-size: 14px;
-            background: transparent;
+            font-weight: 300;
+        }
+
+        .verify_info ul {
+            margin: 0 auto 30px 72px;
+            padding-left: 24px;
+            text-align: left;
+        }
+
+        .verify_info li {
+            position: relative;
+            padding: 10px 0;
+            list-style: square; 
+        }
+
+        .verify_info .btn_join_next {
+            display: block;
+            margin-bottom: 8px;
+            background: #fff;
             border: 1px solid #d4d4d4;
-            outline: none;
-        }
-
-        .signup_step .inpbx input {
-            font-weight: 500;
-            color: #000;
-        }
-
-        .signup_step .inpbx input {
-            border-radius: 2px;
+            color: #5d5d5d;
+            box-sizing: border-box;
+            line-height: 48px;
         }
 
         .signup_step .btn_next {
-            margin-top: 40px;
             border-radius: 2px;
             font-weight: 500;
             width: 100%;
@@ -144,47 +125,39 @@
           font: 400 13.333px Arial;
       }
 
-
-      ul{
-        list-style:none;
-        padding-inline-start: 0px;
-        }
-
-
     </style>
-    </head>
+    </head>    
     <body>
-        <div class="signup_wrap_nm">
-            <form class="form_wrap_nm">
+        <div class="signup_wrap_event">
+            <form class="form_wrap_event">
                 <h2 class="title_signup">간편가입</h2>
                 <div class="step_wrap">
-                    <i class="step2_id"></i>
+                    <i class="step4_event"></i>
                     <ul class="signup_step">
                         <li>
-                            <h3>
-                                이름과 연락처를
-                                <br/>
-                                입력해주세요.
-                            </h3>
-                            <div>
-                                <label for="usernm" class="blind signup_wrap_nm"></label>
-                                <div class="inpbx">
-                                    <input rulerfocuson type="text" id="usernm" placeholder="이름" formcontrolname="usernm"/>
-                                    <!---->
-                                </div>
+                            <div class="verify_info">
+                                <h3>
+                                    <span class="eventbox_title">추천인 입력하고</span>
+                                    <br/>
+                                    혜택을 받으세요
+                                </h3>
+                                <ul class="signup_event_info">
+                                    <li>
+                                        신규 가입시 추천인 입력하면
+                                        <br/>
+                                        추천자, 추천인 모두에게 1000포인트 지급
+                                    </li>
+                                </ul>
+                                <a href='' class="btn_join_next">혜택 없이 계속 가입하기</a>
+                                <button type="button" class="btn_next on signup_event_info">
+                                    추천인 입력하고 혜택받기
+                                </button>
                             </div>
-                            <div>
-                                <label for="userphnumber" class="blind signup_wrap_nm"></label>
-                                <div class="inpbx">
-                                    <input rulerfocuson type="text" id="userphnumber" placeholder="연락처 (전화번호)" formcontrolname="userphnumber"/>
-                                    <!---->
-                                </div>
-                            </div>
-                            <button type="button" class="btn_next">다음</button>
                         </li>
                     </ul>
                 </div>
             </form>
         </div>
+
     </body>
 </html>

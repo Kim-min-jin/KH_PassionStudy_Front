@@ -1,7 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="../CSS/styles.css" />
+    <link rel="stylesheet" href="./CSS/styles.css" />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -23,17 +25,17 @@
                 <a href="index.html"><span>메인</span></a>
               </li>
               <li class="">
-                <a href="facilities/facilities_rooms.html"
+                <a href="Facilities/시설소개_라운지.html"
                   ><span>시설소개</span></a
                 >
               </li>
               <li class="">
-                <a href="facilities/facilities_extra.html"
+                <a href="Facilities/이용안내_카페.html"
                   ><span>이용안내</span></a
                 >
               </li>
               <li class="">
-                <a href="reservation/reservation.html"
+                <a href="reservation/Reservation.html"
                   ><span>예약/결제</span></a
                 >
               </li>
