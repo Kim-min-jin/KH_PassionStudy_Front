@@ -3,6 +3,7 @@
 @import "Component/header.css";
 @import "Component/footer.css";
 
+
 /* 페이지 별 CSS 나눔 */
 @import "PageStyles/facilities.css"; /* 시설소개와 이용안내*/
 @import "PageStyles/manager.css"; /*관리자 영역*/
