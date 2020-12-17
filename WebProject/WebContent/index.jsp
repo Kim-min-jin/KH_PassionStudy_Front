@@ -1,7 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="./CSS/styles.css" />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -10,26 +12,32 @@
     <title>Welcome Passion StudyCafe~!</title>
   </head>
   <body>
-    <header>
+    <header class="PassionStudy_header">
       <div class="header_inner">
         <div class="logo_img">
           <!-- <img src="https://yt3.ggpht.com/a/AATXAJxe0JQTxF0Apn4-OyQ_wCwQ2mB6OGzZdc7_dpsJCw=s900-c-k-c0x00ffffff-no-rj" onclick="">
 				 --><a href="">🔥 열정 스터디</a>
         </div>
         <div class="menu_wrapper">
-          <nav id="menu">
+          <nav id="PassionStudy_header_menu">
             <ul id="" class="menu menu-main text">
               <li class="">
-                <a href=""><span>메인</span></a>
+                <a href="index.html"><span>메인</span></a>
               </li>
               <li class="">
-                <a href=""><span>시설소개</span></a>
+                <a href="Facilities/시설소개_라운지.html"
+                  ><span>시설소개</span></a
+                >
               </li>
               <li class="">
-                <a href=""><span>이용방법</span></a>
+                <a href="Facilities/이용안내_카페.html"
+                  ><span>이용안내</span></a
+                >
               </li>
               <li class="">
-                <a href=""><span>예약/결제</span></a>
+                <a href="reservation/Reservation.html"
+                  ><span>예약/결제</span></a
+                >
               </li>
               <li class="">
                 <a href=""><span>커뮤니티</span></a>
@@ -46,6 +54,44 @@
       </div>
     </header>
 
+    <main>
+      <div>
+        <h1>sdasdsadasdsadas</h1>
+      </div>
+      <div>
+        <h1>sdasdsadasdsadas</h1>
+      </div>
+      <div>
+        <h1>sdasdsadasdsadas</h1>
+      </div>
+      <div>
+        <h1>sdasdsadasdsadas</h1>
+      </div>
+      <div>
+        <h1>sdasdsadasdsadas</h1>
+      </div>
+      <div>
+        <h1>sdasdsadasdsadas</h1>
+      </div>
+      <div>
+        <h1>sdasdsadasdsadas</h1>
+      </div>
+      <div>
+        <h1>sdasdsadasdsadas</h1>
+      </div>
+      <div>
+        <h1>sdasdsadasdsadas</h1>
+      </div>
+      <div>
+        <h1>sdasdsadasdsadas</h1>
+      </div>
+      <div>
+        <h1>sdasdsadasdsadas</h1>
+      </div>
+      <div>
+        <h1>sdasdsadasdsadas</h1>
+      </div>
+    </main>
 
     <footer class="pc">
       <div class="wrapper">
@@ -82,7 +128,8 @@
             <span class="normal">Address :</span>
             <span class="bold address">
               서울특별시 영등포구 선유동2로 57 이레빌딩(구관) 19F
-              열정스터디</span>
+              열정스터디</span
+            >
           </div>
           <div>
             <p>.</p>
@@ -158,5 +205,4 @@
       </div>
     </footer>
   </body>
-
 </html>

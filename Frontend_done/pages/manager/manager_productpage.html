@@ -3,10 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <title>Welcome Passion StudyCafe~!</title>
-    <link rel="stylesheet" href="../../css/styles.css" />
-    <link rel="stylesheet" href="매니저.css" />
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
+    <link rel="stylesheet" href="../../css/styles.css" />
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
@@ -16,6 +15,7 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
+    <script src="../../JS/menubar.js"></script>
   </head>
 
   <body>
@@ -32,24 +32,26 @@
               <li class="main">
                 <a href="../index.html"><span>메인</span></a>
               </li>
-              <li class="roomlist on">
-                <a href="../Facilities/시설소개_라운지.html"
+              <li class="roomlist">
+                <a href="../Facilities/facility_lounge.html"
                   ><span>시설소개</span></a
                 >
               </li>
               <li class="guide">
-                <a href="../Facilities/이용안내_카페.html"
+                <a href="../Facilities/facility_cafe.html"
                   ><span>이용안내</span></a
                 >
               </li>
               <li class="reserve">
-                <a href=""><span>예약/결제</span></a>
+                <a href="../reservation/reservation.html"
+                  ><span>예약/결제</span></a
+                >
               </li>
               <li class="community">
                 <a href=""><span>커뮤니티</span></a>
               </li>
-              <li class="mypage">
-                <a href="회원관리.html"><span>관리자페이지</span></a>
+              <li class="mypage on">
+                <a href="manager_memberpage.html"><span>관리자페이지</span></a>
                 <!-- 자바스크립트를 통해, 관리자가 로그인일 경우에만 tag를 바꿔줘야하는 부분-->
               </li>
               <li class="login">
@@ -69,110 +71,145 @@
       aria-label="Basic example"
     >
       <button type="button" class="btn btn-secondary btn-lg">
-        <a href="회원관리.html" class="manager-manubar__text">회원 관리</a>
-      </button>
-      <button type="button" class="btn btn-secondary btn-lg">
-        <a href="매출관리.html" class="manager-manubar__text">매출 관리</a>
-      </button>
-      <button type="button" class="btn btn-secondary btn-lg">
-        <a href="상품관리.html" class="manager-manubar__text">상품 관리</a>
-      </button>
-    </div>
-
-    <!-- 회원 관리와 관련된 박스-->
-
-    <div class="membersearch-box">
-      <form class="membersearch">
-        <label for="membersearch--input" class="membersearch--label"
-          >이름 또는 전화번호 4자리</label
+        <a href="manager_memberpage.html" class="manager-manubar__text"
+          >회원 관리</a
         >
-        <br />
-        <input type="search" class="membersearch--input" />
-        <input type="submit" value="검색" />
-      </form>
+      </button>
+      <button type="button" class="btn btn-secondary btn-lg">
+        <a href="manager_salespage.html" class="manager-manubar__text"
+          >매출 관리</a
+        >
+      </button>
+      <button type="button" class="btn btn-secondary btn-lg">
+        <a href="manager_productpage.html" class="manager-manubar__text"
+          >상품 관리</a
+        >
+      </button>
     </div>
 
-    <div class="membersearch__member_box">
-      <div class="membersearch__member_detail_box"></div>
-      <div class="membersearch__member_edit_box">
-        <div class="input-group mb-3">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="비밀번호 변경"
-            aria-label="Recipient's username"
-            aria-describedby="button-addon2"
-          />
-          <div class="input-group-append">
-            <button
-              class="btn btn-outline-secondary"
-              type="button"
-              id="button-addon2"
-            >
-              EDIT
-            </button>
-          </div>
-        </div>
-        <div class="input-group mb-3">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="포인트 변경"
-            aria-label="Recipient's username"
-            aria-describedby="button-addon2"
-          />
-          <div class="input-group-append">
-            <button
-              class="btn btn-outline-secondary"
-              type="button"
-              id="button-addon2"
-            >
-              EDIT
-            </button>
-          </div>
-        </div>
-        <div class="input-group mb-3">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="회원 쿠폰 설정"
-            aria-label="Recipient's username"
-            aria-describedby="button-addon2"
-          />
-          <div class="input-group-append">
-            <button
-              class="btn btn-outline-secondary"
-              type="button"
-              id="button-addon2"
-            >
-              EDIT
-            </button>
-          </div>
-        </div>
-        <div class="input-group mb-3">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="블랙리스트 설정"
-            aria-label="Recipient's username"
-            aria-describedby="button-addon2"
-          />
-          <div class="input-group-append">
-            <button
-              class="btn btn-outline-secondary"
-              type="button"
-              id="button-addon2"
-            >
-              EDIT
-            </button>
-          </div>
-        </div>
-      </div>
+    <!-- 상품관리관련 코드-->
+    <div class="product_title_box">
+       <h1>스터디룸 관리</h1> 
     </div>
+    <div class="product_table_Box">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">번호</th>
+        <th scope="col">스터디룸 명</th>
+        <th scope="col">스터디룸 타입</th>
+        <th scope="col">가격</th>
+        <th scope="col">상태</th>
+        <th scope="col">시간설정</th>
+        <th scope="col">수정</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>타오르는 열정</td>
+        <td>특실 12인실</td>
+        <td>30,000원</td>
+        <td>사용가능</td>
+        <td>AM 10 - PM 12</td>
+<td><button type="button" class="btn btn-dark btn_size_edit">Edit</button></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>열정 만수르 1</td>
+        <td>단체실 8인실</td>
+        <td>22,000원</td>
+        <td>사용가능</td>
+        <td>AM 10 - PM 12</td>
+        <td><button type="button" class="btn btn-dark btn_size_edit">Edit</button></td>
 
-    <!-- 끝나는 부분 -->
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>열정 만수르 2</td>
+        <td>단체실 8인실</td>
+        <td>22,000원</td>
+        <td>사용가능</td>
+        <td>AM 10 - PM 12</td>
+        <td><button type="button" class="btn btn-dark btn_size_edit">Edit</button></td>
 
-    <footer class="pc">
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>열정과다 1</td>
+        <td>일반실 6인실</td>
+        <td>16,000원</td>
+        <td>사용가능</td>
+        <td>AM 10 - PM 12</td>
+        <td><button type="button" class="btn btn-dark btn_size_edit">Edit</button></td>
+
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>열정과다 2</td>
+        <td>일반실 6인실</td>
+        <td>16,000원</td>
+        <td>사용가능</td>
+        <td>AM 10 - PM 12</td>
+        <td><button type="button" class="btn btn-dark btn_size_edit">Edit</button></td>
+
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td>열정과다 3</td>
+        <td>일반실 6인실</td>
+        <td>16,000원</td>
+        <td>사용가능</td>
+        <td>AM 10 - PM 12</td>
+        <td><button type="button" class="btn btn-dark btn_size_edit">Edit</button></td>
+
+      </tr>
+      <tr>
+        <th scope="row">7</th>
+        <td>개인실 1</td>
+        <td>개인실 1인실</td>
+        <td>10,000원</td>
+        <td>사용가능</td>
+        <td>AM 10 - PM 12</td>
+        <td><button type="button" class="btn btn-dark btn_size_edit">Edit</button></td>
+
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <td>개인실 2</td>
+        <td>개인실 1인실</td>
+        <td>10,000원</td>
+        <td>사용가능</td>
+        <td>AM 10 - PM 12</td>
+        <td><button type="button" class="btn btn-dark btn_size_edit">Edit</button></td>
+
+      </tr>      <tr>
+        <th scope="row">9</th>
+        <td>개인실 3</td>
+        <td>개인실 1인실</td>
+        <td>10,000원</td>
+        <td>사용가능</td>
+        <td>AM 10 - PM 12</td>
+        <td><button type="button" class="btn btn-dark btn_size_edit">Edit</button></td>
+
+      </tr>      <tr>
+        <th scope="row">10</th>
+        <td>개인실 4</td>
+        <td>개인실 1인실</td>
+        <td>10,000원</td>
+        <td>사용가능</td>
+        <td>AM 10 - PM 12</td>
+        <td><button type="button" class="btn btn-dark btn_size_edit">Edit</button></td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+  
+       <!-- 끝나는 부분 -->
+
+
+       <footer class="pc">
       <div class="wrapper">
         <div class="left-section">
           <div>
