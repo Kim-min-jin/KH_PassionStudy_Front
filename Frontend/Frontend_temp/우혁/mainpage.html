@@ -17,6 +17,10 @@
             height: 350px;
             width: 600px;
         }
+        .mainSideMenu img{
+            height: 50px;
+            width: 50px;
+        }
         .mainExplanations{
             box-sizing: border-box;
             float: left;
@@ -26,12 +30,16 @@
             border-left: 1px solid gray;
             border-right: 1px solid gray;
         }
-        
         .mainFloatLeft{
             float: left;
         }
         .mainFloatRight{
             float: right;
+        }
+
+        .imgFullDiv img{
+            width: 100%;
+            height: 350px;
         }
 
         #swipeImage{
@@ -43,7 +51,7 @@
             position:fixed; 
             width:175px; 
             display:inline-block; 
-            right:0px; /* 창에서 오른쪽 길이 */ 
+            left:93%; /* 창에서 오른쪽 길이 */ 
             top:50%; /* 창에서 위에서 부터의 높이 */ 
             background-color: 
             transparent; margin:0; 
@@ -55,8 +63,8 @@
 </head>
 <body>
     <div id='mainpage'>
-        <div id='swipeImage' class='mainPaddingBottom'>
-            <img src="http://placehold.it/1200x300" />
+        <div id='swipeImage' class='mainPaddingBottom imgFullDiv'>
+            <img src="https://post-phinf.pstatic.net/MjAxODAzMDhfMjU0/MDAxNTIwNDkzNjU0MzY5.vvQxr_1yhy_VLD2iuaKrDby-YHmBxeum7ObPFCIe8MAg.6vh9mDuY3tIltj1tOiEQkALLnMlA7-wXWHd636mSG0Ig.PNG/4.png?type=w1200" />
         </div>
         <div id='showMainContainer' class='mainPaddingBottom'>
             <div id='mainInterior' class='mainContainer'>
@@ -68,13 +76,13 @@
                     <p>클래식한 인테리어와 자유로운 분위기를 경험해보세요</p>
                     <a href=''>바로가기></a>
                 </div>
-                <div id='mainInteriorImg' class='mainContainerContents mainFloatRight'>
-                    <img src="http://placehold.it/600x350" />
+                <div id='mainInteriorImg' class='mainContainerContents mainFloatRight imgFullDiv'>
+                    <img src="https://img-sumaiweb.com/wp-content/uploads/2015/10/shutterstock_305711921-640x427.jpg" />
                 </div>
             </div>
             <div id='mainService' class='mainContainer'>
-                <div id='mainServiceImg' class='mainContainerContents mainFloatLeft'>
-                <img src="http://placehold.it/600x350" />
+                <div id='mainServiceImg' class='mainContainerContents mainFloatLeft imgFullDiv'>
+                <img src="https://img.maisonkorea.com/2017/08/msk_598022b7d5cb0-768x512.jpg" />
                 </div>
                 <div id='mainServiceChar' class='mainContainerContents mainFloatRight'>
                     <h3>INTERIOR</h3>
@@ -128,10 +136,10 @@
     </div>
     <div id='sideSelectMenu'>
         <ul>
-            <li><a href=''><img src="http://placehold.it/50x50" /></a></li>
-            <li><a href=''><img src="http://placehold.it/50x50" /></a></li>
-            <li><a href=''><img src="http://placehold.it/50x50" /></a></li>
-            <li><a href=''><img src="http://placehold.it/50x50" /></a></li>
+            <li><a href='' class='mainSideMenu'><img src="https://www.flaticon.com/svg/static/icons/svg/2948/2948239.svg" /></a></li>
+            <li><a href='' class='mainSideMenu'><img src="https://www.flaticon.com/svg/static/icons/svg/597/597177.svg" /></a></li>
+            <li><a href='' class='mainSideMenu'><img src="https://www.flaticon.com/svg/static/icons/svg/2950/2950657.svg" /></a></li>
+            <li><a href='' class='mainSideMenu'><img src="https://www.flaticon.com/svg/static/icons/svg/992/992703.svg" /></a></li>
         </ul>
     </div>
 </body>
