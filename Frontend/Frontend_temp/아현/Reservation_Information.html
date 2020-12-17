@@ -115,29 +115,140 @@
             background-color: #202020;
             color: #ffffff;
         }
-      
-        section .container {
-          width: 1200px;
-          height: 800px;
-          margin: 0 120px 0 150px; 
+
+        /* 공통 */
+        .section {
+          width: 1000px;
+          margin: 0 auto;
         }
-        section .container .container_room {
-          width: 1200px;
-          height: 160px;
-          border: 1px solid goldenrod;
-          padding: 0 150px 0 150px;
+        .container {
+          padding: 0 25px;
+          margin: 50px 0;
         }
-        section .container .container_room_img {
-          width: 1200px;
-          height: 400px;
-          border: 1px solid indianred;
-          padding: 0 150px 0 150px;
+        .line {
+          border: 1px solid;
         }
-        section .container .container_room_button{
-          width: 1200px;
-          height: 160px;
-          border: 1px solid steelblue ;
-          padding: 0 150px 0 150px;
+
+        /* 예약 공간 */
+        .reservation_space_title {
+          padding: 10px;
+        }
+        .room_img {
+          padding: 10px;
+        }
+        .room_title,
+        .room_introduce,
+        .room_item {
+          background-color: #FBFBEF;
+          padding: 10px;
+        }
+        .room_title .room_person_number {
+          text-align: left;
+        }
+        .room_title .room_time_price {
+          text-align: right;
+        } 
+        .room_introduce {
+          font-size: 15px;
+        }
+        .room_item li {
+          float: left;
+          font-size: 13px;
+        }
+        .room_item_list li {
+          position: relative;
+          display: table;
+          padding: 0 20px 0 45px;
+          height: 36px;
+          margin-top: 10px;
+          color: black;
+        }
+        .room_item_img {
+          position: absolute;
+          left: 0;
+        }
+        .room_item_name {
+          display: table-cell;
+          vertical-align: middle;
+          max-width: 100%;
+        }
+        /* */
+
+        .reservation_information_title,
+        .reseller_information_title {
+          padding: 40px 10px 10px 10px;
+        }
+
+        /* 예약정보 */
+        .reservation_information_content {
+          width: 100%;
+          height: 50px;
+          padding: 10px 20px;
+          margin-top: 10px;
+        }
+        .reservation_information_subtitle {
+          width: 300px;
+          height: 50px;
+          font-weight: bold;
+        }
+        .reservation_information_result {
+          width: 500px;
+          height: 50px;
+          text-align: right;
+        }
+
+
+        /* 예약자정보 */
+        .reseller_information_content {
+          width: 100%;
+          height: 350px;
+          padding-top: 15px;
+        }
+        .reseller_information_subtitle {
+          padding: 0 50px 0 35px;
+          font-weight: bold;
+        }
+        .reseller {
+          width: 720px;
+          height: 30px;
+        }
+        
+        .tel_second,
+        .tel_third,
+        .email,
+        .email_dns {
+          width: 227px;
+          height: 30px;
+        }
+        input::placeholder {
+          padding-left: 10px;
+        }
+        .tel_first,
+        .emailaddr {
+          width: 227px;
+          height: 33px;
+          padding-left: 10px;
+        }
+
+        /* 다음단계 버튼 */
+        .next_button {
+          padding: 20px 425px 0 425px;
+        }
+        .next_button button{
+            width: 100px;
+            height: 40px;
+            background-color: black;
+            color: white;
+            border: 0;
+            border-radius: 4px;
+            font-weight: 900;
+            font-family: 'Montserrat', Noto Sans KR, sans-serif;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        .next_button button:hover{
+            background-color: #ffcc00;
+            color: white;
         }
       </style>
   </head>
@@ -191,7 +302,7 @@
         <div class="tabtype_wrapper">
             <ul>
               <li>
-                  <a href="Reservation_ChooseRoom01.html"><button class="btn1">예약하기</button></a>
+                  <a href="../아현/AH_Frontend_done/Reservation_ChooseRoom01.html"><button class="btn1">예약하기</button></a>
               </li>
               <li>
                   <a href="Reservation_Information.html"><button class="btn2 on">예약자 정보 입력</button></a>
@@ -203,16 +314,139 @@
         </div>
     </div>  
 
-    <section>
+    <section class="section">
       <div class="container">
-        <div class="container_room">
-  
+        <div class="reservation_space">
+          <h3 class="reservation_space_title">예약공간</h3>
+          <hr class="line">
+          <table class="reservation_space_content">
+            <tr>
+              <td class="room_img" rowspan="3">
+                <img src="image/6-8_Room01.jpg" width="480px" height="400px" />
+              </td>
+              <td class="room_title">
+                <h3 class="room_person_number">xx인실</h3>
+                <h3 class="room_time_price">0,000 시간(인)</h3>
+              </td>
+            </tr>
+            <tr>
+              <td class="room_introduce">
+                <p>
+                  xx인 테이블입니다.
+                  <br>
+                  책상 없이 의자만 추가하면 최대 xx인까지 이용 가능합니다:)
+                  <br>
+                  추가적인 필수 주문사항 없습니다. 
+                  <br>
+                  필요하신 대여 장비만 비용 확인 후 예약해주세요 :)
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="room_item">
+                <ul class="room_item_list">
+                  <li>
+                    <img src="icon/multi.png" class="room_item_img" width="30px" height="30px"/>
+                    <span class="room_item_name">유선랜 pc + 모니터 + 키보드 + 마우스</span>
+                  </li>
+                  <li>
+                    <img src="icon/projector.png" class="room_item_img" width="30px" height="30px"/>
+                    <span class="room_item_name">프로젝터</span>
+                  </li>
+                  <li>
+                    <img src="icon/monitor.png" class="room_item_img" width="30px" height="30px"/>
+                    <span class="room_item_name">추가 모니터 (무료)</span>
+                  </li>
+                  <li>
+                    <img src="icon/hdmi-cable.png" class="room_item_img" width="30px" height="30px"/>
+                    <span class="room_item_name">32인치 모니터 + HDMI케이블 (무료)</span>
+                  </li>
+                  <li>
+                    <img src="icon/whiteboard.png" class="room_item_img" width="30px" height="30px"/>
+                    <span class="room_item_name">화이트보드 + 보드마카 (무료)</span>
+                  </li>
+                  <li>
+                    <img src="icon/wifi.png" class="room_item_img" width="30px" height="30px"/>
+                    <span class="room_item_name">인터넷 / 와이파이 (무료)</span>
+                  </li>
+                  <li>
+                    <img src="icon/socket.png" class="room_item_img" width="30px" height="30px"/>
+                    <span class="room_item_name">콘센트 (무료)</span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+
+          </table>
         </div>
-        <div class="container_room_img">
-  
+        <div class="reservation_information">
+          <h3 class="reservation_information_title">예약정보</h3>
+          <hr class="line">
+          <table class="reservation_information_content">
+            <tr>
+              <td class="reservation_information_subtitle"> 예약날짜 </td>
+              <td class="reservation_information_result"> 2020.00.00 (월) 0시 ~ 0시 </td>
+            </tr>
+            <tr>
+              <td class="reservation_information_subtitle"> 예약인원 </td>
+              <td class="reservation_information_result"> 00명 </td>
+            </tr>
+          </table>
         </div>
-        <div class="container_room_button">
-  
+        <div class="reseller_information">
+          <h3 class="reseller_information_title">예약자 정보</h3>
+          <hr class="line">
+            <form action="">
+              <table class="reseller_information_content">
+                <tr>
+                  <td colspan="2"></td>
+                </tr>
+                <tr>
+                  <th class="reseller_information_subtitle">예약자</th>
+                  <td>
+                    <input type="text" name="name" class="reseller" placeholder="이름을 적어주세요.">
+                  </td>
+                </tr>
+                <tr>
+                  <th class="reseller_information_subtitle">연락처</th>
+                  <td>
+                    <select name="tel_first" class="tel_first">
+                      <option value="">선택</option>
+                      <option value="010">010</option>
+                      <option value="011">011</option>
+                      <option value="017">017</option>
+                    </select> - 
+                    <input type="text" name="tel_second" class="tel_second"> -
+                    <input type="text" name="tel_third" class="tel_third">
+                  </td>
+                </tr>
+                <tr>
+                  <th class="reseller_information_subtitle">이메일</th>
+                  <td>
+                    <input type="text" name="email" class="email"> @
+                    <input type="text" name="email_dns" class="email_dns" placeholder="example.com"> 
+                    <select name="emailaddr" class="emailaddr">
+                      <option value="">직접입력</option>
+                      <option value="daum.net">daum.net</option>
+                      <option value="gmail.com">gmail.com</option>
+                      <option value="naver.com">naver.com</option>
+                      <option value="nate.com">nate.com</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="reseller_information_subtitle">요청사항</th>
+                  <td>
+                    <textarea name="feedback" rows="10" cols="100" placeholder="남기고 싶은 말을 적어주세요.">
+                    </textarea>
+                  </td>
+                </tr>
+              </table>
+
+            </form>
+        </div>
+        <div class="next_button">
+          <a href="Payment.html"><button class="next">다음단계 </button></a>
         </div>
       </div>
     </section>

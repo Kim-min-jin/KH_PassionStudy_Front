@@ -1,3 +1,5 @@
+/*STUDY CAFE 검은색 헤더 부분*/
+
 .PassionStudy_header {
   background: #202020;
   position: relative;
@@ -65,4 +67,52 @@ ul {
   font-size: 1.1em;
   font-weight: bold;
   color: #ffcc00;
+}
+
+/*STUDY CAFE 메뉴바 폰트와 메뉴 클릭시 이미지 처리 부분*/
+
+.cont_header {
+  background: #202020;
+  line-height: 7;
+}
+.cont_header .cont_wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  font-family: "Montserrat", Noto Sans KR, sans-serif;
+  text-align: center;
+  color: #fff;
+}
+
+.tabtype {
+  margin: 50px 0 50px 0;
+}
+.tabtype_wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+.tabtype .tabtype_wrapper li {
+  display: inline-block;
+  width: 19.3%;
+}
+.tabtype .tabtype_wrapper button {
+  width: 100%;
+  height: 40px;
+  box-shadow: 0 20px 40px rgba(17, 20, 39, 0.1);
+  background-color: #fff;
+  border: 0;
+  font-weight: 900;
+  font-family: "Montserrat", Noto Sans KR, sans-serif;
+  cursor: pointer;
+  font-size: 20px;
+}
+.tabtype .tabtype_wrapper li a {
+  text-decoration: none;
+}
+.tabtype .tabtype_wrapper button:hover {
+  background-color: #ffcc00;
+  color: white;
+}
+.tabtype button.on {
+  background-color: #202020;
+  color: #ffffff;
 }

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel = "stylesheet" href="../../css/headfoot.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
-      <title>예약/결제</title>
+      <link rel = "stylesheet" href="../../css/headfoot.css">
+      <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
+      <title>마이페이지</title>
       <script src="https://code.jquery.com/jquery-3.5.1.js" 
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
       crossorigin="anonymous"></script>
@@ -81,6 +81,8 @@
             color: #fff;
         }
 
+
+      
       
         .tabtype { 
             margin: 50px 0 50px 0;
@@ -89,9 +91,11 @@
             width: 1000px;
             margin: 0 auto;
         }
-        .tabtype .tabtype_wrapper li {
+
+        /*나의정보 ~ 설정 버튼 */
+        .tabtype .tabtype_wrapper li {  
             display: inline-block;
-            width: 32.9%;
+            width: 24.5%;
         }
         .tabtype .tabtype_wrapper button {
             width: 100%;
@@ -116,60 +120,56 @@
             color: #ffffff;
         }
       
-        /* 공통 */
+        
         .section {
           width: 1000px;
           margin: 0 auto;
         }
         .container {
-          padding: 0 25px;
-          margin: 50px 0;
+          padding: 0; 
+          margin: 50px 0 50px 0;
         }
-        .line {
-          border: 1px solid;
-        }
-        .refund_regulations_title {
-          padding: 10px;
-        }
-        .payment_method_title,
-        .payment_amount_title {
-          padding: 40px 10px 10px 10px;
-        }
-        .refund_regulations_content {
-          margin-top: 10px;
-          height: 500px;
-          background-color: rgb(255, 206, 214);
-        }
-        .payment_method_content {
-          margin-top: 10px;
-          height: 500px;
-          background-color: palegoldenrod;
-        }
-        .payment_amount_content {
-          margin-top: 10px;
-          height: 500px;
-          background-color: rgb(171, 218, 247);
+        /*두 번째 탭 감싸는 ul*/ 
+        .container .container_mypage-management ul { 
+          margin: 0 0 20px 0;
         }
 
-        /* 다음단계 버튼 */
-        .next_button {
-          padding: 20px 425px 0 425px;
+        /*두 번째 탭 사이즈 조절하는 코드*/ 
+        .container .container_mypage-management li {
+          display: inline-block;
+          width: 497px;
         }
-        .next_button button{
-            width: 100px;
-            height: 40px;
-            background-color: black;
-            color: white;
-            border: 0;
-            border-radius: 4px;
-            font-weight: 900;
-            font-family: 'Montserrat', Noto Sans KR, sans-serif;
-            cursor: pointer;
-            font-size: 15px;
+        .container .container_mypage-management button { 
+          width: 100%;
+          height: 35px;
+          background-color: rgb(190, 190, 190);
+          border: 0;
+          font-weight: 900;
+          font-family: 'Montserrat', Noto Sans KR, sans-serif;
+          cursor: pointer;
+          font-size: 15px;
         }
-        .next_button button:hover{
-            background-color: #ffcc00;
-            color: white;
+        .container .container_mypage-management li a { 
+          text-decoration: none;
+        }
+        .container .container_mypage-management button a {
+          color: black;
+        }
+        .container .container_mypage-management button:hover { 
+          background-color: #ffcc00;
+          color: white;
+        }
+        .container button.on {
+          background-color: #202020;
+          color: #ffffff;
+        }
+        
+        
+        
+        .pc {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
         }
         
       </style>
@@ -215,7 +215,7 @@
 
     <div class="cont_header">
       <div class="cont_wrapper">
-          <h1>예약 / 결제</h1>
+          <h1>마이페이지</h1>
       </div>
     </div>
 
@@ -224,38 +224,36 @@
         <div class="tabtype_wrapper">
             <ul>
               <li>
-                  <a href="../아현/AH_Frontend_done/Reservation_ChooseRoom01.html"><button class="btn1">예약하기</button></a>
+                  <a href="나의정보.html"><button class="btn1 on">나의 정보</button></a>
               </li>
               <li>
-                  <a href="Reservation_Information.html"><button class="btn2">예약자 정보 입력</button></a>
+                  <a href="나의 예약 관리.html"><button class="btn2">나의 예약 관리</button></a>
               </li>
               <li>
-                  <a href="Payment.html"><button class="btn3 on">결제하기</button></a>
+                  <a href="나의 활동.html"><button class="btn3">나의 활동</button></a>
               </li>
+              <li>
+                <a href="설정.html"><button class="btn4">설정</button></a>
+            </li>
             </ul>
         </div>
     </div>  
 
     <section class="section">
       <div class="container">
-        <div class="refund_regulations">
-          <h3 class="refund_regulations_title">환불규정 안내</h3>
-          <hr class="line">
-          <div class="refund_regulations_content">어쩌구</div>
+        <div class="container_mypage-management">
+          <ul>
+            <li>
+              <a href="링크.html"><button class="first-teb-button">첫 번째 탭 </button></a>
+            </li>
+            <li>
+              <a href="링크.html"><button class="second-teb-button">두 번째 탭 </button></a>
+            </li>
+          </ul>
         </div>
-        <div class="payment_method">
-          <h3 class="payment_method_title">결제방법 선택</h3>
-          <hr class="line">
-          <div class="payment_method_content">저쩌구</div>
-        </div>
-        <div class="payment_amount">
-          <h3 class="payment_amount_title">결제 예정금액</h3>
-          <hr class="line">
-          <div class="payment_amount_content">아무개</div>
-        </div>
-        <div class="next_button">
-          <a href="../아현/AH_Frontend_done/Reservation_ChooseRoom01.html"><button class="cancel"> 취소하기 </button></a>
-        </div>
+
+        
+       
       </div>
     </section>
 
