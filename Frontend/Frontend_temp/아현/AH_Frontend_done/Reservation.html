@@ -123,19 +123,17 @@
 
 
 
-        section {
+        .section {
           width: 1000px;
           margin: 0 auto;
         }
         
-        h3, h5 {
+        .choose_room,
+        .choose_day {
           text-align: center;
           padding-bottom: 10px;
         }
-        hr {
-          background-color: white;
-          color: white;
-        }
+
         /* 테이블분할한 것 */
         .room_img {
           width:500px;
@@ -195,9 +193,6 @@
           background-color: #ffcc00;
           border: 1px solid #ccc;
         }
-        /* .calender_payment {
-          border: 1px solid grey;
-        } */
         .calender_payment {
           height: 80px;
         }
@@ -207,11 +202,11 @@
         }
         /* */
 
-        h8 {
+        .change_price {
           font-weight: bold;
           padding: 0 0 0 390px;
         } 
-        p {
+        .content {
           font-size: 14px;
           padding: 15px 15px 0 15px;
           text-align: left;
@@ -284,7 +279,7 @@
           font-weight: bold;
           padding: 0 405px 0 0;
         }
-        select {
+        .count {
           width: 90px;
           height: 30px;
           float: right;
@@ -374,12 +369,12 @@
         </div>
     </div>  
     
-    <section>
+    <section class="section">
       <!--jsp로 값 가져와야함-->
       <div class="result">
-        <h3>사용자가 예약하려고 선택한 방</h3>
+        <h3 class="choose_room">사용자가 예약하려고 선택한 방</h3>
         <br/>
-        <h5>날짜와 시간을 선택하세요.</h5>
+        <h5 class="choose_day">날짜와 시간을 선택하세요.</h5>
         <br/>
       </div>
       <table class="container">
@@ -399,7 +394,7 @@
               <h8 class="calender_price">0,000원</h8>
               <br>
               <br>
-              <select name="count">
+              <select name="count" class="count">
                 <option value="one">1</option>
                 <option value="two">2</option>
                 <option value="three">3</option>
@@ -425,12 +420,12 @@
             </div>
             
             <div class="introduce">
-              <p>
+              <p class="content">
                 프로젝터는 4인실 이상부터 이용이 가능하고 32인치 모니터는 예약만 해주시면 무료로 이용 가능합니다.
                 <br>
                 추가적인 필수 주문사항 없습니다. 필요하신 대여 장비만 비용 확인 후 예약해주세요 :)
               </p>
-              <p>
+              <p class="content">
                 1. 32인치 모니터+HDMI케이블 (무료)
                 <br>
                 유선랜 PC +키보드+ 마우스 2,000원(1시간 기준) (예약 필수)
@@ -456,7 +451,7 @@
             </div>
             
             <div class="precautions">
-              <p>
+              <p class="content">
                 스터디룸은 10:00~22:00 사이에 예약 필수
                 <br>
                 <br>
@@ -520,7 +515,7 @@
             
             <div class="option_box_moniter">
               <h8 class="option_menu_moniter">모니터</h8>
-              <p>
+              <p class="content">
                 예약만 해주시면 무료로 이용 가능합니다. 예약한 시간과 동일하게 예약 가능합니다.
                 <br>
                 수량으로 시간 선택해주세요 :)
@@ -531,7 +526,7 @@
               <h8 class="option_menu_moniter_price">무료</h8>
               <br>
               <br>
-              <select name="count">
+              <select name="count" class="count">
                 <option value="one">1</option>
                 <option value="two">2</option>
                 <option value="three">3</option>
@@ -539,12 +534,12 @@
                 <option value="five">5</option>
               </select>
               <br>
-              <h8>무료</h8>
+              <h8 class="change_price">무료</h8>
             </div>
             
             <div class="option_box_multi">
               <h8 class="option_menu_multi">유선랜 PC + 모니터 + 키보드 + 마우스 </h8>
-              <p>
+              <p class="content">
                 스터디룸/회의실 내에 있는 모니터와 PC를 유선랜으로 연결하여 안정적으로
                 기가 인터넷 연결해서 이용 가능합니다. 
                 <br>
@@ -561,7 +556,7 @@
               <h8 class="option_menu_multi_price">2,000원</h8>
               <br>
               <br>
-              <select name="count">
+              <select name="count" class="count">
                 <option value="one">1</option>
                 <option value="two">2</option>
                 <option value="three">3</option>
@@ -569,12 +564,12 @@
                 <option value="five">5</option>
               </select>
               <br>
-              <h8>2,000원</h8>
+              <h8 class="change_price">2,000원</h8>
             </div>
             
             <div class="option_box_projecter">
               <h8 class="option_menu_projecter">프로젝터 </h8>
-              <p>
+              <p class="content">
                 1시간 2,000원으로 세미나실 예약한 시간과 동일하게 예약 가능합니다.
                 <br>
                 수량으로 시간 선택해주세요 :)
@@ -585,7 +580,7 @@
               <h8 class="option_menu_projecter_price">2,000원</h8>
               <br>
               <br>
-              <select name="count">
+              <select name="count" class="count">
                 <option value="one">1</option>
                 <option value="two">2</option>
                 <option value="three">3</option>
@@ -593,7 +588,7 @@
                 <option value="five">5</option>
               </select>
               <br>
-              <h8>2,000원</h8>
+              <h8 class="change_price">2,000원</h8>
             </div>
           </td>
         </tr>
