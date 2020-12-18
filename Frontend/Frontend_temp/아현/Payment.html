@@ -124,6 +124,7 @@
         .container {
           padding: 0 25px;
           margin: 50px 0;
+          height: 1480px;
         }
         .line {
           border: 1px solid;
@@ -135,25 +136,100 @@
         .payment_amount_title {
           padding: 40px 10px 10px 10px;
         }
+        .refund_regulations{
+          margin-top: 10px;
+          background-color: rgb(255, 226, 231);
+        }
+        .payment_method {
+          margin-top: 10px;
+          height: 500px;
+          background-color: rgb(252, 249, 218);
+        }
+        .payment_amount {
+          margin-top: 10px;
+          height: 400px;
+          background-color: rgb(214, 237, 252);
+        }
+        /* 환불규정 안내, 결제 예정금액 */
         .refund_regulations_content {
-          margin-top: 10px;
-          height: 500px;
-          background-color: rgb(255, 206, 214);
+          padding: 15px 30px 0 30px;
+          font-size: 16px;
         }
-        .payment_method_content {
-          margin-top: 10px;
-          height: 500px;
-          background-color: palegoldenrod;
+        .info {
+          padding: 15px 30px;
+          font-size: 16px;
         }
-        .payment_amount_content {
-          margin-top: 10px;
-          height: 500px;
-          background-color: rgb(171, 218, 247);
+        .subline {
+          width: 90%;;
+          color: gray;
+          margin-left: 30px ;
+        }
+        .info_list {
+          padding: 7px 40px;
+        }
+        .title {
+          position: absolute;
+          padding-top: 2px;
+          vertical-align: middle;
+        }
+        .data {
+          vertical-align: top;
+          line-height: 28px;
+          margin-left: 170px;
+        }
+        /* 결제방법 선택 */
+        .payment_method_list {
+          padding: 35px 83px;
+          width: 785px;
+          height: 90px;
+        }
+        .payment_method_list li {
+          float: left;
+          font-size: 17px;
+          position: relative;
+          display: table;
+          padding: 20px 20px 20px 65px;
+          height: 30px;
+          color: black;
+          background-color:#FBFBEF;
+          border: 1px solid rgb(190, 190, 190);
+        }
+        .payment_method_img {
+          position: absolute;
+          left: 10px;
+          width: 40px;
+          height: 40px;
+          
+        }
+        .payment_method_name {
+          display: table-cell;
+          vertical-align: middle;
+          max-width: 100%;
         }
 
+        /* 결제 예정금액 결제쪽 */
+        .amount {
+          float: right;
+          padding: 20px 60px 10px 10px;
+        }
+        .amount_list {
+          padding: 7px 20px;
+        }
+        .amount_title {
+          padding-top: 2px;
+          vertical-align: middle;
+        }
+        .amount_data {
+          vertical-align: top;
+          line-height: 28px;
+        }
         /* 다음단계 버튼 */
         .next_button {
-          padding: 20px 425px 0 425px;
+          padding: 30px 325px;
+          position: absolute;
+        }
+        .cancel {
+          margin-right: 95px;
         }
         .next_button button{
             width: 100px;
@@ -241,20 +317,128 @@
         <div class="refund_regulations">
           <h3 class="refund_regulations_title">환불규정 안내</h3>
           <hr class="line">
-          <div class="refund_regulations_content">어쩌구</div>
+          <p class="refund_regulations_content">
+            <em class="warn" style="color: #ff3a48;">
+              이용당일(첫 날) 이후에 환불 관련 사항은 호스트에게 직접 문의하셔야 합니다.
+            </em>
+            <br>
+            <p class="info">
+              결제 후 2시간 이내에는 100%환불이 가능합니다.(단, 이용시간 전까지만 가능)
+            </p>
+          </p>
+          <ul>
+            <hr class="subline">
+            <li class="info_list">
+              <strong class="title">이용 7일전</strong>
+              <span class="data">총 금액의 100% 환불</span>
+            </li>
+            <hr class="subline">
+            <li class="info_list">
+              <strong class="title">이용 6일전</strong>
+              <span class="data">총 금액의 100% 환불</span>
+            </li>
+            <hr class="subline">
+            <li class="info_list">
+              <strong class="title">이용 5일전</strong>
+              <span class="data">총 금액의 100% 환불</span>
+            </li>
+            <hr class="subline">
+            <li class="info_list">
+              <strong class="title">이용 4일전</strong>
+              <span class="data">총 금액의 100% 환불</span>
+            </li>
+            <hr class="subline">
+            <li class="info_list">
+              <strong class="title">이용 3일전</strong>
+              <span class="data">총 금액의 90% 환불</span>
+            </li>
+            <hr class="subline">
+            <li class="info_list">
+              <strong class="title">이용 2일전</strong>
+              <span class="data">총 금액의 70% 환불</span>
+            </li>
+            <hr class="subline">
+            <li class="info_list">
+              <strong class="title">이용 전날</strong>
+              <span class="data">총 금액의 50% 환불</span>
+            </li>
+            <hr class="subline">
+            <li class="info_list">
+              <strong class="title">이용 당일</strong>
+              <span class="data">환불 불가</span>
+            </li>
+          </ul>
         </div>
+
+
         <div class="payment_method">
           <h3 class="payment_method_title">결제방법 선택</h3>
           <hr class="line">
-          <div class="payment_method_content">저쩌구</div>
+          <div class="payment_method_content">
+              <ul class="payment_method_list">
+                <li class="card">
+                  <img src="icon/credit-card.png" class="payment_method_img" >
+                  <input type="radio" class="payment_method_name" name="patment_method" value="card"/>  신용카드
+                </li>
+                <li class="mobile">
+                  <img src="icon/mobile-payment.png" class="payment_method_img" >
+                  <input type="radio" class="payment_method_name" name="patment_method" value="mobile"/>  실시간 계좌이체
+                </li>
+                <li class="scene">
+                  <img src="icon/scene.png" class="payment_method_img" >
+                  <input type="radio" class="payment_method_name" name="patment_method" value="scene"/>  현장결제
+                </li>
+                <li class="point">
+                  <img src="icon/point.png" class="payment_method_img" >
+                  <input type="radio" class="payment_method_name" name="patment_method" value="point"/>  포인트 결제
+                </li>
+              </ul>
+          </div>
         </div>
+
+
         <div class="payment_amount">
           <h3 class="payment_amount_title">결제 예정금액</h3>
           <hr class="line">
-          <div class="payment_amount_content">아무개</div>
+          <div class="payment_amount_content">
+            <ul>
+              <br>
+              <li class="info_list">
+                <strong class="title">예약날짜</strong>
+                <span class="data">2020.00.00 (월) </span>
+              </li>
+              <hr class="subline">
+              <li class="info_list">
+                <strong class="title">예약시간</strong>
+                <span class="data">00시 ~ 00시, 00시간</span>
+              </li>
+              <hr class="subline">
+              <li class="info_list">
+                <strong class="title">예약인원</strong>
+                <span class="data">00명</span>
+              </li>
+              <hr class="subline">
+            </ul>
+            <ul class="amount">
+              <li class="amount_list">
+                <strong class="amount_title">총 금액</strong>
+                <strong class="amount_data" style="margin-left: 120px;">00,000 원</strong>
+              </li>
+              <li class="amount_list">
+                <strong class="amount_title">포인트 할인</strong>
+                <strong class="amount_data " style="margin-left: 88px;">00,000 원</strong>
+              </li>
+              <hr>
+              <li class="amount_list">
+                <strong class="amount_title">최종결제 금액</strong>
+                <strong class="amount_data" style="margin-left: 73px;">00,000 원</strong>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="next_button">
           <a href="../아현/AH_Frontend_done/Reservation_ChooseRoom01.html"><button class="cancel"> 취소하기 </button></a>
+          <button class="payment"> 결제하기 </button>
         </div>
       </div>
     </section>
