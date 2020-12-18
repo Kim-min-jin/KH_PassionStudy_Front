@@ -158,13 +158,13 @@
           color: white;
         }
 
-        /* 부 탭메뉴버튼과 그 아래 버튼에 on 설정 했을 때  */
+        /* ----------------부 탭메뉴버튼과 그 아래 버튼에 on 설정 했을 때 -------------------------- */
         .container button.on {
           background-color: #202020;
           color: #ffffff;
         }
         
-        /* --------------------------------스타일 먹이기 시작-------- */
+        /* --------------------------------스타일 먹이기 시작---------------------------- */
         .reservation-confirm-tool_container {
           display: flex;
           background-color: #eeecec;
@@ -241,6 +241,10 @@
           height: 40px;
           padding: 5px;
           border-bottom: 1px solid #bbbbbb;
+        }
+        .reservation-state_table .reservation-state-cancel {
+          color: #ce0d0d;
+          font-weight: bold;
         }
         .table-check-details-information {
           background-color: #54a8ec;
@@ -351,10 +355,10 @@
         <div class="container_reservation-management">
           <ul>
             <li>
-              <a href="예약확인.html"><button class="confirm-reservation-button on"> 예약 확인 </button></a>
+              <a href="예약확인.html"><button class="confirm-reservation-button"> 예약 확인 </button></a>
             </li>
             <li>
-              <a href="취소내역.html"><button class="cancel-reservation-button"> 취소 내역 </button></a>
+              <a href="취소내역.html"><button class="cancel-reservation-button on"> 취소 내역 </button></a>
             </li>
           </ul>
         </div>
@@ -496,8 +500,7 @@
           <div class="reservation-confirm-tool-lookup">조회</div>
         </div>
 
-        <!------------- 예약 보여주는 테이블 만들기------밤샘 각이다~~~신난다 ^_^ ----------->
-        <!-- 예약 확인 테이블 (상태: 1.예약, 2.취소, 3.결제) / DB에서 자료 꺼내오기 --------->
+        <!------------- 취소 내역 테이블 : '상태: 취소'만 노출 ------------------->
         <div class="reservation-state_container">
           <table class="reservation-state_table">
             <thead>
@@ -506,7 +509,7 @@
                 <th class="table-room">스터디룸명</th>
                 <th class="table-type">스터디룸 타입</th>
                 <th class="table-date">예약일</th>
-                <th class="table-time">이용시간</th>
+                <th class="table-time">취소일</th>  <!--예약 확인과 달라진 탭메뉴-->
                 <th class="table-state">상태</th> 
                 <th class="table-lookup">조회</th>
                 <!--상태: 취소인 경우 red;-->
@@ -515,11 +518,11 @@
             <tbody>
               <tr>
                 <td>1</td>
-                <td>타오르는 열정</td>
+                <td>열정만수르</td>
                 <td>단체실</td>
                 <td>2020-12-10</td>
-                <td>16:00 ~ 20:00</td>
-                <td>예약</td>
+                <td>2020-11-02</td>
+                <td class="reservation-state-cancel">취소</td>
                 <td><button class="table-check-details-information" type="button" >상세조회</button></td>
               </tr>
             </tbody>

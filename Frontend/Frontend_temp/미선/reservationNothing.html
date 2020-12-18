@@ -242,6 +242,14 @@
           padding: 5px;
           border-bottom: 1px solid #bbbbbb;
         }
+        .reservation-state_table .table-nodata {
+          /* background: url(); */
+          height: 300px;
+          font-weight: bold;
+          font-size: medium;
+          color: #3a3a3a;
+
+        }
         .table-check-details-information {
           background-color: #54a8ec;
           color: white;
@@ -514,29 +522,11 @@
             </thead>
             <tbody>
               <tr>
-                <td>1</td>
-                <td>타오르는 열정</td>
-                <td>단체실</td>
-                <td>2020-12-10</td>
-                <td>16:00 ~ 20:00</td>
-                <td>예약</td>
-                <td><button class="table-check-details-information" type="button" >상세조회</button></td>
+                <td colspan="7" class="table-nodata">최근 1개월 이내에 예약한 이력이 없습니다.</td>
               </tr>
             </tbody>
           </table>
 
-          <div class="reservation-management-pages-count">
-            <div>
-              <span class="button-prev"><</span>
-            </div>
-            <ul>
-              <li><a class="page-number" href="#">1</a></li>
-            </ul>
-            <div>
-              <span class="button-next">></span>
-            </div>
-
-          </div>
         </div>
         
        

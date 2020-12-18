@@ -91,7 +91,9 @@
             width: 1000px;
             margin: 0 auto;
         }
-        .tabtype .tabtype_wrapper li {
+
+        /*나의정보 ~ 설정 버튼 */
+        .tabtype .tabtype_wrapper li {  
             display: inline-block;
             width: 24.5%;
         }
@@ -99,7 +101,7 @@
             width: 100%;
             height: 40px;
             /* box-shadow: 0 20px 40px rgba(17, 20, 39, 0.10); */
-            background-color: #fff;
+            background-color: rgb(190, 190, 190);
             border: 0;
             font-weight: 900;
             font-family: 'Montserrat', Noto Sans KR, sans-serif;
@@ -119,136 +121,65 @@
         }
       
         
-        section {
+        .section {
           width: 1000px;
           margin: 0 auto;
         }
         .container {
-          padding: 0 30px 0 30px;
+          padding: 0; 
           margin: 50px 0 50px 0;
         }
-        /* 방 몇인실 예약할지 */
-        .container .container_room ul {
-          margin: 0 60px 70px 60px;
+        /*두 번째 탭 감싸는 ul*/ 
+        .container .container_mypage-management ul { 
+          margin: 0 0 20px 0;
         }
-        .container .container_room li {
+
+        /*두 번째 탭 사이즈 조절하는 코드*/ 
+        .container .container_mypage-management li {
           display: inline-block;
-          width: 200px;
+          width: 497px;
         }
-        .container .container_room button {
+        .container .container_mypage-management button { 
           width: 100%;
-          height: 30px;
-          /* box-shadow: 0 20px 40px rgba(17, 20, 39, 0.10); */
-          background-color: #fff;
-          border: 1px solid black;
+          height: 35px;
+          background-color: rgb(190, 190, 190);
+          border: 0;
           font-weight: 900;
           font-family: 'Montserrat', Noto Sans KR, sans-serif;
           cursor: pointer;
           font-size: 15px;
         }
-        .container .container_room li a {
+        .container .container_mypage-management li a { 
           text-decoration: none;
         }
-        .container .container_room button a {
+        .container .container_mypage-management button a {
           color: black;
         }
-        .container .container_room button:hover{
-          background-color: lightslategrey;
+        .container .container_mypage-management button:hover { 
+          background-color: #ffcc00;
           color: white;
         }
         .container button.on {
           background-color: #202020;
           color: #ffffff;
         }
-        /* 방 사진 */
-        .container .container_room_img ul {
-          margin: 0 0 25px 0;
-        }
-        .container .container_room_img li {
-          display: inline-block;
-          padding: 0 5px 0 5px;
-        }
-        /* 방 버튼 */
-        .container .container_room_button {
-          margin: 0 20px 0 20px;
-        }
-        .container .container_room_button ul {
-          margin: 0 0 50px 0;
-        } 
-        .container .container_room_button ul .second_room, 
-        .container .container_room_button ul .third_room
-         {
-          margin: 0 0 0 65px;
-        } 
         
-        .container .container_room_button li {
-          display: inline-block;
-          width: 100px;
-          margin: 0px 10px 0 22px;
+        /* ------------------------------------------------------------ */
+        table {
+          border: 1px solid gray;
         }
-        
-        .container .container_room_button button {
-          width: 90%;
-          height: 25px;
-          /* box-shadow: 0 20px 40px rgba(17, 20, 39, 0.10); */
-          background-color: #fff;
-          border: 1px solid black;
-          font-weight: 900;
-          font-family: 'Montserrat', Noto Sans KR, sans-serif;
-          cursor: pointer;
-          font-size: 13px;
-        }
-        .container .container_room_button li a {
-          text-decoration: none;
-        }
-        .container .container_room_button button a {
-          color: black;
-        }
-        .container .container_room_button button:hover{
-          background-color: lightslategrey;
-          color: white;
-        }
-        /* section .con
-        tainer {
-          width: 1200px;
-          height: 800px;
-        } */
-        /* section .container .container_room {
-          width: 1200px;
-          height: 150px;
-          border: 1px solid goldenrod;
-          padding: 30px 200px 30px 260px;
-        } */
-        /* section .container .container_room button {
-          width: 100px;
-          height: 40px;
-          margin: 30px 50px 10px 30px;
-        } */
 
-        /* section .container .container_room_img {
-          width: 1200px;
-          height: 650px;
-          border: 1px solid indianred;
-          padding: 0 150px 0 150px;
+        th, td {
+          border: 1px solid gray;
         }
-        section .container .container_room_img div {
-          width: 290px;
-          height: 600px;
-          float: left;
-          padding: 100px 0 100px 30px;
-        }
-        section .container .container_room_img div button {
-          width: 70px;
-          height: 25px;
-          font-size: 10px;
-          margin: 20px 10px 20px 30px;
+        
+        /* footer 왔다 갔다 할 때 하는 테스트 코드 */
+        /* .pc {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
         } */
-        /* section .container .container_room_button{
-          width: 1200px;
-          height: 250px;
-          border: 1px solid steelblue ;
-          padding: 0 150px 0 150px;
-        } */
+        
       </style>
   </head>
 
@@ -300,69 +231,70 @@
     <div class="tabtype">
         <div class="tabtype_wrapper">
             <ul>
-                <li>
-                    <a href=""><button class="btn1 on">나의 정보</button></a>
-                </li>
-                <li>
-                    <a href=""><button class="btn2">나의 예약 관리</button></a>
-                </li>
-                <li>
-                    <a href=""><button class="btn3">나의 활동</button></a>
-                </li>
-                <li>
-                    <a href=""><button class="btn4">설정</button></a>
-                </li>
+              <li>
+                  <a href="나의정보.html"><button class="btn1 on">나의 정보</button></a>
+              </li>
+              <li>
+                  <a href="나의 예약 관리.html"><button class="btn2">나의 예약 관리</button></a>
+              </li>
+              <li>
+                  <a href="나의 활동.html"><button class="btn3">나의 활동</button></a>
+              </li>
+              <li>
+                <a href="설정.html"><button class="btn4">설정</button></a>
+            </li>
             </ul>
         </div>
     </div>  
 
-    <section>
+    <section class="section">
       <div class="container">
-        <div class="container_room">
+        <div class="container_mypage-management">
           <ul>
             <li>
-              <button class="room_one on"> 회원정보수정 </button>
+              <a href="링크.html"><button class="first-teb-button">첫 번째 탭 </button></a>
             </li>
             <li>
-              <button class="room_two"><a href="Reservation_ChooseRoom02.html"> 비밀번호변경 </a></button>
+              <a href="링크.html"><button class="second-teb-button">두 번째 탭 </button></a>
             </li>
           </ul>
         </div>
-        <div class="container_room_img">
-          <ul>
-            <li>
-              <img src="room_img.jpeg" width="299px" height="300px">
-            </li>
-            <li>
-              <img src="room_img.jpeg" width="299px" height="300px">
-            </li>
-            <li>
-              <img src="room_img.jpeg" width="299px" height="300px">
-            </li>
-          </ul>
-        </div>
-        <div class="container_room_button">
-          <ul>
-            <li>
-              <button class="facilities_introduction"><a href="">시설소개</a></button>
-            </li>
-            <li>  
-              <button class="room_reservation"><a href="Reservation.html">예약하기</a></button>
-            </li>
-            <li class="second_room">
-              <button class="facilities_introduction"><a href="">시설소개</a></button>
-            </li>
-            <li> 
-              <button class="room_reservation"><a href="Reservation.html">예약하기</a></button>
-            </li>
-            <li class="third_room">
-              <button class="facilities_introduction"><a href="">시설소개</a></button>
-            </li>
-            <li> 
-              <button class="room_reservation"><a href="Reservation.html">예약하기</a></button>
-            </li>
-          </ul>
-        </div>
+
+        <!------------------------------------------------- 테이블 테스트 -->
+        <table>
+          <thead>
+            <tr>
+              <th colspan="3">1</th>
+              <!-- <th>2</th>
+              <th>3</th> -->
+              <th>4</th>
+              <th>5</th>
+              <th>6</th>
+              <th>7</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2">1</td>
+              <td colspan="2">2</td>
+              <!-- <td>3</td> -->
+              <td rowspan="2">4</td>
+              <td rowspan="2">5</td>
+              <td rowspan="2">6</td>
+              <td rowspan="2">7</td>
+            </tr>
+            <tr>
+              <!-- <td>1</td> -->
+              <td colspan="2">2</td>
+              <!-- <td>3</td> -->
+              <!-- <td>4</td> -->
+              <!-- <td>5</td> -->
+              <!-- <td>6</td> -->
+              <!-- <td>7</td> -->
+            </tr>
+          </tbody>
+        </table>
+       
       </div>
     </section>
 
