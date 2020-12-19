@@ -4,7 +4,7 @@
       <link rel = "stylesheet" href="../../css/headfoot.css">
       <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
-      <title>마이페이지</title>
+      <title>예약-예약확인</title>
       <script src="https://code.jquery.com/jquery-3.5.1.js" 
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
       crossorigin="anonymous"></script>
@@ -83,9 +83,8 @@
 
 
       
-        /* --------------------------------탭 설정 임의로 변경----------------------------------------- */
+      /* --------------------------------탭 설정 임의로 변경----------------------------------------- */
         .tabtype { 
-            /* margin: 50px 0 50px 0; */
             margin: 50px 0 30px 0;
         }
         .tabtype_wrapper{
@@ -129,19 +128,19 @@
           padding: 0; /*변경 4*/
           margin: 30px 0 50px 0;
         }
-        /*------------------------두 번째 탭 감싸는 ul------------------------*/
+        /*두 번째 탭 감싸는 ul*/
         .container .container_reservation-management ul { 
-          margin: 0 0 55px 0; /*변경2*/
+          margin: 0 0 20px 0; /*변경2*/
         }
-        /*-----------------------------두 번째 탭 사이즈 조절하는 코드----------*/
+        /*두 번째 탭 사이즈 조절하는 코드*/
         .container .container_reservation-management li { 
           display: inline-block;
-          width: 1000px; /*변경1*/
+          width: 497px; /*변경1*/
         }
         .container .container_reservation-management button { 
           width: 100%;
           height: 35px; /*변경3*/
-          /* background-color: rgb(190, 190, 190); */
+          background-color: rgb(190, 190, 190);
           border: 0;
           font-weight: 900;
           font-family: 'Montserrat', Noto Sans KR, sans-serif;
@@ -166,11 +165,6 @@
         }
         
         /* --------------------------------스타일 먹이기 시작-------- */
-        .reservation-lookup-button {
-          background-color: #202020;
-          color: #ffffff;
-        }
-
         .reservation-confirm-tool_container {
           display: flex;
           background-color: #eeecec;
@@ -193,7 +187,44 @@
           margin: 33px 0 0 0 ;
           font-weight: bold;
         }
-       
+        /* 가운데 박스 */
+        .reservation-confirm-tool-period {
+          height: 125px;
+          padding: 10px;
+        }
+        .reservation-confirm-tool-period > div {
+          margin: 20px 0;
+        }
+        .selected-month > button {
+          width: 60px; height: 30px;
+          margin: 0 5px;
+          border: none;
+          border-radius: 4px;
+          background-color: white;
+        }
+        .selected-ymd > select {
+          width: 80px; height: 30px;
+          border-radius: 4px;
+          border: 1px solid #cfcdcd;
+        }
+        .selected-ymd > .until {
+          margin: 0 20px;
+        }
+        .selected-ymd  > label {
+          margin-right: 8px;
+        }
+        .reservation-confirm-tool-lookup {
+          margin: 0 auto;
+          margin-right: 0;
+          padding: 32px 0 0 0;
+          text-align: center;
+          font-weight: bold;
+          background-color: #4e4e4e;
+          border-top-right-radius: 6px;
+          border-bottom-right-radius: 6px;
+          color: white;
+        }
+        /* ---------------------------------------날짜 선택 하는 폼 완료------ */
         .reservation-state_table {
           width: 1000px;
           text-align: center;
@@ -210,130 +241,34 @@
           height: 40px;
           padding: 5px;
           border-bottom: 1px solid #bbbbbb;
-          font-weight: bold;
-          color: #363636;
         }
-        .reservation-state_table td:nth-child(5) {
-          width: 90px;
-          color: tomato;
-        }
-        .reservation-state_table img {
-          width: 200px; height: 160px;
-        }
-        .reservation-state_table p {
-          display: inline;
-        }
-        .reservation-state_table .table-body-title, .table-body-explanation {
-          border-bottom: none;
-          padding: 0;
-          text-align: left;
-          font-weight: bold;
-          color: #363636;
-        }
-        
         .table-check-details-information {
-          color: #3a3939;
-          width: 80px; height: 33px;
+          background-color: #54a8ec;
+          color: white;
+          width: 70px; height: 33px;
           line-height: 32px;
           border: none;
-          font-weight: bold;
-        }
-        /* 주문정보테이블 css */
-        .reservation-order-information {
-          font-size: 1.5rem;
-          height: 50px;
-          line-height: 60px;
-          margin: 20px 0 10px;
-          color: #464545;
-        }
-        .reservation-order_table {
-          width: 1000px;
-          text-align: center;
-          border-collapse: collapse;
         }
 
-        .reservation-order_table th {
-          height: 40px;
-          background-color: #e4e4e4;
-          margin: 30px 0;
-          border-top: 1px solid #bbbbbb;
-          border-bottom: 1px solid #bbbbbb;
-        }
-        .reservation-order_table td {
-          height: 40px;
-          padding: 5px;
-          border-bottom: 1px solid #bbbbbb;
-          font-weight: bold;
-          color: #363636;
-        }
-        /* 결제 정보 테이블 css */
-        .reservation-payment-information {
-          font-size: 1.5rem;
-          height: 50px;
-          line-height: 60px;
-          margin: 20px 0 10px;
-          color: #464545;
-        }
-        .reservation-payment_table {
-          width: 1000px;
-          text-align: center;
-          border-collapse: collapse;
-        }
-
-        .reservation-payment_table th {
-          height: 40px;
-          background-color: #e4e4e4;
-          margin: 30px 0;
-          border-top: 1px solid #bbbbbb;
-          border-bottom: 1px solid #bbbbbb;
-        }
-        .reservation-payment_table td {
-          height: 40px;
-          padding: 5px;
-          border-bottom: 1px solid #bbbbbb;
-          font-weight: bold;
-          color: tomato;
-        }
-        .reservation-payment_table td:nth-child(4), .reservation-payment_table td:nth-child(4) p {
-          color: #e42706;
-        }
-        .reservation-payment_table td:nth-child(5) {
-          color: #535353;
-        }
-        .reservation-payment_table p {
+        /* 페이지 넘기는 버튼 */
+        .reservation-management-pages-count div, .reservation-management-pages-count ul, .reservation-management-pages-count li{
           display: inline;
         }
-        .reservation-get-point {
-          text-align: right;
-          background-color: #f1f1f1;
-          height: 50px;
-          line-height: 50px;
-          color: #5f5f5f;
-          border-bottom: 1px solid #bbbbbb;
-        }
-        .reservation-get-point p, h4 {
-          display: inline;
-        }
-        .reservation-get-point span, p {
-          color: tomato;
-        }
-        .reservation-get-point span {
-          margin: 0 10px 0 0;
-        }
-        .reservation-management-list {
-          width: 125px; height: 50px;
-          line-height: 50px;
+        .reservation-management-pages-count {
           text-align: center;
-          margin: 60px auto;
-          background-color: #444444;
-          border-radius: 6px;
-          cursor: pointer;
+          margin-top: 190px;
         }
-        .reservation-management-list .list-button {
+        .reservation-management-pages-count li {
+          margin: 0 20px;
+          color: #2b2b2b;
+          font-weight: bold;
+        }
+        .reservation-management-pages-count .page-number{
           text-decoration: none;
-          color: white;
+          color: #2b2b2b;
           font-weight: bold;
         }
+
 
         /* footer야 제발 정신 좀 차려. 바닥에 붙어 있어라. */
         /* .pc {
@@ -412,15 +347,154 @@
 
     <section class="section">
       <div class="container">
-        <!--------------------------- 예약확인, 취소내역 감싸는 div ----------------------------->
+        <!-- 예약확인, 취소내역 감싸는 div -->
         <div class="container_reservation-management">
           <ul>
             <li>
-              <a><button class="reservation-lookup-button"> 예약 상세 조회 </button></a>
+              <a href="예약확인.html"><button class="confirm-reservation-button on"> 예약 확인 </button></a>
+            </li>
+            <li>
+              <a href="취소내역.html"><button class="cancel-reservation-button"> 취소 내역 </button></a>
             </li>
           </ul>
         </div>
-        <!-- -------------------------------채워 넣어야 할 바디 시작 ------------------------------------->
+        <!-- 채워 넣어야 할 바디 시작 -->
+        <!---------------------- 날짜 선택 하는 폼 완료------------- -->
+        <div class="reservation-confirm-tool_container">
+          <div class="reservation-confirm-tool-title">구매 기간</div>
+          <div class="reservation-confirm-tool-period">
+            <div class="selected-month"> <!-- 달 선택 -->
+              <button class = "on" type="button">1개월</button>
+              <button type="button">3개월</button>
+              <button type="button">6개월</button>
+              <button type="button">12개월</button>
+            </div>
+            <div class="selected-ymd">
+              <select id="selected-ymd-year">
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020" selected="selected">2020</option>
+              </select>
+              <label for="selected-ymd-year">년</label>
+    
+              <select id="selected-ymd-month">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11" selected="selected">11</option>
+                <option value="12">12</option>
+              </select>
+              <label for="selected-ymd-month">월</label>
+    
+              <select id="selected-ymd-day">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10" selected="selected">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="20">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select>
+              <label for="selected-ymd">일</label>
+    
+              <span class="until">~</span>
+              
+              <select id="selected-ymd-end-year">
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020" selected="selected">2020</option>
+              </select>
+              <label for="selected-ymd-end-year">년</label>
+    
+              <select id="selected-ymd-end-month">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12" selected="selected">12</option>
+              </select>
+              <label for="selected-ymd-end-month">월</label>
+    
+              <select id="selected-ymd-end-day">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10" selected="selected">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="20">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select>
+              <label for="selected-ymd-end-day">일</label>
+            </div>
+          </div>
+          <div class="reservation-confirm-tool-lookup">조회</div>
+        </div>
 
         <!------------- 예약 보여주는 테이블 만들기------밤샘 각이다~~~신난다 ^_^ ----------->
         <!-- 예약 확인 테이블 (상태: 1.예약, 2.취소, 3.결제) / DB에서 자료 꺼내오기 --------->
@@ -428,85 +502,44 @@
           <table class="reservation-state_table">
             <thead>
               <tr>
-                <th colspan="3" class="table-room">스터디룸명</th>
+                <th class="table-num">번호</th>
+                <th class="table-room">스터디룸명</th>
+                <th class="table-type">스터디룸 타입</th>
                 <th class="table-date">예약일</th>
                 <th class="table-time">이용시간</th>
-                <th class="table-price">판매가</th> 
-                <th class="table-state">진행현황</th>
+                <th class="table-state">상태</th> 
+                <th class="table-lookup">조회</th>
                 <!--상태: 취소인 경우 red;-->
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td rowspan="2"><img src="./img/study-room-2.jpg"></td>
-                <td colspan="2" class="table-body-title">열정과다</td>
-                <td rowspan="2">2020-10-24</td>
-                <td rowspan="2">10:00 ~ 15:00</td>
-                <td rowspan="2">70,000<p>원</p></td>
-                <td rowspan="2" class="table-check-details-information">결제</td>
-              </tr>
-              <tr>
-                <td colspan="2" class="table-body-explanation">스페이스(개인실), 허브티 무료</td>
+                <td>1</td>
+                <td>타오르는 열정</td>
+                <td>단체실</td>
+                <td>2020-12-10</td>
+                <td>16:00 ~ 20:00</td>
+                <td>예약</td>
+                <td><button class="table-check-details-information" type="button" >상세조회</button></td>
               </tr>
             </tbody>
           </table>
+
+          <div class="reservation-management-pages-count">
+            <div>
+              <span class="button-prev"><</span>
+            </div>
+            <ul>
+              <li><a class="page-number" href="#">1</a></li>
+            </ul>
+            <div>
+              <span class="button-next">></span>
+            </div>
+
+          </div>
         </div>
-        <!---------------------------주문 정보 테이블-------------------------------------------------->
-        <div class="reservation-order-information">
-          <h3 class="reservation-order-information title">주문 정보</h3>
-        </div>
-        <table class="reservation-order_table">
-          <thead>
-            <tr>
-              <th class="table-order-num">주문번호</th>
-              <th class="table-order-date">주문일자</th>
-              <th class="table-order-customer">주문자</th>
-              <th class="table-order-phone">연락처</th>
-              <th class="table-order-email">이메일</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1234567</td>
-              <td>2020-10-12</td>
-              <td>강미선</td>
-              <td>010-1234-5678</td>
-              <td>tired@abc.com</td>
-            </tr>
-          </tbody>
-        </table>
-        <!-- -------------------------------결제 정보 테이블-------------------------------------------- -->
-        <div class="reservation-payment-information">
-          <h3 class="reservation-payment-information title">결제 정보</h3>
-        </div>
-        <table class="reservation-payment_table">
-          <thead>
-            <tr>
-              <th class="table-payment-price">상품금액</th>
-              <th class="table-payment-discount">할인금액</th>
-              <th class="table-payment-point">포인트 및 기타결제</th>
-              <th class="table-payment-total">총 결제금액</th>
-              <th class="table-payment-how">결제 방법</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>70,000<p>원</p></td>
-              <td>-5,000<p>원</p></td>
-              <td>-2,500<p>원</p></td>
-              <td>62,500<p>원</p></td>
-              <td>신용카드</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="reservation-get-point">
-          <h4>열정스터디카페 포인트 예상 적립: </h4>
-          <span>500<p>P</p></span>
-        </div>
+        
        
-        <div class="reservation-management-list">
-          <a class="list-button" href="예약 상세 조회">목록</a>
-        </div>
       </div>
     </section>
 

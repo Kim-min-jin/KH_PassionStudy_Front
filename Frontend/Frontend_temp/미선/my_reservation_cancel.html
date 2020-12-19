@@ -4,7 +4,7 @@
       <link rel = "stylesheet" href="../../css/headfoot.css">
       <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
-      <title>마이페이지</title>
+      <title>예약-취소내역</title>
       <script src="https://code.jquery.com/jquery-3.5.1.js" 
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
       crossorigin="anonymous"></script>
@@ -158,13 +158,13 @@
           color: white;
         }
 
-        /* 부 탭메뉴버튼과 그 아래 버튼에 on 설정 했을 때  */
+        /* ----------------부 탭메뉴버튼과 그 아래 버튼에 on 설정 했을 때 -------------------------- */
         .container button.on {
           background-color: #202020;
           color: #ffffff;
         }
         
-        /* --------------------------------스타일 먹이기 시작-------- */
+        /* --------------------------------스타일 먹이기 시작---------------------------- */
         .reservation-confirm-tool_container {
           display: flex;
           background-color: #eeecec;
@@ -242,13 +242,9 @@
           padding: 5px;
           border-bottom: 1px solid #bbbbbb;
         }
-        .reservation-state_table .table-nodata {
-          /* background: url(); */
-          height: 300px;
+        .reservation-state_table .reservation-state-cancel {
+          color: #ce0d0d;
           font-weight: bold;
-          font-size: medium;
-          color: #3a3a3a;
-
         }
         .table-check-details-information {
           background-color: #54a8ec;
@@ -359,10 +355,10 @@
         <div class="container_reservation-management">
           <ul>
             <li>
-              <a href="예약확인.html"><button class="confirm-reservation-button on"> 예약 확인 </button></a>
+              <a href="예약확인.html"><button class="confirm-reservation-button"> 예약 확인 </button></a>
             </li>
             <li>
-              <a href="취소내역.html"><button class="cancel-reservation-button"> 취소 내역 </button></a>
+              <a href="취소내역.html"><button class="cancel-reservation-button on"> 취소 내역 </button></a>
             </li>
           </ul>
         </div>
@@ -504,8 +500,7 @@
           <div class="reservation-confirm-tool-lookup">조회</div>
         </div>
 
-        <!------------- 예약 보여주는 테이블 만들기------밤샘 각이다~~~신난다 ^_^ ----------->
-        <!-- 예약 확인 테이블 (상태: 1.예약, 2.취소, 3.결제) / DB에서 자료 꺼내오기 --------->
+        <!------------- 취소 내역 테이블 : '상태: 취소'만 노출 ------------------->
         <div class="reservation-state_container">
           <table class="reservation-state_table">
             <thead>
@@ -514,7 +509,7 @@
                 <th class="table-room">스터디룸명</th>
                 <th class="table-type">스터디룸 타입</th>
                 <th class="table-date">예약일</th>
-                <th class="table-time">이용시간</th>
+                <th class="table-time">취소일</th>  <!--예약 확인과 달라진 탭메뉴-->
                 <th class="table-state">상태</th> 
                 <th class="table-lookup">조회</th>
                 <!--상태: 취소인 경우 red;-->
@@ -522,11 +517,29 @@
             </thead>
             <tbody>
               <tr>
-                <td colspan="7" class="table-nodata">최근 1개월 이내에 예약한 이력이 없습니다.</td>
+                <td>1</td>
+                <td>열정만수르</td>
+                <td>단체실</td>
+                <td>2020-12-10</td>
+                <td>2020-11-02</td>
+                <td class="reservation-state-cancel">취소</td>
+                <td><button class="table-check-details-information" type="button" >상세조회</button></td>
               </tr>
             </tbody>
           </table>
 
+          <div class="reservation-management-pages-count">
+            <div>
+              <span class="button-prev"><</span>
+            </div>
+            <ul>
+              <li><a class="page-number" href="#">1</a></li>
+            </ul>
+            <div>
+              <span class="button-next">></span>
+            </div>
+
+          </div>
         </div>
         
        

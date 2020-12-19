@@ -252,6 +252,133 @@
             /* line-height: 35px; */
           }
 
+        .login_wrap {
+            max-width: 400px;
+            margin: 0 auto 50px;
+            list-style: none;
+            padding-inline-start: 0px;
+            
+        }
+
+        .form_wrap_signup {
+            height: 700px;
+        }
+
+        .login_wrap .member_title {
+            margin-bottom: 20px;
+            color: #000;
+            font-size: 44px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .login_wrap h2 {
+            display: block;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .login_wrap .member_tab_list {
+            width: 100%;
+            overflow: hidden;
+            margin-top: 40px;
+        }
+
+        .login_wrap .member_tab_list li {
+            float: left;
+            width: 50%;
+            box-sizing: border-box;
+            border-bottom: 4px solid #000;
+        }
+
+        .login_wrap .member_tab_list li:first-child a {
+            margin-right: -1px;
+        }
+
+        .login_wrap .member_tab_list a.active {
+            position: relative;
+            background: #000;
+            color: #fff;
+            border-color: #000;
+        }
+
+        .login_wrap .member_tab_list a {
+            color: #303033;
+            display: block;
+            height: 48px;
+            border: 1px solid #d4d4d4;
+            border-bottom: 0;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 46px;
+            text-align: center;
+        }
+
+        .login_wrap .member_tab_cnt {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .login_wrap .member_login_info {
+            padding-bottom: 40px;
+            text-align: center;
+        }
+
+        .login_wrap .btn_me.active {
+            background: #303033;
+        }
+
+        .login_wrap .btn_me {
+            width: 100%;
+            border-radius: 2px;
+            color: #fff;
+            font-size: 14px;
+            line-height: 36px;
+            font-weight: 600;
+        }
+
+        .btn_me {
+            display: inline-block;
+            position: relative;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .member_login_info li {
+            margin-bottom: 40px;
+        }
+
+        .member_field_box .inpbx {
+            vertical-align: top;
+            box-sizing: border-box;
+        }
+
+        .inpbx {
+            position: relative;
+            height: 48px;
+            background: #fff;
+        }
+
+        .inpbx input {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 0 14px;
+            font-size: 14px;
+            color: #1a1a1a;
+            background: transparent;
+            border: 1px solid #d4d4d4;
+            border-radius: 2px;
+        }
+
+        ul, ol, li {
+            list-style: none;
+            padding-inline-start: 0px;
+
+        }
+
         
 
 
@@ -298,7 +425,41 @@
     </header>
 
     <section>
-      
+        <div class="login_wrap">
+            <form class="form_wrap_signup">
+                <h2 class="member_title">계정찾기</h2>
+                    <ul class="member_tab_list">
+                        <li>
+                            <a href="" >아이디</a>
+                        </li>
+                        <li>
+                            <a href="" class="active">비밀번호</a>
+                        </li>
+                    </ul>
+                    <div class="member_tab_cnt">
+                        <div class="member_login_info">
+                            <p>
+                                본인인증을 통해 아이디(이메일) 확인 및
+                                <br/>
+                                비밀번호를 변경하실 수 있습니다.
+                            </p>
+                        </div>
+                        <ul class="member_field_section">
+                            <li>
+                                <div class="field_id_box">
+                                    <div class="inpbx">
+                                        <input type="text" id="userid" placeholder="아이디(이메일)" formcontrolname="userid" 
+                                                autocorrect="off" autocapitalize="none"/>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="" class="btn_me active">
+                        <button type="button" class="btn btn_me active">본인인증하기</button>
+                    </a>
+            </form>
+        </div>
 
 
 

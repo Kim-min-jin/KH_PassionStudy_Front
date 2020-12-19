@@ -4,7 +4,7 @@
       <link rel = "stylesheet" href="../../css/headfoot.css">
       <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
-      <title>부메뉴까지 포함한 기본 틀</title>
+      <title>포인트내역이 없습니다.</title>
       <script src="https://code.jquery.com/jquery-3.5.1.js" 
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
       crossorigin="anonymous"></script>
@@ -81,45 +81,6 @@
             color: #fff;
         }
 
-
-      
-      /* -------------------------탭 설정 임의로 변경 (bottom: 50px-> 30px)----------------------------------- */
-        .tabtype { 
-            margin: 50px 0 30px 0;
-        }
-        .tabtype_wrapper{
-            width: 1000px;
-            margin: 0 auto;
-        }
-
-        /*나의정보 ~ 설정 버튼 */
-        .tabtype .tabtype_wrapper li {  
-            display: inline-block;
-            width: 24.5%;
-        }
-        .tabtype .tabtype_wrapper button {
-            width: 100%;
-            height: 40px;
-            /* box-shadow: 0 20px 40px rgba(17, 20, 39, 0.10); */
-            background-color: rgb(190, 190, 190);
-            border: 0;
-            font-weight: 900;
-            font-family: 'Montserrat', Noto Sans KR, sans-serif;
-            cursor: pointer;
-            font-size: 20px;
-        }
-        .tabtype .tabtype_wrapper li a{
-            text-decoration: none;
-        }
-        .tabtype .tabtype_wrapper button:hover{
-            background-color: #ffcc00;
-            color: white;
-        }
-        .tabtype button.on {
-            background-color: #202020;
-            color: #ffffff;
-        }
-      
         
         .section {
           width: 1000px;
@@ -128,7 +89,10 @@
         /* -------------------------탭 설정 임의로 변경 (top: 50px-> 30px)----------------------------------- */
         .container {
           padding: 0; 
-          margin: 30px 0 50px 0;
+          margin: 50px 0 30px 0;
+        }
+        .container_mypage-management {
+          height: 40px;
         }
         /*두 번째 탭 감싸는 ul*/ 
         .container .container_mypage-management ul { 
@@ -138,7 +102,7 @@
         /*두 번째 탭 사이즈 조절하는 코드*/ 
         .container .container_mypage-management li {
           display: inline-block;
-          width: 497px;
+          width: 1000px;
         }
         .container .container_mypage-management button { 
           width: 100%;
@@ -165,14 +129,124 @@
           color: #ffffff;
         }
         
-        
-        /* footer 왔다 갔다 할 때 하는 테스트 코드 */
-        /* .pc {
+        /* ----------------------------------------------------------------- */
+        .mypage-point {
+          width: 1000px;
+          margin-bottom: 160px;
+        }
+        .available-point {
+          height: 60px;
+          margin-top: 70px;
+          border-bottom: 1px solid #c5c5c5;
+          position: relative;
+        }
+        .available-point .point-amount {
           position: absolute;
-          bottom: 0;
-          width: 100%;
-        } */
+          right: 20px;
+        }
+        .available-point strong {
+          font-size: 1.7rem;
+          font-weight: bold;
+        }
         
+        .point-list-intro {
+          height: 60px;
+          margin-top: 40px;
+          position: relative;
+        }
+        .point-list-intro p {
+          display: inline-block;
+          font-size: 1.7rem;
+          font-weight: bold;
+
+        }
+        .point-list-intro span{
+          position: absolute;
+          right: 20px;
+          font-size: 0.9rem;
+          font-weight: bold;
+          margin-top: 7px;
+
+        }
+
+        .point-list-container {
+          border-bottom: 1px solid #c5c5c5;
+          border-top: 1px solid #c5c5c5;
+        }
+        .point-list-container .point-minus {
+          position: absolute;
+          right: 20px;
+        }
+        .point-state {
+          width: 60px; height: 40px;
+          line-height: 40px;
+          text-align: center;
+          border: 1px solid #cc1010;
+          margin: 30px 50px 70px 0;
+          color: #cc1010;
+          border-radius: 6px;
+          font-weight: bold;
+        }
+
+        /* 포인트 적립인 경우: blue */
+        .state-plus {
+          width: 60px; height: 40px;
+          line-height: 40px;
+          text-align: center;
+          border: 1px solid #325cac;
+          margin: 30px 50px 70px 0;
+          color: #325cac;
+          border-radius: 6px;
+          font-weight: bold;
+        }
+        .point-list-container .point-plus {
+          position: absolute;
+          right: 20px;
+        }
+        .point-plus {
+          margin: 30px 0;
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: #325cac;
+        }
+
+        .point-detail {
+          margin-top: 30px;
+        }
+        .point-detail li:nth-child(2) {
+          margin: 15px 0 13px;
+          font-size: 1.4rem;
+          font-weight: bold;
+          border-bottom: none;
+          color: #353535;
+          
+        }
+        .point-detail li:nth-child(3) {
+          font-size: small;
+        }
+        .point-minus {
+          margin: 30px 0;
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: #cc1010;
+        }
+
+
+        .pointlist-nothing {
+          text-align: center;
+          height: 300px;
+          border-left: none;
+          border-right: none
+          ;
+        }
+        .pointlist-nothing #Capa_1 {
+          margin: 80px 0 20px;
+        }
+        .pointlist-nothing p {
+          font-size: 0.9rem;
+          color: #414141;
+        }
+       
       </style>
   </head>
 
@@ -220,41 +294,41 @@
       </div>
     </div>
 
-  
-    <div class="tabtype">
-        <div class="tabtype_wrapper">
-            <ul>
-              <li>
-                  <a href="나의정보.html"><button class="btn1 on">나의 정보</button></a>
-              </li>
-              <li>
-                  <a href="나의 예약 관리.html"><button class="btn2">나의 예약 관리</button></a>
-              </li>
-              <li>
-                  <a href="나의 활동.html"><button class="btn3">나의 활동</button></a>
-              </li>
-              <li>
-                <a href="설정.html"><button class="btn4">설정</button></a>
-            </li>
-            </ul>
-        </div>
-    </div>  
 
     <section class="section">
       <div class="container">
         <div class="container_mypage-management">
           <ul>
             <li>
-              <a href="링크.html"><button class="first-teb-button on">첫 번째 탭 </button></a>
-            </li>
-            <li>
-              <a href="링크.html"><button class="second-teb-button">두 번째 탭 </button></a>
+              <a href="링크.html"><button class="first-teb-button on">내 포인트</button></a>
             </li>
           </ul>
         </div>
 
+        <div class="mypage-point">
+          <ul class="point-detail">
+            <li class="available-point">
+              <strong>
+                사용가능한 포인트
+                <span class="point-amount">0 P</span>
+              </strong>
+            </li>
+          </ul>
+          <div class="point-list-intro">
+            <p>포인트 내역</p>
+            <span>열정스터디카페 포인트 사용 안내 ></span>
+          </div>
+          <div class="point-list-container">
+            <div class="pointlist-nothing">
+              <svg id="Capa_1" enable-background="new 0 0 551.13 551.13" height="120" viewBox="0 0 551.13 551.13" width="120" xmlns="http://www.w3.org/2000/svg"><path d="m275.565 0c-151.944 0-275.565 123.621-275.565 275.565s123.621 275.565 275.565 275.565 275.565-123.621 275.565-275.565-123.621-275.565-275.565-275.565zm0 516.685c-132.955 0-241.119-108.164-241.119-241.119s108.164-241.12 241.119-241.12 241.12 108.164 241.12 241.119-108.165 241.12-241.12 241.12z"/><path d="m258.342 378.902h34.446v34.446h-34.446z"/><path d="m258.344 137.783h34.444v206.674h-34.444z"/></svg>
+              <p>포인트 내역이 없습니다.</p>
+            </div>
+          </div>
+
+          
+
+        </div>
         
-       
       </div>
     </section>
 
