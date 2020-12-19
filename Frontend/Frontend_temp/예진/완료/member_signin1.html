@@ -318,6 +318,7 @@
         }
   
         .signup_step .ckjoinbox {
+          
           margin-bottom: 15px;
           padding: 22px 0;
           border-bottom: 2px solid #f4f4f4;
@@ -352,23 +353,20 @@
           color: #303033;
           box-sizing: border-box;
           cursor: pointer;
-          vertical-align: top;
-          font-size: 13px;
           top: 50%;
           left: 6px;
-          height: 11px;
-          margin-top: -3px;
+          margin-top: -2px;
         }
   
         .ckjoinbox label {
-          margin-top: 0;
+            margin-top: -px;
         }
   
         .signup_step .cklist {
           margin-bottom: 34px;
         }
   
-        .signup_step .cklist .btn_check {
+        .signup_step .cklist .btn_check, .btn_check2, .btn_check3 {
           margin-left: 15px; 
           font-size: 11px;
           color: #303033;
@@ -411,11 +409,7 @@
           margin-bottom: 4px;
         }
   
-        .ckbox1 {
-          padding-bottom: 4px;
-        }
 
-        
 
 
   </style>
@@ -476,89 +470,125 @@
                         이용약관에 동의해주세요.
                       </h3>
                       <div class="ckjoinbox">
-                        <span>
+                        
                           <input
                             type="checkbox"
                             name="allckbox"
-                            class="check_box_all"
                           />
                           <label title="모두 동의 (선택 정보 포함)">
                             모두 동의 (선택 정보 포함)
                           </label>
-                        </span>
                       </div>
                       <div class="cklist">
                         <span class="ckbox1">
                           <input
                             type="checkbox"
                             name="ckbox1"
-                            class="check_box_age"
                           />
                           <label title="[필수] 만 14세 이상">
                             [필수] 만 14세 이상
                           </label>
                         </span>
                         <span>
-                          <span class="ckjoin">
+                          <span class="ckbox1">
                             <input
                               type="checkbox"
                               name="ckbox2"
-                              class="check_box_terms"
                             />
                             <label title="[필수] 이용약관 동의">
                               [필수] 이용약관 동의
                               <button type="button" class="btn_check" data-toggle="modal" data-target="#exampleModalScrollable">보기</button>
                               <!---->
                             </label>
-<!-- Modal -->
-<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalScrollableTitle">이용약관</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p class="ls2 lh6 bs5 ts4"><em class="emphasis"><(주)열정스터디>('www.열정스터디.net'이하  '열정스터디')</em>은(는) 개인정보보호법에 따라 이용자의 개인정보 보호 및 권익을 보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록 다음과 같은 처리방침을 두고 있습니다.</p><p class="ls2 lh6 bs5 ts4"><em class="emphasis"><(주)열정스터디>('열정스터디')</em> 은(는) 회사는 개인정보처리방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.</p><p class="ls2">○ 본 방침은부터 <em class="emphasis">2020</em>년 <em class="emphasis">1</em>월 <em class="emphasis">3</em>일부터 시행됩니다.</p></br><p class='lh6 bs4'><strong>1. 개인정보의 처리 목적 <em class="emphasis"><(주)열정스터디>('www.열정스터디.net'이하  '열정스터디')</em>은(는) 개인정보를 다음의 목적을 위해 처리합니다. 처리한 개인정보는 다음의 목적이외의 용도로는 사용되지 않으며 이용 목적이 변경될 시에는 사전동의를 구할 예정입니다.</strong></p><ul class="list_indent2 mgt10"><p class="ls2">가. 홈페이지 회원가입 및 관리</p><p class="ls2">회원 가입의사 확인, 서비스 부정이용 방지, 각종 고지·통지 등을 목적으로 개인정보를 처리합니다.</p></br></ul>
 
-
-      </div>
-    </div>
-  </div>
-</div>
                               <!---->
                             
                           </span>
                         </span>
                         <span>
-                          <span class="ckjoin">
+                          <span class="ckbox1">
                             <input
                               type="checkbox"
                               name="ckbox3"
-                              class="check_box_psnl"
                             />
                             <label title="[필수] 개인정보 처리방침 동의">
                               [필수] 개인정보 처리방침 동의
-                              <button type="button" class="btn_check">보기</button>
+                              <button type="button" class="btn_check2" data-toggle="modal" data-target="#exampleModalScrollable1">보기</button>
                             </label>
                           </span>
                         </span>
                         <span>
-                          <span class="ckjoin">
+                          <span class="ckbox1">
                             <input
                               type="checkbox"
                               name="ckbox4"
-                              class="check_box_ad"
                             />
                             <label
                               title="[선택] 광고성 정보 수신 및 마케팅 활용 동의"
                             >
                               [선택] 광고성 정보 수신 및 마케팅 활용 동의
-                              <button type="button" class="btn_check">보기</button>
+                              <button type="button" class="btn_check3" data-toggle="modal" data-target="#exampleModalScrollable2">보기</button>
                             </label>
                           </span>
+
+                      <!-- 1번 약관 -->
+                      <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-scrollable" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalScrollableTitle">이용약관</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <p class="ls2 lh6 bs5 ts4"><em class="emphasis"><(주)열정스터디>('www.열정스터디.net'이하  '열정스터디')</em>은(는) 개인정보보호법에 따라 이용자의 개인정보 보호 및 권익을 보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록 다음과 같은 처리방침을 두고 있습니다.</p><p class="ls2 lh6 bs5 ts4"><em class="emphasis"><(주)열정스터디>('열정스터디')</em> 은(는) 회사는 개인정보처리방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.</p><p class="ls2">○ 본 방침은부터 <em class="emphasis">2020</em>년 <em class="emphasis">1</em>월 <em class="emphasis">3</em>일부터 시행됩니다.</p></br><p class='lh6 bs4'><strong>1. 개인정보의 처리 목적 <em class="emphasis"><(주)열정스터디>('www.열정스터디.net'이하  '열정스터디')</em>은(는) 개인정보를 다음의 목적을 위해 처리합니다. 처리한 개인정보는 다음의 목적이외의 용도로는 사용되지 않으며 이용 목적이 변경될 시에는 사전동의를 구할 예정입니다.</strong></p><ul class="list_indent2 mgt10"><p class="ls2">가. 홈페이지 회원가입 및 관리</p><p class="ls2">회원 가입의사 확인, 서비스 부정이용 방지, 각종 고지·통지 등을 목적으로 개인정보를 처리합니다.</p></br></ul>
+                        
+                        
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- 2번약관 -->
+                        
+                        <div class="modal fade" id="exampleModalScrollable1" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable1" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalScrollableTitle1">이용약관</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <p class="ls2 lh6 bs5 ts4"><em class="emphasis"><(주)열정스터디>('www.열정스터디.net'이하  '열정스터디')</em>은(는) 개인정보보호법에 따라 이용자의 개인정보 보호 및 권익을 보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록 다음과 같은 처리방침을 두고 있습니다.</p><p class="ls2 lh6 bs5 ts4"><em class="emphasis"><(주)열정스터디>('열정스터디')</em> 은(는) 회사는 개인정보처리방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.</p><p class="ls2">○ 본 방침은부터 <em class="emphasis">2020</em>년 <em class="emphasis">1</em>월 <em class="emphasis">3</em>일부터 시행됩니다.</p></br><p class='lh6 bs4'><strong>1. 개인정보의 처리 목적 <em class="emphasis"><(주)열정스터디>('www.열정스터디.net'이하  '열정스터디')</em>은(는) 개인정보를 다음의 목적을 위해 처리합니다. 처리한 개인정보는 다음의 목적이외의 용도로는 사용되지 않으며 이용 목적이 변경될 시에는 사전동의를 구할 예정입니다.</strong></p><ul class="list_indent2 mgt10"><p class="ls2">가. 홈페이지 회원가입 및 관리</p><p class="ls2">회원자격 유지·관리, 제한적 본인확인제 시행에 따른 본인확인, 서비스 부정이용 방지, 각종 고지·통지 등을 목적으로 개인정보를 처리합니다.</p></br></ul>    
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        
+                        <!-- 3번약관 -->
+                          <div class="modal fade" id="exampleModalScrollable2" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle2" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable2" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalScrollableTitle2">이용약관</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <p class="ls2 lh6 bs5 ts4"><em class="emphasis"><(주)열정스터디>('www.열정스터디.net'이하  '열정스터디')</em>은(는) 개인정보보호법에 따라 이용자의 개인정보 보호 및 권익을 보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록 다음과 같은 처리방침을 두고 있습니다.</p><p class="ls2 lh6 bs5 ts4"><em class="emphasis"><(주)열정스터디>('열정스터디')</em> 은(는) 회사는 개인정보처리방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.</p><p class="ls2">○ 본 방침은부터 <em class="emphasis">2020</em>년 <em class="emphasis">1</em>월 <em class="emphasis">3</em>일부터 시행됩니다.</p></br><p class='lh6 bs4'><strong>1. 개인정보의 처리 목적 <em class="emphasis"><(주)열정스터디>('www.열정스터디.net'이하  '열정스터디')</em>은(는) 개인정보를 다음의 목적을 위해 처리합니다. 처리한 개인정보는 다음의 목적이외의 용도로는 사용되지 않으며 이용 목적이 변경될 시에는 사전동의를 구할 예정입니다.</strong></p><ul class="list_indent2 mgt10"><p class="ls2">가. 마케팅 및 광고에의 활용</p><p class="ls2">신규 서비스(제품) 개발 및 맞춤 서비스 제공, 이벤트 및 광고성 정보 제공 및 참여기회 제공 , 인구통계학적 특성에 따른 서비스 제공 및 광고 게재 , 서비스의 유효성 확인 등을 목적으로 개인정보를 처리합니다.</p></br></ul>
+                        
+                          
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+
                           <input
                             type="hidden"
                             formcontrolname="receive_sms"
@@ -571,6 +601,9 @@
                           />
                         </span>
                       </div>
+
+
+            
                       <a href="./member_signin2.html" class="member_go">
                         <button type="button" class="btn_next_step">
                           동의하고 가입하기
