@@ -252,6 +252,134 @@
             /* line-height: 35px; */
           }
 
+
+        
+        .signup_wrap{
+            overflow: hidden;
+            max-width: 400px;
+            margin: 0 auto 200px;
+        }
+
+        .signup_wrap h2 {
+            margin-bottom: 34px;
+            font-weight: 600;
+            font-size: 44px;
+            text-align: center;
+            display: block;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .step_wrap {
+            position: relative;
+        }
+
+        .step_wrap .step5_event_info {
+            width: 80%
+        }
+
+        .step_wrap i {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: #000;
+            transition: width .2s;
+            z-index: 1;
+        }
+
+        .signup_step {
+            display: flex;
+            list-style: none;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 0px;
+        }
+
+        .signup_step>li, .step_wrap {
+            position: relative;
+        }
+
+        .signup_step>li {
+            -webkit-box-flex: 1;
+            flex: 1 0 100%;
+            padding-top: 18px;
+            border-top: 4px solid #f4f4f4;
+        }
+
+        .signup_step h3 {
+            margin-bottom: 20px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        .blind {
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 1px;
+            font-size: 1px;
+            line-height: 100px;
+            white-space: nowrap;
+        }
+
+        .inpbx input{
+            margin-top: 20px;
+            margin-bottom: 30px;
+            display: block;
+            width: 100%;
+            height: 48px;
+            padding: 0 14px;
+            font-size: 14px;
+            color: #1a1a1a;
+            border: 0;
+            background: transparent;
+            outline: none;
+            border: 1px solid #d4d4d4;
+            
+        }
+
+        .inpbx, .inpbx input {
+            vertical-align: top;
+            box-sizing: border-box;
+        }
+
+        .signup_wrap .btn_next_step {
+            border-radius: 2px;
+            font-weight: 500;
+            width: 100%;
+            height: 48px;
+            background: #c4c4c4;
+            font-size: 14px;
+            color: #fff;
+            outline: none;
+        }
+
+        button {
+          border: 0;
+          background: transparent;
+          cursor: pointer;
+          appearance: button;
+          text-rendering: auto;
+          letter-spacing: normal;
+          word-spacing: normal;
+          text-transform: none;
+          text-indent: 0px;
+          text-shadow: none;
+          display: inline-block;
+          text-align: center;
+          align-items: flex-start;
+          box-sizing: border-box;
+          font: 400 13.333px Arial;
+      }
+
         
 
 
@@ -298,20 +426,35 @@
     </header>
 
     <section>
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <div class="signup_wrap">
+            <form class="form_wrap_signup">
+                <h2 class="title_signup">간편가입</h2>
+                <div class="step_wrap">
+                    <i class="step5_event_info"></i>
+                    <ul class="signup_step">
+                        <li>
+                            <h3>추천인을 입력해주세요.</h3>
+                            <div class="signup_step_box">
+                                <label for="user_event_input" class="blind signup_step"></label>
+                                <div class="field signup_step_box">
+                                    <div class="inpbx">
+                                        <input type="text" 
+                                               id="user_eventid" 
+                                               placeholder="추천인 아이디" 
+                                               formcontrolname="user_eventid"
+                                               autocorrect="off" 
+                                               autocapitalize="none"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="./member_signin7.html" class="member_go">
+                                <button type="button" class="btn_next_step">다음</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
 
     </section>
 

@@ -253,6 +253,117 @@
           }
 
         
+        .signup_wrap {
+            overflow: hidden;
+            max-width: 400px;
+            margin: 0 auto 200px;
+        }
+
+        .signup_wrap h2 {
+            margin-bottom: 34px;
+            font-weight: 600;
+            font-size: 44px;
+            text-align: center;
+            display: block;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .step_wrap {
+            position: relative;
+        }
+
+        .step_wrap .step6_welcome {
+            width: 100%;
+        }
+
+        .step_wrap i {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: #000;
+            transition: width .2s;
+            z-index: 1;
+        }
+
+        .signup_step {
+            display: flex;
+            list-style: none;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 0px;
+        }
+
+        .signup_step>li, .step_wrap {
+            position: relative;
+        }
+
+        .signup_step>li {
+            -webkit-box-flex: 1;
+            flex: 1 0 100%;
+            padding-top: 18px;
+            border-top: 4px solid #f4f4f4;
+        }
+
+        .join_ly {
+            font-size: 12px;
+        }
+
+        .join_ly h3 {
+            margin: 16px 0 45px;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        .coupon_dsc .user_coupon_img {
+            border: 0;
+            vertical-align: top;
+            margin-left: 25px;
+            width: 164px;
+        }
+
+        .join_ly p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .coupon_dsc a {
+            font-weight: 500;
+            color: #303033;
+            text-decoration: underline;
+        }
+
+        .join_ly .btn_next_step {
+            display: block;
+            background: #000;
+            text-align: center;
+            border-radius: 2px;
+            font-weight: 500;
+        }
+
+        .signup_step .btn_next_step {
+            border-radius: 2px;
+            font-weight: 500;
+            width: 100%;
+            height: 48px;
+            background: #c4c4c4;
+            font-size: 14px;
+            color: #fff;
+            outline: none;
+            border: none;
+        }
+
+        
 
 
   </style>
@@ -298,20 +409,41 @@
     </header>
 
     <section>
-      
+        <div class="signup_wrap">
+            <form class="form_signup_wrap">
+                <h2 class="title_signup">간편가입</h2>
+                <div class="step_wrap">
+                    <i class="step6_welcome"></i>
+                    <ul class="signup_step">
+                        <li>
+                            <div class="join_ly">
+                                <h3>WELCOME
+                                    <br/>
+                                    COUPON
+                                </h3>
+                                <div class="coupon_dsc">
+                                    <img class="user_coupon_img" src="https://www.flaticon.com/svg/static/icons/svg/612/612844.svg">
+                                    <img class="user_coupon_img" src="https://www.flaticon.com/svg/static/icons/svg/612/612844.svg">
 
-
-
-
-
-
-
-
-
-
-
-
-
+                                    <p>
+                                        + 쿠폰 상세 내용은
+                                        <a href="./mypage/coupon">마이 > 쿠폰</a>
+                                        <!-- 마이페이지 링크 연결 -->
+                                        에서 확인하세요.
+                                    </p>
+                                </div>
+                                <div class="login_dsc">
+                                    <!-- 로그인 화면 링크 -->
+                                    <a href="./member_login.html" class="member_go">
+                                        <button type="button" class="btn_next_step">로그인 하기</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
 
     </section>
 

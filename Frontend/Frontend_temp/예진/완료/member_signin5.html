@@ -252,9 +252,130 @@
             /* line-height: 35px; */
           }
 
-        
+          .signup_wrap {
+            overflow: hidden;
+            max-width: 400px;
+            margin: 0 auto 200px;
+        }
 
+        .signup_wrap h2 {
+            margin-bottom: 34px;
+            font-weight: 600;
+            font-size: 44px;
+            text-align: center;
+            display: block;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
 
+        .step_wrap {
+            position: relative;
+        }
+
+        .step_wrap .step4_event {
+            width: 80%
+        }
+
+        .step_wrap i {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: #000;
+            transition: width .2s;
+            z-index: 1;
+        }
+
+        .signup_step {
+            display: flex;
+            list-style: none;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 0px;
+        }
+
+        .signup_step>li, .step_wrap {
+            position: relative;
+        }
+
+        .signup_step>li {
+            -webkit-box-flex: 1;
+            flex: 1 0 100%;
+            padding-top: 18px;
+            border-top: 4px solid #f4f4f4;
+        }
+    
+        .verify_info {
+            text-align: center;
+        }
+
+        .verify_info h3 {
+            margin: 20px 0 32px;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 28px;
+        }
+
+        .verify_info h3 span {
+            display: block;
+            font-weight: 300;
+        }
+
+        .verify_info ul {
+            margin: 0 auto 30px 50px;
+            padding-left: 24px;
+            text-align: left;
+        }
+
+        .verify_info li {
+            position: relative;
+            padding: 10px 0;
+            list-style: square; 
+        }
+
+        .verify_info .btn_fix {
+            font-size: 14px;
+            display: block;
+            margin-bottom: 8px;
+            background: #fff;
+            border: 1px solid #d4d4d4;
+            color: #5d5d5d;
+            box-sizing: border-box;
+            line-height: 48px;
+        }
+
+        .signup_step .btn_next_step {
+            border-radius: 2px;
+            font-weight: 500;
+            width: 100%;
+            height: 48px;
+            background: #c4c4c4;
+            font-size: 14px;
+            color: #fff;
+            outline: none;
+        }
+
+        button {
+          border: 0;
+          background: transparent;
+          cursor: pointer;
+          appearance: button;
+          text-rendering: auto;
+          letter-spacing: normal;
+          word-spacing: normal;
+          text-transform: none;
+          text-indent: 0px;
+          text-shadow: none;
+          display: inline-block;
+          text-align: center;
+          align-items: flex-start;
+          box-sizing: border-box;
+          font: 400 13.333px Arial;
+        }
   </style>
 </head>
 <body>
@@ -298,19 +419,38 @@
     </header>
 
     <section>
-      
-
-
-
-
-
-
-
-
-
-
-
-
+        <div class="signup_wrap">
+            <form class="form_wrap_signup">
+                <h2 class="title_signup">간편가입</h2>
+                <div class="step_wrap">
+                    <i class="step4_event"></i>
+                    <ul class="signup_step">
+                        <li>
+                            <div class="verify_info">
+                                <h3>
+                                    <span class="eventbox_title">추천인 입력하고</span>
+                                    <br/>
+                                    혜택을 받으세요
+                                </h3>
+                                <ul class="signup_event_info">
+                                    <li>
+                                        신규 가입시 추천인 입력하면
+                                        <br/>
+                                        추천자, 추천인 모두에게 1000포인트 지급
+                                    </li>
+                                </ul>
+                                <a href='./member_signin7.html' class="btn_fix">혜택 없이 계속 가입하기</a>
+                                <a href='./member_signin6.html'>
+                                    <button type="button" class="btn_next_step on verify_info">
+                                        추천인 입력하고 혜택받기
+                                    </button>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
 
 
     </section>
