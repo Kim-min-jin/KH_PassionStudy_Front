@@ -4,7 +4,7 @@
       <link rel = "stylesheet" href="../../css/headfoot.css">
       <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
-      <title>부메뉴까지 포함한 기본 틀</title>
+      <title>문의내역이 없습니다.</title>
       <script src="https://code.jquery.com/jquery-3.5.1.js" 
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
       crossorigin="anonymous"></script>
@@ -130,15 +130,15 @@
           padding: 0; 
           margin: 30px 0 50px 0;
         }
-        /*두 번째 탭 감싸는 ul*/ 
+        /*---------------------------------두 번째 탭 감싸는 ul---------------------------------*/ 
         .container .container_mypage-management ul { 
           margin: 0 0 20px 0;
         }
 
-        /*두 번째 탭 사이즈 조절하는 코드*/ 
+        /*-------------------------------두 번째 탭 사이즈 조절하는 코드-----------------------*/ 
         .container .container_mypage-management li {
           display: inline-block;
-          width: 497px;
+          width: 1000px;
         }
         .container .container_mypage-management button { 
           width: 100%;
@@ -164,15 +164,83 @@
           background-color: #202020;
           color: #ffffff;
         }
-        
-        
-        /* footer 왔다 갔다 할 때 하는 테스트 코드 */
-        /* .pc {
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-        } */
-        
+        /* ---------------------------------------------------------------------- */
+        /* --------------------------------스타일 먹이기 시작-------- */
+        .reservation-confirm-tool_container {
+          display: flex;
+          background-color: #eeecec;
+          margin: 0 0 55px 0;
+        }
+        .reservation-confirm-tool_container > div:nth-child(1) {
+          flex-basis: 100px;
+          /* flex-grow: 1; */
+        }
+        .reservation-confirm-tool_container > div:nth-child(2) {
+          flex-basis: 800px;
+          /* flex-grow: 2.5; */
+        }
+        .reservation-confirm-tool_container > div:nth-child(3) {
+          flex-basis: 70px;
+          /* flex-grow: 0.5; */
+        }
+        .reservation-confirm-tool-title {
+          text-align: center;
+          margin: 33px 0 0 0 ;
+          font-weight: bold;
+        }
+        /* 가운데 박스 */
+        .reservation-confirm-tool-period {
+          height: 125px;
+          padding: 10px;
+        }
+        .reservation-confirm-tool-period > div {
+          margin: 20px 0;
+        }
+        .selected-month > button {
+          width: 60px; height: 30px;
+          margin: 0 5px;
+          border: none;
+          border-radius: 4px;
+          background-color: white;
+        }
+        .selected-ymd > select {
+          width: 80px; height: 30px;
+          border-radius: 4px;
+          border: 1px solid #cfcdcd;
+        }
+        .selected-ymd > .until {
+          margin: 0 20px;
+        }
+        .selected-ymd  > label {
+          margin-right: 8px;
+        }
+        .reservation-confirm-tool-lookup {
+          margin: 0 auto;
+          margin-right: 0;
+          padding: 32px 0 0 0;
+          text-align: center;
+          font-weight: bold;
+          background-color: #4e4e4e;
+          border-top-right-radius: 6px;
+          border-bottom-right-radius: 6px;
+          color: white;
+        }
+        /* ---------------------------------------날짜 선택 하는 폼 완료------ */
+        .mypage-inquery-nothing {
+          text-align: center;
+          height: 300px;
+          border: 3px solid #c4c4c4;
+          border-left: none;
+          border-right: none
+          ;
+        }
+        .mypage-inquery-nothing #Capa_1 {
+          margin: 80px 0 20px;
+        }
+        .mypage-inquery-nothing p {
+          font-size: 0.9rem;
+          color: #414141;
+        }
       </style>
   </head>
 
@@ -245,16 +313,153 @@
         <div class="container_mypage-management">
           <ul>
             <li>
-              <a href="링크.html"><button class="first-teb-button on">첫 번째 탭 </button></a>
-            </li>
-            <li>
-              <a href="링크.html"><button class="second-teb-button">두 번째 탭 </button></a>
+              <a href="링크.html"><button class="first-teb-button on">1:1 문의 내역</button></a>
             </li>
           </ul>
         </div>
+         <!---------------------- 날짜 선택 하는 폼 시작------------- -->
+        <div class="reservation-confirm-tool_container">
+          <div class="reservation-confirm-tool-title">구매 기간</div>
+          <div class="reservation-confirm-tool-period">
+            <div class="selected-month"> <!-- 달 선택 -->
+              <button class = "on" type="button">1개월</button>
+              <button type="button">3개월</button>
+              <button type="button">6개월</button>
+              <button type="button">12개월</button>
+            </div>
+            <div class="selected-ymd">
+              <select id="selected-ymd-year">
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020" selected="selected">2020</option>
+              </select>
+              <label for="selected-ymd-year">년</label>
+    
+              <select id="selected-ymd-month">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11" selected="selected">11</option>
+                <option value="12">12</option>
+              </select>
+              <label for="selected-ymd-month">월</label>
+    
+              <select id="selected-ymd-day">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10" selected="selected">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="20">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select>
+              <label for="selected-ymd">일</label>
+    
+              <span class="until">~</span>
+              
+              <select id="selected-ymd-end-year">
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020" selected="selected">2020</option>
+              </select>
+              <label for="selected-ymd-end-year">년</label>
+    
+              <select id="selected-ymd-end-month">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12" selected="selected">12</option>
+              </select>
+              <label for="selected-ymd-end-month">월</label>
+    
+              <select id="selected-ymd-end-day">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10" selected="selected">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="20">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select>
+              <label for="selected-ymd-end-day">일</label>
+            </div>
+          </div>
+          <div class="reservation-confirm-tool-lookup">조회</div>
+        </div>
+         <!---------------------- 날짜 선택 하는 폼 완료------------- -->
+        <div class="mypage-inquery-nothing">
+          <svg id="Capa_1" enable-background="new 0 0 551.13 551.13" height="120" viewBox="0 0 551.13 551.13" width="120" xmlns="http://www.w3.org/2000/svg"><path d="m275.565 0c-151.944 0-275.565 123.621-275.565 275.565s123.621 275.565 275.565 275.565 275.565-123.621 275.565-275.565-123.621-275.565-275.565-275.565zm0 516.685c-132.955 0-241.119-108.164-241.119-241.119s108.164-241.12 241.119-241.12 241.12 108.164 241.12 241.119-108.165 241.12-241.12 241.12z"/><path d="m258.342 378.902h34.446v34.446h-34.446z"/><path d="m258.344 137.783h34.444v206.674h-34.444z"/></svg>
+          <p>작성하신 문의 내역이 없습니다.</p>
+        </div>
 
-        
-       
+
       </div>
     </section>
 

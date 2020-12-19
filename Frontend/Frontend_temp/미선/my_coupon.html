@@ -4,7 +4,7 @@
       <link rel = "stylesheet" href="../../css/headfoot.css">
       <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
-      <title>부메뉴까지 포함한 기본 틀</title>
+      <title>쿠폰받기</title>
       <script src="https://code.jquery.com/jquery-3.5.1.js" 
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
       crossorigin="anonymous"></script>
@@ -81,45 +81,6 @@
             color: #fff;
         }
 
-
-      
-      /* -------------------------탭 설정 임의로 변경 (bottom: 50px-> 30px)----------------------------------- */
-        .tabtype { 
-            margin: 50px 0 30px 0;
-        }
-        .tabtype_wrapper{
-            width: 1000px;
-            margin: 0 auto;
-        }
-
-        /*나의정보 ~ 설정 버튼 */
-        .tabtype .tabtype_wrapper li {  
-            display: inline-block;
-            width: 24.5%;
-        }
-        .tabtype .tabtype_wrapper button {
-            width: 100%;
-            height: 40px;
-            /* box-shadow: 0 20px 40px rgba(17, 20, 39, 0.10); */
-            background-color: rgb(190, 190, 190);
-            border: 0;
-            font-weight: 900;
-            font-family: 'Montserrat', Noto Sans KR, sans-serif;
-            cursor: pointer;
-            font-size: 20px;
-        }
-        .tabtype .tabtype_wrapper li a{
-            text-decoration: none;
-        }
-        .tabtype .tabtype_wrapper button:hover{
-            background-color: #ffcc00;
-            color: white;
-        }
-        .tabtype button.on {
-            background-color: #202020;
-            color: #ffffff;
-        }
-      
         
         .section {
           width: 1000px;
@@ -128,7 +89,10 @@
         /* -------------------------탭 설정 임의로 변경 (top: 50px-> 30px)----------------------------------- */
         .container {
           padding: 0; 
-          margin: 30px 0 50px 0;
+          margin: 50px 0 30px 0;
+        }
+        .container_mypage-management {
+          height: 40px;
         }
         /*두 번째 탭 감싸는 ul*/ 
         .container .container_mypage-management ul { 
@@ -138,7 +102,7 @@
         /*두 번째 탭 사이즈 조절하는 코드*/ 
         .container .container_mypage-management li {
           display: inline-block;
-          width: 497px;
+          width: 1000px;
         }
         .container .container_mypage-management button { 
           width: 100%;
@@ -165,14 +129,90 @@
           color: #ffffff;
         }
         
-        
-        /* footer 왔다 갔다 할 때 하는 테스트 코드 */
-        /* .pc {
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-        } */
-        
+        /* ----------------------------------------------------------------- */
+        .coupon-feed {
+          width: 1000px;
+        }
+        .coupon-feed-register {
+          border-top: 1px solid gray;
+          border-bottom: 1px solid gray;
+          margin: 50px 0 20px;
+          height: 110px;
+          text-align: center;
+        }
+        .coupon-feed-register-title {
+          display: inline-block;
+          font-size: 20px;
+        }
+        .coupon-feed-register-input {
+          width: 300px;
+          height: 35px;
+          border: 1px solid #c0bebe;
+          margin: 35px 10px 35px 10px;
+        }
+        .coupon-feed-register-input::placeholder {
+          padding-left: 10px;
+          color: gray;
+          font-weight: bold;
+        }
+        .coupon-feed-register-button {
+          width: 80px;
+          height: 35px;
+          background-color: #444444;
+          color: white;
+          border-radius: 6px;
+        }
+      
+      .coupon-mold{
+        display: flex;
+        flex-wrap: wrap;;
+        margin: 40px 0;
+      }
+      .coupon-item {
+        flex-basis: 190px;
+        height: 250px;
+        padding: 20px;
+        background-color: #e4e4e4;
+        margin: 10px 10px;
+      }
+      .coupon-item_title {
+        font-size: 23px;
+        font-weight: bold;
+      }
+      .coupon-item_price {
+        font-size: 30px;
+        margin: 15px 0;
+      }
+      .coupon-item_price-number {
+        font-weight: bold;
+        font-size: 34px;
+        color: steelblue;
+      }
+      .coupon-item_price-won {
+        font-size: 18px;
+      }
+      .coupon-item_due-date {
+        margin-bottom: 15px;
+        color: #464646;
+      }
+      .coupon-item_due-date span {
+        font-size: 16px;
+      }
+      .coupon-item_studyroom-list {
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: #4e77b9;
+      }
+      .coupon-item_status-get {
+        background-color: steelblue;
+        margin: 23px 0;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 6px;
+        color: white;
+      }
       </style>
   </head>
 
@@ -220,41 +260,124 @@
       </div>
     </div>
 
-  
-    <div class="tabtype">
-        <div class="tabtype_wrapper">
-            <ul>
-              <li>
-                  <a href="나의정보.html"><button class="btn1 on">나의 정보</button></a>
-              </li>
-              <li>
-                  <a href="나의 예약 관리.html"><button class="btn2">나의 예약 관리</button></a>
-              </li>
-              <li>
-                  <a href="나의 활동.html"><button class="btn3">나의 활동</button></a>
-              </li>
-              <li>
-                <a href="설정.html"><button class="btn4">설정</button></a>
-            </li>
-            </ul>
-        </div>
-    </div>  
 
     <section class="section">
       <div class="container">
         <div class="container_mypage-management">
           <ul>
             <li>
-              <a href="링크.html"><button class="first-teb-button on">첫 번째 탭 </button></a>
-            </li>
-            <li>
-              <a href="링크.html"><button class="second-teb-button">두 번째 탭 </button></a>
+              <a href="링크.html"><button class="first-teb-button on">내 쿠폰</button></a>
             </li>
           </ul>
         </div>
+        <!-- 쿠폰 html -->
+        <div class="coupon-feed">
+          <div class="coupon-feed-container">
+            <div class="coupon-feed-register">
+              <h3 class="coupon-feed-register-title">쿠폰등록</h3>
+              <input
+                class="coupon-feed-register-input"
+                type="text"
+                placeholder="쿠폰 코드를 입력해주세요."
+              />
+              <button class="coupon-feed-register-button" type="submit">
+                등록
+              </button>
+            </div>
+            <div class="coupon-wrap">
+              <div class="coupon-mold">
+                <div class="coupon-item">
+                  <div class="coupon-item_title">[스터디룸명] 할인쿠폰</div>
+                  <div class="coupon-item_price">
+                    <span class="coupon-item_price-number">5,000</span>
+                    <span class="coupon-item_price-won">원</span>
+                  </div>
+                  <div class="coupon-item_due-date">
+                    <span>·2020년 12월 19일까지</span>
+                  </div>
+                  <a class="coupon-item_studyroom-list" href="#">적용상품 보기 ></a>
+                  <div class="coupon-item_status-get">받기</div>
+                </div>
 
-        
+                <div class="coupon-item">
+                  <div class="coupon-item_title">[스터디룸명] 할인쿠폰</div>
+                  <div class="coupon-item_price">
+                    <span class="coupon-item_price-number">5,000</span>
+                    <span class="coupon-item_price-won">원</span>
+                  </div>
+                  <div class="coupon-item_due-date">
+                    <span>·2020년 12월 19일까지</span>
+                  </div>
+                  <a class="coupon-item_studyroom-list" href="#">적용상품 보기 ></a>
+                  <div class="coupon-item_status-get">받기</div>
+                </div>
+
+                <div class="coupon-item">
+                  <div class="coupon-item_title">[스터디룸명] 할인쿠폰</div>
+                  <div class="coupon-item_price">
+                    <span class="coupon-item_price-number">5,000</span>
+                    <span class="coupon-item_price-won">원</span>
+                  </div>
+                  <div class="coupon-item_due-date">
+                    <span>·2020년 12월 19일까지</span>
+                  </div>
+                  <a class="coupon-item_studyroom-list" href="#">적용상품 보기 ></a>
+                  <div class="coupon-item_status-get">받기</div>
+                </div>
+
+                <div class="coupon-item">
+                  <div class="coupon-item_title">[스터디룸명] 할인쿠폰</div>
+                  <div class="coupon-item_price">
+                    <span class="coupon-item_price-number">5,000</span>
+                    <span class="coupon-item_price-won">원</span>
+                  </div>
+                  <div class="coupon-item_due-date">
+                    <span>·2020년 12월 19일까지</span>
+                  </div>
+                  <a class="coupon-item_studyroom-list" href="#">적용상품 보기 ></a>
+                  <div class="coupon-item_status-get">받기</div>
+                </div>
+
+                <div class="coupon-item">
+                  <div class="coupon-item_title">[스터디룸명] 할인쿠폰</div>
+                  <div class="coupon-item_price">
+                    <span class="coupon-item_price-number">5,000</span>
+                    <span class="coupon-item_price-won">원</span>
+                  </div>
+                  <div class="coupon-item_due-date">
+                    <span>·2020년 12월 19일까지</span>
+                  </div>
+                  <a class="coupon-item_studyroom-list" href="#">적용상품 보기 ></a>
+                  <div class="coupon-item_status-get">받기</div>
+                </div>
+
+                <div class="coupon-item">
+                  <div class="coupon-item_title">[스터디룸명] 할인쿠폰</div>
+                  <div class="coupon-item_price">
+                    <span class="coupon-item_price-number">5,000</span>
+                    <span class="coupon-item_price-won">원</span>
+                  </div>
+                  <div class="coupon-item_due-date">
+                    <span>·2020년 12월 19일까지</span>
+                  </div>
+                  <a class="coupon-item_studyroom-list" href="#">적용상품 보기 ></a>
+                  <div class="coupon-item_status-get">받기</div>
+                </div>
+
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+          
+            
+
+         
+
        
+        
       </div>
     </section>
 
