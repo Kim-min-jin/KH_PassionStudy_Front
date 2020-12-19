@@ -74,6 +74,7 @@ ul {
 .cont_header {
   background: #202020;
   line-height: 7;
+  align-items: center;
 }
 .cont_header .cont_wrapper {
   width: 1200px;
