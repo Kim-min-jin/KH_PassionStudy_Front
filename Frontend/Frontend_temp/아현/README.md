@@ -9,8 +9,8 @@
 - [x] calender.html : 달력 페이지 Reservation.html에 넣어줌
 - [ ] TimeTable.html : Reservation.html에 날짜 선택 시 알림창 뜨게 해줌
 
-- [ ] Reservation_Information.html : 예약자 정보 입력 페이지
+- [x] Reservation_Information.html : 예약자 정보 입력 페이지
 
-- [ ] Payment.html : 결제하기 페이지
+- [x] Payment.html : 결제하기 페이지
 
-- 주요 색 : 검은색(black) 회색(rgb(190, 190, 190)) 노란색(#ffcc00)
+- 주요 색 : 검은색(black) 회색(rgb(190, 190, 190), 틀 테두리 #D8D8D8) 노란색(#ffcc00), 틀 내부 베이지색(#FBFBEF)

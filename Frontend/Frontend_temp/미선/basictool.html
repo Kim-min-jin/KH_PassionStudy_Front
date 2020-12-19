@@ -4,7 +4,7 @@
       <link rel = "stylesheet" href="../../css/headfoot.css">
       <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
-      <title>마이페이지</title>
+      <title>부메뉴까지 포함한 기본 틀</title>
       <script src="https://code.jquery.com/jquery-3.5.1.js" 
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
       crossorigin="anonymous"></script>
@@ -83,9 +83,9 @@
 
 
       
-      
+      /* -------------------------탭 설정 임의로 변경 (bottom: 50px-> 30px)----------------------------------- */
         .tabtype { 
-            margin: 50px 0 50px 0;
+            margin: 50px 0 30px 0;
         }
         .tabtype_wrapper{
             width: 1000px;
@@ -125,9 +125,10 @@
           width: 1000px;
           margin: 0 auto;
         }
+        /* -------------------------탭 설정 임의로 변경 (top: 50px-> 30px)----------------------------------- */
         .container {
           padding: 0; 
-          margin: 50px 0 50px 0;
+          margin: 30px 0 50px 0;
         }
         /*두 번째 탭 감싸는 ul*/ 
         .container .container_mypage-management ul { 
@@ -165,12 +166,12 @@
         }
         
         
-        
-        .pc {
+        /* footer 왔다 갔다 할 때 하는 테스트 코드 */
+        /* .pc {
           position: absolute;
           bottom: 0;
           width: 100%;
-        }
+        } */
         
       </style>
   </head>
@@ -194,13 +195,13 @@
                 <li class="guide">
                     <a href=""><span>이용안내</span></a>
                 </li>
-                <li class="reserve on">
+                <li class="reserve">
                     <a href=""><span>예약/결제</span></a>
                 </li>
                 <li class="community">
                     <a href=""><span>커뮤니티</span></a>
                 </li>
-                <li class="mypage">
+                <li class="mypage on">
                     <a href=""><span>마이페이지</span></a>
                 </li>
                 <li class="login">
@@ -244,7 +245,7 @@
         <div class="container_mypage-management">
           <ul>
             <li>
-              <a href="링크.html"><button class="first-teb-button">첫 번째 탭 </button></a>
+              <a href="링크.html"><button class="first-teb-button on">첫 번째 탭 </button></a>
             </li>
             <li>
               <a href="링크.html"><button class="second-teb-button">두 번째 탭 </button></a>

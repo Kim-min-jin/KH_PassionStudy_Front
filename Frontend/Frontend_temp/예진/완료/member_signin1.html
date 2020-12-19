@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>Welcome Passion StudyCafe~!</title>
+  <link rel = "stylesheet" href="/Frontend/CSS/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.js" 
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+  crossorigin="anonymous"></script>
+  <script>    
+    /****헤더 마우스따라 움직이는 바****/
+    function headerBar(){
+       var onMenu = $('header #menu li.on').offset().left
+                                                   
+       $('.floting_bar').offset( { left: onMenu } );
+   
+       $('header #menu li').on('mouseenter', function () {
+      var a = $(this).offset().left
+      $('.floting_bar').offset( { left: a } );
+
+       })
+       $('header #menu li').on('mouseleave', function () {
+      $('.floting_bar').offset( { left: onMenu } );
+       });   
+    };
+
+    function checkWindowWidth() {
+       var windowWidth = $(window).width();
+       if (windowWidth < 1000) {
+      //창 가로 크기가 1000 미만일 경우
+      $('header #menu li.pc').removeClass('on');
+      if($("header #menu li.job.mo").length == 0) {
+         $('#menu-main .job.mo').addClass('on');
+      }
+       } else {
+      //창 가로 크기가 1000보다 클 경우
+      $('header #menu li.mo').removeClass('on');
+      if($("header #menu li.pc").length == 0) {
+         $('header #menu li.pc').addClass('on');
+      }
+       }
+    };
+
+    /****웹 로드시 작동****/
+    $(function () {
+   
+       //checkWindowWidth();
+       headerBar();
+   
+       /****헤더클릭 페이지 바로가기+중앙배치****/
+       $('header #menu li a.pagemove').click(function () {
+      var makeCenter = ($(window).height() - $(this.hash).outerHeight()) / 2
+      $('html,body').animate({
+         scrollTop: $(this.hash).offset().top - makeCenter
+      }, 400);
+       });
+
+    });
+
+    /****창크기 변화 감지 후 작동****/
+    $(window).resize(function() {
+   
+       //checkWindowWidth();   
+       headerBar();
+   
+    });
+  </script>
+  <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+          }
+
+          header {
+            background: #202020;
+            position: relative;
+            /* top: 0; */
+            /* left: 0; */
+            width: 100%;
+            height: 82px;
+            /* background: rgba(0, 0, 0, 0); */
+            border-bottom: 2px solid #fff;
+            z-index: 9;
+          }
+          header .header_inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 1200px;
+            margin-top: -2.5px;
+            transform: translateX(-50%);
+          }
+          header .header_inner .logo_img {
+            /* display: inline-block; */
+            /* left: 0; */
+            float: left;
+            /* cursor: pointer; */
+          }
+          header .header_inner .logo_img img {    
+            width: 40px;
+            height: 21px;
+          }
+          header .header_inner .logo_img a {
+            font-size: 33px;
+            color: #fff;
+            text-decoration: none;
+            line-height: 0;
+            cursor: pointer;
+          }
+          header .header_inner .menu_wrapper {
+            float: right;
+          }
+          ul {
+            list-style: none;
+          }
+          header #menu li {
+            float: left;
+            width: 110px;
+            text-align: center;
+          }
+          header #menu li a {
+            font-size: 16px;
+            color: #fff;
+          text-decoration: none;
+          }
+          header .floting_bar {
+            position: absolute;
+            top: 43px;
+            width: 110px;
+            height: 2px;
+            background: #ffcc00;
+            transition: 0.5s all;
+          }
+          header #menu li.on a {
+            color: #ffcc00;
+          }
+          header #menu li:hover a {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #ffcc00;
+          }
+
+
+          footer {
+            background: #202020;
+            /* min-height: 200px; */
+          }
+          footer .wrapper {
+            /* position: relative; */
+            width: 1200px;
+            margin: 0 auto;
+            padding: 70px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+          }
+          footer .wrapper::after {
+            content: "";
+            display: block;
+            clear: both;
+          }
+          footer .wrapper .right-section,
+          footer .wrapper .left-section {
+            float: left;
+            /* width: 50%; */
+          }
+          footer .wrapper .left-section span {
+            font-size: 13px;
+            color: #fff;
+            line-height: 26px;
+          }
+          footer .wrapper .left-section span.normal {
+            color: rgba(255, 255, 255, 0.75);
+          }
+          footer .wrapper .left-section span.copyright,
+          footer .wrapper .left-section span.normal {
+            font-weight: 300;
+            letter-spacing: 0.07em;
+          }
+          footer .wrapper .left-section span.bold {
+            padding-left: 5px;
+            font-weight: 200;
+            letter-spacing: 0.07em;
+            /* word-break: keep-all; */
+          }
+          footer .wrapper .left-section span.divide {
+            /* display: inline-block; */
+            margin: 0 5px;
+            color: rgba(255, 255, 255, 0.4);
+            font-weight: 100;
+          }
+          footer .wrapper .right-section {
+            float: right;
+            width: 37%;
+            /* vertical-align: top; */
+          }
+          footer .wrapper .right-section ul.menu > li {
+            display: inline-block;
+            padding-right: 50px;
+            vertical-align: top;
+            /* color: #fff; */
+          }
+          footer .wrapper .right-section ul.menu > li > ul {
+            padding-top: 20px;
+            list-style: none;
+          }
+          footer .wrapper .right-section ul.menu > li > a {
+            /* position: relative; */
+            font-size: 16px;
+            font-weight: 300;
+            /* z-index: 1; */
+          }
+          footer .wrapper .right-section li a {
+            color: #fff;
+            text-decoration: none;
+          }
+          footer .wrapper .right-section ul.menu > li > ul li a {
+            /* display: block; */
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 200;
+            line-height: 24px;
+            /* transition: color 0.3s ease; */
+          }
+          footer .wrapper .right-section ul.menu > li > ul li a:hover {
+            color: #ffffff;
+          }
+          footer .wrapper .right-section .family_site {
+            margin-top: 20px;
+            text-align: right;
+          }
+          footer .wrapper .right-section select.passionstudy_site {
+            /* position: relative; */
+            width: 200px;
+            height: 35px;
+            padding: 0 15px;
+            background-color: transparent;
+            /* box-shadow: none !important; */
+            /* border-radius: 0; */
+            font-size: 13px;
+            color: #ffffff;
+            /* text-align: left; */
+            /* line-height: 35px; */
+          }
+          footer .wrapper .right-section select.passionstudy_site option {
+            /* width: 200px; */
+            /* height: 35px; */
+            /* font-size: 13px; */
+            color: #202020;
+            /* line-height: 35px; */
+          }
+
+
+        .signup_wrap {
+          overflow: hidden;
+          max-width: 400px;
+          margin: 0 auto 200px;
+        }
+
+        .form_wrap_signup {
+            height: 700px;
+        }
+  
+        .title_signup {
+          display: block;
+          font-weight: 600;
+          font-size: 44px;
+          margin-bottom: 34px;
+          margin-block-start: 0.83em;
+          margin-block-end: 0.83em;
+          margin-inline-start: 0px;
+          margin-inline-end: 0px;
+          text-align: center;
+        }
+  
+        .step_wrap {
+          position: relative;
+        }
+  
+        .step_wrap i {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 4px;
+          background: #000;
+          transition: width 0.2s;
+          z-index: 1;
+        }
+  
+        .step_wrap .step0_terms {
+          width: 20%;
+        }
+  
+        .signup_step {
+          display: flex;
+          list-style: none;
+          margin-block-start: 1em;
+          margin-block-end: 1em;
+          margin-inline-start: 0px;
+          margin-inline-end: 0px;
+          padding-inline-start: 0px;
+        }
+  
+        .signup_step > li {
+          position: relative;
+          -webkit-box-flex: 1;
+          flex: 1 0 100%;
+          padding-top: 18px;
+          border-top: 4px solid #f4f4f4;
+        }
+  
+        .signup_step h3 {
+          margin-bottom: 20px;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 28px;
+        }
+  
+        .signup_step .ckjoinbox {
+          
+          margin-bottom: 15px;
+          padding: 22px 0;
+          border-bottom: 2px solid #f4f4f4;
+        }
+  
+        .ckbox1 {
+          position: relative;
+          vertical-align: top;
+          min-width: 20px;
+          min-height: 20px;
+          line-height: 20px;
+        }
+  
+        .signup_step0 input,
+        .signup_step0 span {
+          overflow: hidden;
+        }
+  
+        .signup_step0 input {
+          top: 2px;
+          left: 2px;
+          background: transparent;
+          width: 14px;
+          height: 14px;
+          border: 5;
+        }
+  
+        .signup_step0 label {
+          display: inline-block;
+          position: relative;
+          z-index: 10;
+          color: #303033;
+          box-sizing: border-box;
+          cursor: pointer;
+          top: 50%;
+          left: 6px;
+          margin-top: -2px;
+        }
+  
+        .ckjoinbox label {
+            margin-top: -px;
+        }
+  
+        .signup_step .cklist {
+          margin-bottom: 34px;
+        }
+  
+        .signup_step .cklist .btn_check, .btn_check2, .btn_check3 {
+          margin-left: 15px; 
+          font-size: 11px;
+          color: #303033;
+          text-decoration: underline;
+          margin-top: -3px;
+          display: inline-block;
+        }
+  
+        button {
+          border: 0;
+          background: transparent;
+          cursor: pointer;
+          appearance: button;
+          text-rendering: auto;
+          letter-spacing: normal;
+          word-spacing: normal;
+          text-transform: none;
+          text-indent: 0px;
+          text-shadow: none;
+          display: inline-block;
+          text-align: center;
+          align-items: flex-start;
+          box-sizing: border-box;
+          font: 400 13.333px Arial;
+        }
+  
+        .signup_step .btn_next_step {
+          width: 100%;
+          height: 48px;
+          background: #c4c4c4;
+          font-size: 14px;
+          color: #fff;
+        }
+  
+        .signup_step .cklist span {
+          display: block;
+        }
+  
+        .cklist span {
+          margin-bottom: 4px;
+        }
+  
+
+
+
+  </style>
+</head>
+<body>
+    <header>
+        <div class="header_inner">
+            
+            <div class="logo_img">
+            <!-- <img src="https://yt3.ggpht.com/a/AATXAJxe0JQTxF0Apn4-OyQ_wCwQ2mB6OGzZdc7_dpsJCw=s900-c-k-c0x00ffffff-no-rj" onclick="">
+            --><a href="">🔥 열정 스터디</a>
+            </div>
+        
+            <div class="menu_wrapper">
+                <nav id="menu">
+                    <ul id="menu-main" class="menu menu-main">
+                        <li class="main">
+                            <a href=""><span>메인</span></a>
+                        </li>
+                        <li class="roomlist">
+                            <a href="시설소개_라운지.html"><span>시설소개</span></a>
+                        </li>
+                        <li class="guide">
+                            <a href="이용안내_카페.html"><span>이용안내</span></a>
+                        </li>
+                        <li class="reserve">
+                            <a href=""><span>예약/결제</span></a>
+                        </li>
+                        <li class="community">
+                            <a href=""><span>커뮤니티</span></a>
+                        </li>
+                        <li class="mypage">
+                            <a href=""><span>마이페이지</span></a>
+                        </li>
+                        <li class="login on">
+                            <a href=""><span>로그인</span></a>
+                        </li>
+                        <div class="floting_bar" style="left: 400px;"></div>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="signup_wrap">
+            <form class="form_wrap_signup">
+              <section>
+                <h2 class="title_signup">간편가입</h2>
+                <div class="step_wrap">
+                  <i class="step0_terms"></i>
+                  <ul class="signup_step">
+                    <!-- 체크박스 부분 -->
+                    <li class="signup_step0">
+                      <h3>
+                        열정스터디 카페 서비스
+                        <br />
+                        이용약관에 동의해주세요.
+                      </h3>
+                      <div class="ckjoinbox">
+                        
+                          <input
+                            type="checkbox"
+                            name="allckbox"
+                          />
+                          <label title="모두 동의 (선택 정보 포함)">
+                            모두 동의 (선택 정보 포함)
+                          </label>
+                      </div>
+                      <div class="cklist">
+                        <span class="ckbox1">
+                          <input
+                            type="checkbox"
+                            name="ckbox1"
+                          />
+                          <label title="[필수] 만 14세 이상">
+                            [필수] 만 14세 이상
+                          </label>
+                        </span>
+                        <span>
+                          <span class="ckbox1">
+                            <input
+                              type="checkbox"
+                              name="ckbox2"
+                            />
+                            <label title="[필수] 이용약관 동의">
+                              [필수] 이용약관 동의
+                              <button type="button" class="btn_check" data-toggle="modal" data-target="#exampleModalScrollable">보기</button>
+                              <!---->
+                            </label>
+
+                              <!---->
+                            
+                          </span>
+                        </span>
+                        <span>
+                          <span class="ckbox1">
+                            <input
+                              type="checkbox"
+                              name="ckbox3"
+                            />
+                            <label title="[필수] 개인정보 처리방침 동의">
+                              [필수] 개인정보 처리방침 동의
+                              <button type="button" class="btn_check2" data-toggle="modal" data-target="#exampleModalScrollable1">보기</button>
+                            </label>
+                          </span>
+                        </span>
+                        <span>
+                          <span class="ckbox1">
+                            <input
+                              type="checkbox"
+                              name="ckbox4"
+                            />
+                            <label
+                              title="[선택] 광고성 정보 수신 및 마케팅 활용 동의"
+                            >
+                              [선택] 광고성 정보 수신 및 마케팅 활용 동의
+                              <button type="button" class="btn_check3" data-toggle="modal" data-target="#exampleModalScrollable2">보기</button>
+                            </label>
+                          </span>
+
+                      <!-- 1번 약관 -->
+                      <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-scrollable" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalScrollableTitle">이용약관</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <p class="ls2 lh6 bs5 ts4"><em class="emphasis"><(주)열정스터디>('www.열정스터디.net'이하  '열정스터디')</em>은(는) 개인정보보호법에 따라 이용자의 개인정보 보호 및 권익을 보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록 다음과 같은 처리방침을 두고 있습니다.</p><p class="ls2 lh6 bs5 ts4"><em class="emphasis"><(주)열정스터디>('열정스터디')</em> 은(는) 회사는 개인정보처리방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.</p><p class="ls2">○ 본 방침은부터 <em class="emphasis">2020</em>년 <em class="emphasis">1</em>월 <em class="emphasis">3</em>일부터 시행됩니다.</p></br><p class='lh6 bs4'><strong>1. 개인정보의 처리 목적 <em class="emphasis"><(주)열정스터디>('www.열정스터디.net'이하  '열정스터디')</em>은(는) 개인정보를 다음의 목적을 위해 처리합니다. 처리한 개인정보는 다음의 목적이외의 용도로는 사용되지 않으며 이용 목적이 변경될 시에는 사전동의를 구할 예정입니다.</strong></p><ul class="list_indent2 mgt10"><p class="ls2">가. 홈페이지 회원가입 및 관리</p><p class="ls2">회원 가입의사 확인, 서비스 부정이용 방지, 각종 고지·통지 등을 목적으로 개인정보를 처리합니다.</p></br></ul>
+                        
+                        
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- 2번약관 -->
+                        
+                        <div class="modal fade" id="exampleModalScrollable1" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable1" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalScrollableTitle1">이용약관</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <p class="ls2 lh6 bs5 ts4"><em class="emphasis"><(주)열정스터디>('www.열정스터디.net'이하  '열정스터디')</em>은(는) 개인정보보호법에 따라 이용자의 개인정보 보호 및 권익을 보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록 다음과 같은 처리방침을 두고 있습니다.</p><p class="ls2 lh6 bs5 ts4"><em class="emphasis"><(주)열정스터디>('열정스터디')</em> 은(는) 회사는 개인정보처리방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.</p><p class="ls2">○ 본 방침은부터 <em class="emphasis">2020</em>년 <em class="emphasis">1</em>월 <em class="emphasis">3</em>일부터 시행됩니다.</p></br><p class='lh6 bs4'><strong>1. 개인정보의 처리 목적 <em class="emphasis"><(주)열정스터디>('www.열정스터디.net'이하  '열정스터디')</em>은(는) 개인정보를 다음의 목적을 위해 처리합니다. 처리한 개인정보는 다음의 목적이외의 용도로는 사용되지 않으며 이용 목적이 변경될 시에는 사전동의를 구할 예정입니다.</strong></p><ul class="list_indent2 mgt10"><p class="ls2">가. 홈페이지 회원가입 및 관리</p><p class="ls2">회원자격 유지·관리, 제한적 본인확인제 시행에 따른 본인확인, 서비스 부정이용 방지, 각종 고지·통지 등을 목적으로 개인정보를 처리합니다.</p></br></ul>    
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        
+                        <!-- 3번약관 -->
+                          <div class="modal fade" id="exampleModalScrollable2" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle2" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable2" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalScrollableTitle2">이용약관</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <p class="ls2 lh6 bs5 ts4"><em class="emphasis"><(주)열정스터디>('www.열정스터디.net'이하  '열정스터디')</em>은(는) 개인정보보호법에 따라 이용자의 개인정보 보호 및 권익을 보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록 다음과 같은 처리방침을 두고 있습니다.</p><p class="ls2 lh6 bs5 ts4"><em class="emphasis"><(주)열정스터디>('열정스터디')</em> 은(는) 회사는 개인정보처리방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.</p><p class="ls2">○ 본 방침은부터 <em class="emphasis">2020</em>년 <em class="emphasis">1</em>월 <em class="emphasis">3</em>일부터 시행됩니다.</p></br><p class='lh6 bs4'><strong>1. 개인정보의 처리 목적 <em class="emphasis"><(주)열정스터디>('www.열정스터디.net'이하  '열정스터디')</em>은(는) 개인정보를 다음의 목적을 위해 처리합니다. 처리한 개인정보는 다음의 목적이외의 용도로는 사용되지 않으며 이용 목적이 변경될 시에는 사전동의를 구할 예정입니다.</strong></p><ul class="list_indent2 mgt10"><p class="ls2">가. 마케팅 및 광고에의 활용</p><p class="ls2">신규 서비스(제품) 개발 및 맞춤 서비스 제공, 이벤트 및 광고성 정보 제공 및 참여기회 제공 , 인구통계학적 특성에 따른 서비스 제공 및 광고 게재 , 서비스의 유효성 확인 등을 목적으로 개인정보를 처리합니다.</p></br></ul>
+                        
+                          
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+
+                          <input
+                            type="hidden"
+                            formcontrolname="receive_sms"
+                            value="F"
+                          />
+                          <input
+                            type="hidden"
+                            formcontrolname="receive_eamil"
+                            value="F"
+                          />
+                        </span>
+                      </div>
+
+
+            
+                      <a href="./member_signin2.html" class="member_go">
+                        <button type="button" class="btn_next_step">
+                          동의하고 가입하기
+                        </button>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </form>
+          </div>
+
+    </section>
+
+
+    <footer class="pc">
+        <div class="wrapper">
+            <div class="left-section">
+                <div>
+                    <span class="normal">상호명 :</span>
+                    <span class="bold">열정스터디</span>
+                    <span class="divide">|</span>
+                    <span class="normal">대표 :</span>
+                    <span class="bold">최주영</span>
+                    <span class="dovide">|</span>
+                    <span class="normal">Tel :</span>
+                    <span class="bold">010-****-****</span>
+                </div>
+                <div>
+                    <span class="normal">사업자등록번호 :</span>
+                    <span class="bold">123-45-67890</span>
+                    <span class="divide">|</span>
+                    <span class="normal">통신판매업 신고번호 :</span>
+                    <span class="bold">제 2017-서울종로-0105호</span>
+                </div>
+                <div>
+                    <span class="normal">개인정보관리처리자 :</span>
+                    <span class="bold">최주빵</span>
+                    <span class="divide">|</span>
+                    <span class="normal">Email</span>
+                    <span class="bold">wndud0159@naver.com</span>
+                </div>
+                <div>
+                    <span class="normal">직업정보제공사업 신고번호 :</span>
+                    <span class="bold">서울청 제2017-1호</span>
+                </div>
+                <div>
+                    <span class="normal">Address :</span>
+                    <span class="bold address">서울특별시 영등포구 선유동2로 57 이레빌딩(구관) 19F
+                    열정스터디</span>
+                </div>
+                <div>
+                    <p>.</p>
+                    <p>.</p>
+                </div>
+                <div>
+                    <span class="copyright">copyright 2019 PASSIONSTUDY. ALL Rights Reserved.</span>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <ul class="menu">
+                    <li class="product">
+                        <a href="">Space</a>
+                        <ul class="sub-depth">
+                            <li>
+                                <a href="">여기</a>
+                            </li>
+                            <li>
+                                <a href="">에</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="">Mentoring</a>
+                        <ul class="sub-depth">
+                            <li>
+                                <a href="">무</a>
+                            </li>
+                            <li>
+                                <a href="">엇</a>
+                            </li>
+                            <li>
+                                <a href="">을</a>
+                            </li>
+                            <li>
+                                <a href="">?</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="">Connect</a>
+                        <ul class="sub-depth">
+                            <li>
+                                <a href="">넣</a>
+                            </li>
+                            <li>
+                                <a href="">을</a>
+                            </li>
+                            <li>
+                                <a href="">까</a>
+                            </li>
+                            <li>
+                                <a href="">요</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="family_site">
+                    <select class="passionstudy_site">
+                        <option>Passion Family</option>
+                        <option value="">강미선, 김민진</option>
+                        <option value="">김종구, 정우혁</option>
+                        <option value="">차예진, 최주영, 한아현</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+            crossorigin="anonymous"></script>
+</body>
+</html>
