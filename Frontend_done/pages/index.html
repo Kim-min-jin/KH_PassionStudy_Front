@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
   <head>
+    <meta charset="utf-8" />
+    <title>Welcome Passion StudyCafe~!</title>
     <link rel="stylesheet" href="../CSS/styles.css" />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <title>Welcome Passion StudyCafe~!</title>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header class="PassionStudy_header">
@@ -15,36 +20,38 @@
         <div class="logo_img">
           <a href="./index.html">🔥 열정 스터디</a>
         </div>
+
         <div class="menu_wrapper">
           <nav id="PassionStudy_header_menu">
-            <ul id="" class="menu menu-main text">
-              <li class="">
-                <a href="index.html"><span>메인</span></a>
+            <ul id="menu-main" class="menu menu-main">
+              <li class="main on">
+                <a href="./index.html"><span>메인</span></a>
               </li>
-              <li class="">
+              <li class="roomlist">
                 <a href="facilities/facilities_rooms.html"
                   ><span>시설소개</span></a
                 >
               </li>
-              <li class="">
+              <li class="guide">
                 <a href="facilities/facilities_extra.html"
                   ><span>이용안내</span></a
                 >
               </li>
-              <li class="">
+              <li class="reserve">
                 <a href="reservation/reservation.html"
                   ><span>예약/결제</span></a
                 >
               </li>
-              <li class="">
+              <li class="community">
                 <a href=""><span>커뮤니티</span></a>
               </li>
-              <li class="">
+              <li class="mypage">
                 <a href=""><span>마이페이지</span></a>
               </li>
-              <li class="">
+              <li class="login">
                 <a href="member/member_login.html"><span>로그인</span></a>
               </li>
+              <div class="floting_bar" style="left: 430px"></div>
             </ul>
           </nav>
         </div>
@@ -202,4 +209,6 @@
       </div>
     </footer>
   </body>
+  <script src="../JS/menubar.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </html>

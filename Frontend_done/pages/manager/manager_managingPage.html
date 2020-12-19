@@ -3,19 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <title>Welcome Passion StudyCafe~!</title>
-
-    <link rel="stylesheet" href="../../css/styles.css" />
-    <script
-    src="https://code.jquery.com/jquery-3.5.1.js"
-    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-    crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="../../CSS/styles.css" />
     <link
-    rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -65,31 +63,32 @@
       </div>
     </header>
 
-    <div
-      class="btn-group btn_maxsizing"
-      role="group"
-      aria-label="Basic example"
-    >
-      <button type="button" class="btn btn-secondary btn-lg">
-        <a href="manager_memberpage.html" class="manager-manubar__text"
-          >회원 관리</a
-        >
-      </button>
-      <button type="button" class="btn btn-secondary btn-lg">
-        <a href="manager_salespage.html" class="manager-manubar__text"
-          >매출 관리</a
-        >
-      </button>
-      <button type="button" class="btn btn-secondary btn-lg">
-        <a href="manager_productpage.html" class="manager-manubar__text"
-          >상품 관리</a
-        >
-      </button>
+    <div class="cont_header">
+      <div class="cont_wrapper">
+        <h1>관리메뉴</h1>
+      </div>
+    </div>
+
+
+    <div class="tabtype btn_maxsizing">
+      <div class="tabtype_wrapper">
+        <ul>
+          <li>
+            <button class="btn1 on">회원 관리</button>
+          </li>
+          <li>
+            <button class="btn2">매출 조회</button>
+          </li>
+          <li>
+            <button class="btn3">상품 관리</button>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <!-- 회원 관리와 관련된 박스-->
 
-    <section class="manager_member__section">
+    <section class="manager_member__section manager_section">
       <div class="membersearch-box">
         <form class="membersearch">
           <label for="membersearch--input" class="membersearch--label"
@@ -207,7 +206,7 @@
 
     <!-- 매출과 관련된 섹터 -->
     
-    <section class="manager_sales__section">
+    <section class="manager_sales__section manager_section">
 
       
     <div class="finance__manager">
@@ -308,7 +307,7 @@
 
     <!-- 상품관리와 관련된 섹터 -->
 
-    <section class="manager_product__section">
+    <section class="manager_product__section manager_section">
       <!-- 상품관리관련 코드-->
       <div class="product_title_box">
         <h1>스터디룸 관리</h1>
@@ -574,5 +573,8 @@
       </div>
     </footer>
   </body>
+
   <script src="../../JS/menubar.js"></script>
+  <script src="../../JS/pagesjs/manager_managing_click.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   </html>
