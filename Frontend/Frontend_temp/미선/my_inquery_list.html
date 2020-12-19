@@ -4,7 +4,7 @@
       <link rel = "stylesheet" href="../../css/headfoot.css">
       <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
-      <title>마이페이지</title>
+      <title>1:1문의내역</title>
       <script src="https://code.jquery.com/jquery-3.5.1.js" 
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
       crossorigin="anonymous"></script>
@@ -66,6 +66,19 @@
       
         });
       </script>
+
+      <script>
+        $(document).ready(function(){
+          $(".state-complete").click(function(){
+            var submenu = $(this).next("ul");
+            if(submenu.is("visible")){
+              submenu.slideUp();
+            }else{
+              submenu.slideDown();
+            }
+          });
+        });
+      </script>
       <style>
         
         .cont_header{
@@ -83,7 +96,7 @@
 
 
       
-      /* --------------------------------탭 설정 임의로 변경----------------------------------------- */
+      /* -------------------------탭 설정 임의로 변경 (bottom: 50px-> 30px)----------------------------------- */
         .tabtype { 
             margin: 50px 0 30px 0;
         }
@@ -91,6 +104,7 @@
             width: 1000px;
             margin: 0 auto;
         }
+
         /*나의정보 ~ 설정 버튼 */
         .tabtype .tabtype_wrapper li {  
             display: inline-block;
@@ -124,22 +138,24 @@
           width: 1000px;
           margin: 0 auto;
         }
+        /* -------------------------탭 설정 임의로 변경 (top: 50px-> 30px)----------------------------------- */
         .container {
-          padding: 0; /*변경 4*/
+          padding: 0; 
           margin: 30px 0 50px 0;
         }
-        /*두 번째 탭 감싸는 ul*/
-        .container .container_reservation-management ul { 
-          margin: 0 0 20px 0; /*변경2*/
+        /*---------------------------------두 번째 탭 감싸는 ul---------------------------------*/ 
+        .container .container_mypage-management ul { 
+          margin: 0 0 20px 0;
         }
-        /*두 번째 탭 사이즈 조절하는 코드*/
-        .container .container_reservation-management li { 
+
+        /*-------------------------------두 번째 탭 사이즈 조절하는 코드-----------------------*/ 
+        .container .container_mypage-management li {
           display: inline-block;
-          width: 497px; /*변경1*/
+          width: 1000px;
         }
-        .container .container_reservation-management button { 
+        .container .container_mypage-management button { 
           width: 100%;
-          height: 35px; /*변경3*/
+          height: 35px;
           background-color: rgb(190, 190, 190);
           border: 0;
           font-weight: 900;
@@ -147,23 +163,21 @@
           cursor: pointer;
           font-size: 15px;
         }
-        .container .container_reservation-management li a { 
+        .container .container_mypage-management li a { 
           text-decoration: none;
         }
-        .container .container_reservation-management button a {
+        .container .container_mypage-management button a {
           color: black;
         }
-        .container .container_reservation-management button:hover { 
+        .container .container_mypage-management button:hover { 
           background-color: #ffcc00;
           color: white;
         }
-
-        /* 부 탭메뉴버튼과 그 아래 버튼에 on 설정 했을 때  */
         .container button.on {
           background-color: #202020;
           color: #ffffff;
         }
-        
+        /* ---------------------------------------------------------------------- */
         /* --------------------------------스타일 먹이기 시작-------- */
         .reservation-confirm-tool_container {
           display: flex;
@@ -225,59 +239,81 @@
           color: white;
         }
         /* ---------------------------------------날짜 선택 하는 폼 완료------ */
-        .reservation-state_table {
-          width: 1000px;
+        .mypage-inquery{
+          border: 3px solid #c4c4c4;
+          border-left: none;
+          border-right: none;
+        }
+
+        .state-complete {
+          position: relative;
+          height: 40px;
+          padding: 20px 0 20px 30px;
+          font-weight: bold;
+        }
+        .state-complete {
+          cursor: pointer;
+        }
+        .state-complete .state-date {
+          position: absolute;
+          right: 60px;
+          color: #2f3236;
+        }
+        .state-complete strong {
+          display: inline-block;
           text-align: center;
-          border-collapse: collapse;
-        }
-        .reservation-state_table th {
-          height: 40px;
-          background-color: #e4e4e4;
-          margin: 30px 0;
-          border-top: 1px solid #bbbbbb;
-          border-bottom: 1px solid #bbbbbb;
-        }
-        .reservation-state_table td {
-          height: 40px;
-          padding: 5px;
-          border-bottom: 1px solid #bbbbbb;
-        }
-        .table-check-details-information {
-          background-color: #54a8ec;
+          margin: 0 20px 0 0;
+          background-color: seagreen;
           color: white;
-          width: 70px; height: 33px;
-          line-height: 32px;
+          width: 80px; height: 30px;
+          line-height: 30px;
+          border-radius: 6px;
           border: none;
         }
-
-        /* 페이지 넘기는 버튼 */
-        .reservation-management-pages-count div, .reservation-management-pages-count ul, .reservation-management-pages-count li{
-          display: inline;
+        .expansion {
+          background-color:#f5f5f5;
+          display: none;
         }
-        .reservation-management-pages-count {
-          text-align: center;
-          margin-top: 190px;
+        .expansion .question {
+          padding: 25px 30px 25px 35px;
         }
-        .reservation-management-pages-count li {
-          margin: 0 20px;
-          color: #2b2b2b;
-          font-weight: bold;
+        .expansion .question p {
+          margin-top: 30px;
         }
-        .reservation-management-pages-count .page-number{
-          text-decoration: none;
-          color: #2b2b2b;
-          font-weight: bold;
+        .expansion .answer {
+          padding: 25px 30px 25px 35px;
         }
-
-
-        /* footer야 제발 정신 좀 차려. 바닥에 붙어 있어라. */
-        /* .pc {
+        .expansion .answer p {
+          margin-top: 30px;
+        }
+        .answer {
+          position: relative;
+          border-top: 1px solid #c9c9c9;
+        }
+        .answer .answer-date {
           position: absolute;
-          bottom: 0;
-          width: 100%;
-        } */
+          right: 60px;
+          color: #2f3236;
+        }
+        .answer > strong {
+          font-weight: bold;
+          color:seagreen;
+        }
 
-        
+        .go-inquery {
+          width: 130px; height: 45px;
+          line-height: 43px;
+          text-align: center;
+          background-color: seagreen;
+          border-radius: 6px;
+          margin: 100px auto 10px;
+        }
+        .go-inquery_button {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+        }
+
       </style>
   </head>
 
@@ -330,10 +366,10 @@
         <div class="tabtype_wrapper">
             <ul>
               <li>
-                  <a href="나의정보.html"><button class="btn1">나의 정보</button></a>
+                  <a href="나의정보.html"><button class="btn1 on">나의 정보</button></a>
               </li>
               <li>
-                  <a href="나의 예약 관리.html"><button class="btn2 on">나의 예약 관리</button></a>
+                  <a href="나의 예약 관리.html"><button class="btn2">나의 예약 관리</button></a>
               </li>
               <li>
                   <a href="나의 활동.html"><button class="btn3">나의 활동</button></a>
@@ -347,19 +383,14 @@
 
     <section class="section">
       <div class="container">
-        <!-- 예약확인, 취소내역 감싸는 div -->
-        <div class="container_reservation-management">
+        <div class="container_mypage-management">
           <ul>
             <li>
-              <a href="예약확인.html"><button class="confirm-reservation-button on"> 예약 확인 </button></a>
-            </li>
-            <li>
-              <a href="취소내역.html"><button class="cancel-reservation-button"> 취소 내역 </button></a>
+              <a href="링크.html"><button class="first-teb-button on">1:1 문의 내역</button></a>
             </li>
           </ul>
         </div>
-        <!-- 채워 넣어야 할 바디 시작 -->
-        <!---------------------- 날짜 선택 하는 폼 완료------------- -->
+         <!---------------------- 날짜 선택 하는 폼 시작------------- -->
         <div class="reservation-confirm-tool_container">
           <div class="reservation-confirm-tool-title">구매 기간</div>
           <div class="reservation-confirm-tool-period">
@@ -495,51 +526,43 @@
           </div>
           <div class="reservation-confirm-tool-lookup">조회</div>
         </div>
+         <!---------------------- 날짜 선택 하는 폼 완료------------- -->
 
-        <!------------- 예약 보여주는 테이블 만들기------밤샘 각이다~~~신난다 ^_^ ----------->
-        <!-- 예약 확인 테이블 (상태: 1.예약, 2.취소, 3.결제) / DB에서 자료 꺼내오기 --------->
-        <div class="reservation-state_container">
-          <table class="reservation-state_table">
-            <thead>
-              <tr>
-                <th class="table-num">번호</th>
-                <th class="table-room">스터디룸명</th>
-                <th class="table-type">스터디룸 타입</th>
-                <th class="table-date">예약일</th>
-                <th class="table-time">이용시간</th>
-                <th class="table-state">상태</th> 
-                <th class="table-lookup">조회</th>
-                <!--상태: 취소인 경우 red;-->
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>타오르는 열정</td>
-                <td>단체실</td>
-                <td>2020-12-10</td>
-                <td>16:00 ~ 20:00</td>
-                <td>예약</td>
-                <td><button class="table-check-details-information" type="button" >상세조회</button></td>
-              </tr>
-            </tbody>
-          </table>
-
-          <div class="reservation-management-pages-count">
-            <div>
-              <span class="button-prev"><</span>
-            </div>
-            <ul>
-              <li><a class="page-number" href="#">1</a></li>
-            </ul>
-            <div>
-              <span class="button-next">></span>
-            </div>
-
-          </div>
+        <div class="mypage-inquery">
+          <ul>  <!--li 1개당 답변완료 틀 1개-->
+            <li id="12345"> <!--클릭 했을 때 펼쳐지게 할 것 (+ cursur: pointer;)-->
+              <p class="state-complete">
+                <strong>답변완료</strong>
+                test: 여기엔 1:1 문의 제목이 노출 된다.
+                <span class="state-date">2020.12.19</span>
+              </p>
+              <ul class="expansion">  <!--사용자가 클릭하지 않는 이상 보이지 않는 블록-->
+                <li class="question">
+                  <strong>문의</strong>
+                  <!-- <ul></ul> -->
+                  <p>test: 여기엔 1:1 문의 내용이 노출 된다.</p>
+                </li>
+                <li class="answer">
+                  <strong>
+                    답변완료
+                    <span class="answer-date">2020.12.20</span>
+                  </strong>
+                  <p>
+                    반갑습니다. 고객님.
+                    열정스터디 카페 담당자 강파이어 입니다.
+                    문의하신 내용에 대해 블라블라 답변을 블라블라 디비에서 가져온다.
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li id="12346"></li>
+          </ul>
         </div>
-        
-       
+
+        <div class="go-inquery">
+          <a href="민진님1:1문의페이지.html" class="go-inquery_button">1:1문의하기</a>
+        </div>
+
       </div>
     </section>
 

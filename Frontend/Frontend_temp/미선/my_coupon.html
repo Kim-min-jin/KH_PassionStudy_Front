@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <link rel = "stylesheet" href="../../../css/headfoot.css">
+      <link rel = "stylesheet" href="../../css/headfoot.css">
       <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
-      <title>예약/결제</title>
+      <title>쿠폰받기</title>
       <script src="https://code.jquery.com/jquery-3.5.1.js" 
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
       crossorigin="anonymous"></script>
@@ -81,62 +81,32 @@
             color: #fff;
         }
 
-        /* 부메뉴 */
-        .tabtype { 
-            margin: 50px 0 50px 0;
-        }
-        .tabtype_wrapper{
-            width: 1000px;
-            margin: 0 auto;
-        }
-        .tabtype .tabtype_wrapper li {
-            display: inline-block;
-            width: 32.9%;
-        }
-        .tabtype .tabtype_wrapper button {
-            width: 100%;
-            height: 40px;
-            /* box-shadow: 0 20px 40px rgba(17, 20, 39, 0.10); */
-            background-color: rgb(190, 190, 190);
-            border: 0;
-            font-weight: 900;
-            font-family: 'Montserrat', Noto Sans KR, sans-serif;
-            cursor: pointer;
-            font-size: 20px;
-        }
-        .tabtype .tabtype_wrapper li a{
-            text-decoration: none;
-        }
-        .tabtype .tabtype_wrapper button:hover{
-            background-color: #ffcc00;
-            color: white;
-        }
-        .tabtype button.on {
-            background-color: #202020;
-            color: #ffffff;
-        }
-      
         
         .section {
           width: 1000px;
           margin: 0 auto;
         }
+        /* -------------------------탭 설정 임의로 변경 (top: 50px-> 30px)----------------------------------- */
         .container {
-          padding: 0 30px 0 30px;
-          margin: 50px 0 50px 0;
+          padding: 0; 
+          margin: 50px 0 30px 0;
         }
-        /* 방 몇인실 예약할지 */
-        .container .container_room ul {
-          margin: 0 60px 70px 60px;
+        .container_mypage-management {
+          height: 40px;
         }
-        .container .container_room li {
+        /*두 번째 탭 감싸는 ul*/ 
+        .container .container_mypage-management ul { 
+          margin: 0 0 20px 0;
+        }
+
+        /*두 번째 탭 사이즈 조절하는 코드*/ 
+        .container .container_mypage-management li {
           display: inline-block;
-          width: 200px;
+          width: 1000px;
         }
-        .container .container_room button {
+        .container .container_mypage-management button { 
           width: 100%;
-          height: 30px;
-          /* box-shadow: 0 20px 40px rgba(17, 20, 39, 0.10); */
+          height: 35px;
           background-color: rgb(190, 190, 190);
           border: 0;
           font-weight: 900;
@@ -144,13 +114,13 @@
           cursor: pointer;
           font-size: 15px;
         }
-        .container .container_room li a {
+        .container .container_mypage-management li a { 
           text-decoration: none;
         }
-        .container .container_room button a {
+        .container .container_mypage-management button a {
           color: black;
         }
-        .container .container_room button:hover{
+        .container .container_mypage-management button:hover { 
           background-color: #ffcc00;
           color: white;
         }
@@ -158,54 +128,91 @@
           background-color: #202020;
           color: #ffffff;
         }
-        /* 방 사진 */
-        .container .container_room_img ul {
-          margin: 0 0 25px 0;
-        }
-        .container .container_room_img li {
-          display: inline-block;
-          padding: 0 5px 0 5px;
-        }
-        /* 방 버튼 */
-        .container .container_room_button {
-          margin: 0 20px 0 20px;
-        }
-        .container .container_room_button ul {
-          margin: 0 0 50px 0;
-        } 
-        .container .container_room_button ul .second_room, 
-        .container .container_room_button ul .third_room
-         {
-          margin: 0 0 0 65px;
-        } 
         
-        .container .container_room_button li {
+        /* ----------------------------------------------------------------- */
+        .coupon-feed {
+          width: 1000px;
+        }
+        .coupon-feed-register {
+          border-top: 1px solid gray;
+          border-bottom: 1px solid gray;
+          margin: 50px 0 20px;
+          height: 110px;
+          text-align: center;
+        }
+        .coupon-feed-register-title {
           display: inline-block;
-          width: 100px;
-          margin: 0px 10px 0 22px;
+          font-size: 20px;
         }
-        
-        .container .container_room_button button {
-          width: 90%;
-          height: 25px;
-          /* box-shadow: 0 20px 40px rgba(17, 20, 39, 0.10); */
-          background-color: rgb(190, 190, 190);
-          border: 0;
-          font-weight: 900;
-          font-family: 'Montserrat', Noto Sans KR, sans-serif;
-          cursor: pointer;
-          font-size: 13px;
+        .coupon-feed-register-input {
+          width: 300px;
+          height: 35px;
+          border: 1px solid #c0bebe;
+          margin: 35px 10px 35px 10px;
         }
-        .container .container_room_button li a {
-          text-decoration: none;
+        .coupon-feed-register-input::placeholder {
+          padding-left: 10px;
+          color: gray;
+          font-weight: bold;
         }
-        .container .container_room_button button a {
-          color: black;
-        }
-        .container .container_room_button button:hover{
-          background-color: #ffcc00;
+        .coupon-feed-register-button {
+          width: 80px;
+          height: 35px;
+          background-color: #444444;
           color: white;
+          border-radius: 6px;
         }
+      
+      .coupon-mold{
+        display: flex;
+        flex-wrap: wrap;;
+        margin: 40px 0;
+      }
+      .coupon-item {
+        flex-basis: 190px;
+        height: 250px;
+        padding: 20px;
+        background-color: #e4e4e4;
+        margin: 10px 10px;
+      }
+      .coupon-item_title {
+        font-size: 23px;
+        font-weight: bold;
+      }
+      .coupon-item_price {
+        font-size: 30px;
+        margin: 15px 0;
+      }
+      .coupon-item_price-number {
+        font-weight: bold;
+        font-size: 34px;
+        color: steelblue;
+      }
+      .coupon-item_price-won {
+        font-size: 18px;
+      }
+      .coupon-item_due-date {
+        margin-bottom: 15px;
+        color: #464646;
+      }
+      .coupon-item_due-date span {
+        font-size: 16px;
+      }
+      .coupon-item_studyroom-list {
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: #4e77b9;
+      }
+      .coupon-item_status-get {
+        background-color: steelblue;
+        margin: 23px 0;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 6px;
+        color: white;
+      }
       </style>
   </head>
 
@@ -228,13 +235,13 @@
                 <li class="guide">
                     <a href=""><span>이용안내</span></a>
                 </li>
-                <li class="reserve on">
+                <li class="reserve">
                     <a href=""><span>예약/결제</span></a>
                 </li>
                 <li class="community">
                     <a href=""><span>커뮤니티</span></a>
                 </li>
-                <li class="mypage">
+                <li class="mypage on">
                     <a href=""><span>마이페이지</span></a>
                 </li>
                 <li class="login">
@@ -249,80 +256,128 @@
 
     <div class="cont_header">
       <div class="cont_wrapper">
-          <h1>예약 / 결제</h1>
+          <h1>마이페이지</h1>
       </div>
     </div>
 
-  
-    <div class="tabtype">
-        <div class="tabtype_wrapper">
-            <ul>
-                <li>
-                    <a href="Reservation_ChooseRoom01.html"><button class="btn1 on">예약하기</button></a>
-                </li>
-                <li>
-                    <a href="Reservation_Information.html"><button class="btn2">예약자 정보 입력</button></a>
-                </li>
-                <li>
-                    <a href="Payment.html"><button class="btn3">결제하기</button></a>
-                </li>
-            </ul>
-        </div>
-    </div>  
 
     <section class="section">
       <div class="container">
-        <div class="container_room">
+        <div class="container_mypage-management">
           <ul>
             <li>
-              <button class="room_one on"> 3~5인실 </button>
-            </li>
-            <li>
-              <a href="Reservation_ChooseRoom02.html"><button class="room_two"> 4~6인실 </button></a>
-            </li>
-            <li>
-              <a href="Reservation_ChooseRoom03.html"><button class="room_three"> 6~8인실 </button></a>
-            </li>
-            <li>
-              <a href="Reservation_ChooseRoom04.html"><button class="room_four"> 12인실 </button></a>
+              <a href="링크.html"><button class="first-teb-button on">내 쿠폰</button></a>
             </li>
           </ul>
         </div>
-        <div class="container_room_img">
-          <ul>
-            <li>
-              <img src="../image/3-5_Room01.jpeg" width="299px" height="300px">
-            </li>
-            <li>
-              <img src="../image/3-5_Room02.jpg" width="299px" height="300px">
-            </li>
-            <li>
-              <img src="../image/3-5_Room03.jpeg" width="299px" height="300px">
-            </li>
-          </ul>
+        <!-- 쿠폰 html -->
+        <div class="coupon-feed">
+          <div class="coupon-feed-container">
+            <div class="coupon-feed-register">
+              <h3 class="coupon-feed-register-title">쿠폰등록</h3>
+              <input
+                class="coupon-feed-register-input"
+                type="text"
+                placeholder="쿠폰 코드를 입력해주세요."
+              />
+              <button class="coupon-feed-register-button" type="submit">
+                등록
+              </button>
+            </div>
+            <div class="coupon-wrap">
+              <div class="coupon-mold">
+                <div class="coupon-item">
+                  <div class="coupon-item_title">[스터디룸명] 할인쿠폰</div>
+                  <div class="coupon-item_price">
+                    <span class="coupon-item_price-number">5,000</span>
+                    <span class="coupon-item_price-won">원</span>
+                  </div>
+                  <div class="coupon-item_due-date">
+                    <span>·2020년 12월 19일까지</span>
+                  </div>
+                  <a class="coupon-item_studyroom-list" href="#">적용상품 보기 ></a>
+                  <div class="coupon-item_status-get">받기</div>
+                </div>
+
+                <div class="coupon-item">
+                  <div class="coupon-item_title">[스터디룸명] 할인쿠폰</div>
+                  <div class="coupon-item_price">
+                    <span class="coupon-item_price-number">5,000</span>
+                    <span class="coupon-item_price-won">원</span>
+                  </div>
+                  <div class="coupon-item_due-date">
+                    <span>·2020년 12월 19일까지</span>
+                  </div>
+                  <a class="coupon-item_studyroom-list" href="#">적용상품 보기 ></a>
+                  <div class="coupon-item_status-get">받기</div>
+                </div>
+
+                <div class="coupon-item">
+                  <div class="coupon-item_title">[스터디룸명] 할인쿠폰</div>
+                  <div class="coupon-item_price">
+                    <span class="coupon-item_price-number">5,000</span>
+                    <span class="coupon-item_price-won">원</span>
+                  </div>
+                  <div class="coupon-item_due-date">
+                    <span>·2020년 12월 19일까지</span>
+                  </div>
+                  <a class="coupon-item_studyroom-list" href="#">적용상품 보기 ></a>
+                  <div class="coupon-item_status-get">받기</div>
+                </div>
+
+                <div class="coupon-item">
+                  <div class="coupon-item_title">[스터디룸명] 할인쿠폰</div>
+                  <div class="coupon-item_price">
+                    <span class="coupon-item_price-number">5,000</span>
+                    <span class="coupon-item_price-won">원</span>
+                  </div>
+                  <div class="coupon-item_due-date">
+                    <span>·2020년 12월 19일까지</span>
+                  </div>
+                  <a class="coupon-item_studyroom-list" href="#">적용상품 보기 ></a>
+                  <div class="coupon-item_status-get">받기</div>
+                </div>
+
+                <div class="coupon-item">
+                  <div class="coupon-item_title">[스터디룸명] 할인쿠폰</div>
+                  <div class="coupon-item_price">
+                    <span class="coupon-item_price-number">5,000</span>
+                    <span class="coupon-item_price-won">원</span>
+                  </div>
+                  <div class="coupon-item_due-date">
+                    <span>·2020년 12월 19일까지</span>
+                  </div>
+                  <a class="coupon-item_studyroom-list" href="#">적용상품 보기 ></a>
+                  <div class="coupon-item_status-get">받기</div>
+                </div>
+
+                <div class="coupon-item">
+                  <div class="coupon-item_title">[스터디룸명] 할인쿠폰</div>
+                  <div class="coupon-item_price">
+                    <span class="coupon-item_price-number">5,000</span>
+                    <span class="coupon-item_price-won">원</span>
+                  </div>
+                  <div class="coupon-item_due-date">
+                    <span>·2020년 12월 19일까지</span>
+                  </div>
+                  <a class="coupon-item_studyroom-list" href="#">적용상품 보기 ></a>
+                  <div class="coupon-item_status-get">받기</div>
+                </div>
+
+                </div>
+              </div>
+
+
+            </div>
+          </div>
         </div>
-        <div class="container_room_button">
-          <ul>
-            <li>
-              <a href=""><button class="facilities_introduction">시설소개</button></a>
-            </li>
-            <li>  
-              <a href="Reservation.html"><button class="room_reservation">예약하기</button></a>
-            </li>
-            <li class="second_room">
-              <a href=""><button class="facilities_introduction">시설소개</button></a>
-            </li>
-            <li>  
-              <a href="Reservation.html"><button class="room_reservation">예약하기</button></a>
-            </li>
-            <li class="third_room">
-              <a href=""><button class="facilities_introduction">시설소개</button></a>
-            </li>
-            <li>  
-              <a href="Reservation.html"><button class="room_reservation">예약하기</button></a>
-            </li>
-          </ul>
-        </div>
+          
+            
+
+         
+
+       
+        
       </div>
     </section>
 
