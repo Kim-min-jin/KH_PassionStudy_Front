@@ -1,94 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
   <head>
-    <link rel="stylesheet" href="../CSS/styles.css" />
+    <meta charset="utf-8" />
+    <title>Welcome Passion StudyCafe~!</title>
+    <link rel="stylesheet" href="../../CSS/styles.css" />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <title>Welcome Passion StudyCafe~!</title>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header class="PassionStudy_header">
       <div class="header_inner">
         <div class="logo_img">
-          <a href="./index.html">🔥 열정 스터디</a>
+          <!-- <img src="https://yt3.ggpht.com/a/AATXAJxe0JQTxF0Apn4-OyQ_wCwQ2mB6OGzZdc7_dpsJCw=s900-c-k-c0x00ffffff-no-rj" onclick="">
+          --><a href="">🔥 열정 스터디</a>
         </div>
+
         <div class="menu_wrapper">
           <nav id="PassionStudy_header_menu">
-            <ul id="" class="menu menu-main text">
-              <li class="">
-                <a href="index.html"><span>메인</span></a>
+            <ul id="menu-main" class="menu menu-main">
+              <li class="main">
+                <a href="../index.html"><span>메인</span></a>
               </li>
-              <li class="">
-                <a href="facilities/facilities_rooms.html"
-                  ><span>시설소개</span></a
-                >
+              <li class="roomlist">
+                <a href="facilities_rooms.html"><span>시설소개</span></a>
               </li>
-              <li class="">
-                <a href="facilities/facilities_extra.html"
-                  ><span>이용안내</span></a
-                >
+              <li class="guide">
+                <a href="facilities_extra.html"><span>이용안내</span></a>
               </li>
-              <li class="">
-                <a href="reservation/reservation.html"
+              <li class="reserve">
+                <a href="../reservation/reservation.html"
                   ><span>예약/결제</span></a
                 >
               </li>
-              <li class="">
+              <li class="community">
                 <a href=""><span>커뮤니티</span></a>
               </li>
-              <li class="">
+              <li class="mypage">
                 <a href=""><span>마이페이지</span></a>
               </li>
-              <li class="">
-                <a href="member/member_login.html"><span>로그인</span></a>
+              <li class="login on">
+                <a href=""><span>로그인</span></a>
               </li>
+              <div class="floting_bar" style="left: 400px"></div>
             </ul>
           </nav>
         </div>
       </div>
     </header>
 
-    <main>
-      <div>
-        <h1>sdasdsadasdsadas</h1>
+    <div class="find_id_btn">
+      <div class="login_wrap">
+        <div class="tabtype">
+          <div class="tabtype_wrapper">
+            <ul>
+              <li>
+                <button class="btn1 on">아이디로 찾기</button>
+              </li>
+              <li>
+                <button class="btn2">비밀번호로 찾기</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="member_tab_cnt">
+          <div class="member_login_info">
+            <p>
+              본인인증을 통해 아이디(이메일) 확인 및
+              <br />
+              비밀번호를 변경하실 수 있습니다.
+            </p>
+            <br />
+            <div class="field_id_box">
+              <section class="btn_password_push">
+                <div class="inpbx">
+                  <input
+                    type="text"
+                    id="userid"
+                    placeholder="아이디(이메일)"
+                    formcontrolname="userid"
+                    autocorrect="off"
+                    autocapitalize="none"
+                  />
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        <section>
+          <input type="button" class="btn btn_me active" value="본인인증하기" />
+        </section>
       </div>
-      <div>
-        <h1>sdasdsadasdsadas</h1>
-      </div>
-      <div>
-        <h1>sdasdsadasdsadas</h1>
-      </div>
-      <div>
-        <h1>sdasdsadasdsadas</h1>
-      </div>
-      <div>
-        <h1>sdasdsadasdsadas</h1>
-      </div>
-      <div>
-        <h1>sdasdsadasdsadas</h1>
-      </div>
-      <div>
-        <h1>sdasdsadasdsadas</h1>
-      </div>
-      <div>
-        <h1>sdasdsadasdsadas</h1>
-      </div>
-      <div>
-        <h1>sdasdsadasdsadas</h1>
-      </div>
-      <div>
-        <h1>sdasdsadasdsadas</h1>
-      </div>
-      <div>
-        <h1>sdasdsadasdsadas</h1>
-      </div>
-      <div>
-        <h1>sdasdsadasdsadas</h1>
-      </div>
-    </main>
+    </div>
 
     <footer class="pc">
       <div class="wrapper">
@@ -123,8 +134,8 @@
           </div>
           <div>
             <span class="normal">Address :</span>
-            <span class="bold address">
-              서울특별시 영등포구 선유동2로 57 이레빌딩(구관) 19F
+            <span class="bold address"
+              >서울특별시 영등포구 선유동2로 57 이레빌딩(구관) 19F
               열정스터디</span
             >
           </div>
@@ -201,5 +212,7 @@
         </div>
       </div>
     </footer>
+    <script src="../../JS/menubar.js"></script>
+    <script src="../../JS/pagesjs/member_find_click.js"></script>
   </body>
 </html>
