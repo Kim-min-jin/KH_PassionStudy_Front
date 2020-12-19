@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Welcome Passion StudyCafe~!</title>
-  <link rel = "stylesheet" href="../../../CSS/styles.css">
+  <link rel = "stylesheet" href="../../css/headfoot.css">
+  <link rel = "sytlesheet" href="../../CSS/styles.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js" 
@@ -69,6 +70,7 @@
     });
   </script>
   <style>
+    
     .cont_header{
         background:  #202020;
         line-height: 7;
@@ -81,6 +83,9 @@
         color: #fff;
     }
 
+
+  
+  
     .tabtype { 
         margin: 50px 0 50px 0;
     }
@@ -90,7 +95,7 @@
     }
     .tabtype .tabtype_wrapper li {
         display: inline-block;
-        width: 33%;
+        width: 19.3%;
     }
     .tabtype .tabtype_wrapper button {
         width: 100%;
@@ -146,45 +151,84 @@
     section .section-right img{
         width: 55%;
     }
+
+
     /**/
 
 
-    #board_left{
-        
-    }
+    .kakaotalk_inquiry {
+         
+            }
 
-    #board_right { 
-        min-width: 1000px;
-        padding-bottom:120px;
-    }
-    #board_form_title{
-       width:996px;
-       padding-top: 7px;
-   }
+            #board_left{
+              float: left;
+            }
 
-   .write_btn {
-        width: 90px;
-        display: inline-block;
-        line-height: 30px;
-        text-align: center;
-        background-color: black;
-        border: 1px solid black;
-        color:#fff;
-        margin-left: 2px;
-        font-size: 13px;
-        border-radius: 3px;
-        position:absolute;
-        left: 46.5%;
-    }
-    
-    .write_btn:hover{
-        border: 1px solid #ffcc00;
-        background-color: #ffcc00;
-        color: white;
-    }
+            #board_right { 
+                height:1000px;
+                margin-top:100px;
+               
+                min-width: 1000px;
+             
+              
+                padding-right:100px;
+            }
 
-    
+            table {
+                text-align:center;
+                width: 500px;
+            }
 
+            .search {
+                padding-top: 70px;
+                min-width: 1000px;
+            }
+
+            #buttons {
+                padding-left:690px;
+                padding-bottom:20px;
+            }
+
+            #search-btn {
+                background-color: black;
+                color:white;
+                padding-inline: 10px;
+                border-radius: 3px;
+              
+            }
+
+            .write_btn {
+                width: 90px;
+                display: inline-block;
+                line-height: 30px;
+                text-align: center;
+                background-color: black;
+                border: 1px solid black;
+                color:#fff;
+                margin-left: 2px;
+                font-size: 13px;
+                border-radius: 3px;
+            }
+
+            .write_btn:hover{
+                border: 1px solid #ffcc00;
+                background-color: #ffcc00;
+                color: white;
+
+            }
+
+            .remove_btn {
+                width: 70px;
+                display: inline-block;
+                line-height: 30px;
+                text-align: center;
+                background-color: #d3d3d3;
+                border: 1px solid #d3d3d3;
+                color:#fff;
+                margin-left: 2px;
+                font-size: 13px;
+                border-radius: 3px;
+            }
   </style>
 </head>
 <body>
@@ -202,7 +246,7 @@
                         <li class="main">
                             <a href=""><span>메인</span></a>
                         </li>
-                        <li class="roomlist">
+                        <li class="roomlist on">
                             <a href="시설소개_라운지.html"><span>시설소개</span></a>
                         </li>
                         <li class="guide">
@@ -211,7 +255,7 @@
                         <li class="reserve">
                             <a href=""><span>예약/결제</span></a>
                         </li>
-                        <li class="community on">
+                        <li class="community">
                             <a href=""><span>커뮤니티</span></a>
                         </li>
                         <li class="mypage">
@@ -230,54 +274,57 @@
     
     <div class="cont_header">
         <div class="cont_wrapper">
-            <h1>커뮤니티</h1>
+            <h1>시설zzzzzzzzzzzzzzzzzzzzzzzzz소개</h1>
         </div>
     </div>
-
-    
-    <div class="tabtype">
-        <div class="tabtype_wrapper">
-            <ul>
-                <li>
-                    <a href="notice.html"><button class="btn1">공지사항</button></a>
-                </li>
-                <li>
-                    <a href="자주하는 질문.html"><button class="btn2">자주하는 질문</button></a>
-                </li>
-                <li>
-                    <a href="1대1문의.html"><button class="btn3 on">1:1문의</button></a>
-                </li>
-            </ul>
-        </div>
-    </div>  
-
-
     <section>
-        <div id='board'>
-            <!-- 왼쪽 사이드 -->
+        
             <div id='board_right'>
-              <div id="board_form">
-                <select id="board_select" name="board_select" title="문의선택" class="sel">
-                    <option value="please_select">선택해주세요</option>
-                    <option value="member_inquiry">회원문의</option>
-                    <option value="reservation_inquiry">예약문의</option>
-                    <option value="payment_inquiry">결제문의</option>
-                    <option value="product_inquiry">상품문의</option>
-                    <option value="cancel_inquiry">취소문의</option>
-                  </select>
-                <form id="board_form_title" action="writerAction" method="post">
-                    <input type="text" name="bdTitle" class="form-control mt-4 mb-2"
-                        placeholder="제목을 입력해주세요." required/>
-                    <div class="form-group">
-                        <textarea class="form-control" rows="10" name="bdContent"
-                            placeholder="내용을 입력해주세요" required
-                        ></textarea>
-                    </div>
-                    <a href="notice.html"><button type="button" class="write_btn yb" style="float:none;">등록하기</button></a>
-                </form>
-              </div>
+                <div id='buttons'>
+                    <a href="1대1문의(관리자글쓰기).html"><button type="button" class="write_btn yb" style="float:none;">답변작성</button></a>
+                    <button type="button" class="remove_btn yb" style="float:none;">삭제</button>
+                </div>
+
+                <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
+  <div class="toast" style="position: absolute; top: 0; right: 0;">
+    <div class="toast-header">
+      <img src="..." class="rounded mr-2" alt="...">
+      <strong class="mr-auto">Bootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>
+                <table class='table table-hover' width='50%'>
+                    <th><input type="checkbox" class="checkbox"></th>
+                    <th>NO</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>작성일</th>
+                        <tr><!-- 첫번째 줄 시작-->
+                            <td><input type="checkbox" class="checkbox"></td>
+                            <td>2</td>
+                            <td>단체예약 문의드립니다.</td>
+                            <td>김열정</td>
+                            <td>2020-12-25</td>
+                        </tr><!-- 첫번째 줄 끝-->
+                        <tr><!-- 두번째 줄 시작-->
+                            <td><input type="checkbox" class="checkkbox"></td>
+                            <td>1</td>
+                            <td><img src="https://www.kurly.com/shop/data/skin/designgj/img/common/myqna_answer.gif">안녕하세요 고객님, 답변드립니다.</td>
+                            <td>관리자</td>
+                            <td>2020-12-25</td>
+                        </tr><!-- 두번째 줄 끝-->      
+                  </table>
             </div>
-          </div>
+            
+        </div>
+        
     </section>
 
 
