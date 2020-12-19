@@ -6,7 +6,6 @@
   <title>Welcome Passion StudyCafe~!</title>
   <link rel = "stylesheet" href="/Frontend/CSS/styles.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js" 
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
   crossorigin="anonymous"></script>
@@ -325,7 +324,6 @@
         }
   
         .ckbox1 {
-          display: inline-block;
           position: relative;
           vertical-align: top;
           min-width: 20px;
@@ -371,11 +369,12 @@
         }
   
         .signup_step .cklist .btn_check {
-          padding: 9px 5px;
+          margin-left: 15px; 
           font-size: 11px;
           color: #303033;
           text-decoration: underline;
           margin-top: -3px;
+          display: inline-block;
         }
   
         button {
@@ -508,8 +507,29 @@
                             />
                             <label title="[필수] 이용약관 동의">
                               [필수] 이용약관 동의
-                              <button type="button" class="btn_check">보기</button>
+                              <button type="button" class="btn_check" data-toggle="modal" data-target="#exampleModalScrollable">보기</button>
+                              <!---->
                             </label>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">이용약관</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="ls2 lh6 bs5 ts4"><em class="emphasis"><(주)열정스터디>('www.열정스터디.net'이하  '열정스터디')</em>은(는) 개인정보보호법에 따라 이용자의 개인정보 보호 및 권익을 보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록 다음과 같은 처리방침을 두고 있습니다.</p><p class="ls2 lh6 bs5 ts4"><em class="emphasis"><(주)열정스터디>('열정스터디')</em> 은(는) 회사는 개인정보처리방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.</p><p class="ls2">○ 본 방침은부터 <em class="emphasis">2020</em>년 <em class="emphasis">1</em>월 <em class="emphasis">3</em>일부터 시행됩니다.</p></br><p class='lh6 bs4'><strong>1. 개인정보의 처리 목적 <em class="emphasis"><(주)열정스터디>('www.열정스터디.net'이하  '열정스터디')</em>은(는) 개인정보를 다음의 목적을 위해 처리합니다. 처리한 개인정보는 다음의 목적이외의 용도로는 사용되지 않으며 이용 목적이 변경될 시에는 사전동의를 구할 예정입니다.</strong></p><ul class="list_indent2 mgt10"><p class="ls2">가. 홈페이지 회원가입 및 관리</p><p class="ls2">회원 가입의사 확인, 서비스 부정이용 방지, 각종 고지·통지 등을 목적으로 개인정보를 처리합니다.</p></br></ul>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+                              <!---->
+                            
                           </span>
                         </span>
                         <span>
@@ -673,5 +693,9 @@
             </div>
         </div>
     </footer>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+            crossorigin="anonymous"></script>
 </body>
 </html>
