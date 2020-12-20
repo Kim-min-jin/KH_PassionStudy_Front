@@ -2,8 +2,8 @@
 <html>
   <head>
       <link rel = "stylesheet" href="../../css/headfoot.css">
-      <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
       <title>쿠폰받기</title>
       <script src="https://code.jquery.com/jquery-3.5.1.js" 
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
@@ -169,11 +169,12 @@
         margin: 40px 0;
       }
       .coupon-item {
-        flex-basis: 190px;
-        height: 250px;
+        flex-basis: 230px;
+        height: 315px;
         padding: 20px;
-        background-color: #e4e4e4;
+        background-color: #ebeef0;
         margin: 10px 10px;
+        border-radius: 6px;
       }
       .coupon-item_title {
         font-size: 23px;
@@ -186,7 +187,7 @@
       .coupon-item_price-number {
         font-weight: bold;
         font-size: 34px;
-        color: steelblue;
+        color: #5dbbf1;
       }
       .coupon-item_price-won {
         font-size: 18px;
@@ -205,13 +206,30 @@
         color: #4e77b9;
       }
       .coupon-item_status-get {
-        background-color: steelblue;
+        background-color: #5dbbf1;
         margin: 23px 0;
         height: 40px;
         line-height: 40px;
         text-align: center;
         border-radius: 6px;
         color: white;
+        cursor: pointer;
+      }
+      /*  */
+      .coupon-item_status-done {
+        background-color: #505152;
+        margin: 23px 0;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 6px;
+        color: white;
+      }
+      .coupon-done {
+        border-bottom: 1px solid #dbdcdd;
+      }
+      .coupon-done .coupon-item {
+        margin-bottom: 50px;
       }
       </style>
   </head>
@@ -285,6 +303,21 @@
               </button>
             </div>
             <div class="coupon-wrap">
+              <div class="coupon-mold coupon-done">
+                <div class="coupon-item">
+                  <div class="coupon-item_title">[스터디룸명] 할인쿠폰</div>
+                  <div class="coupon-item_price">
+                    <span class="coupon-item_price-number">5,000</span>
+                    <span class="coupon-item_price-won">원</span>
+                  </div>
+                  <div class="coupon-item_due-date">
+                    <span>·2020년 12월 19일까지</span>
+                  </div>
+                  <a class="coupon-item_studyroom-list" href="#">적용상품 보기 ></a>
+                  <div class="coupon-item_status-done">받았음</div>
+                </div>
+              </div>
+
               <div class="coupon-mold">
                 <div class="coupon-item">
                   <div class="coupon-item_title">[스터디룸명] 할인쿠폰</div>
@@ -296,7 +329,7 @@
                     <span>·2020년 12월 19일까지</span>
                   </div>
                   <a class="coupon-item_studyroom-list" href="#">적용상품 보기 ></a>
-                  <div class="coupon-item_status-get">받기</div>
+                  <div class="coupon-item_status-get" onclick="location.href='#'">받기</div>
                 </div>
 
                 <div class="coupon-item">

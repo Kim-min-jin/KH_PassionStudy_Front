@@ -2,8 +2,8 @@
 <html>
   <head>
       <link rel = "stylesheet" href="../../css/headfoot.css">
-      <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
       <title>예약-예약확인</title>
       <script src="https://code.jquery.com/jquery-3.5.1.js" 
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
@@ -330,16 +330,16 @@
         <div class="tabtype_wrapper">
             <ul>
               <li>
-                  <a href="나의정보.html"><button class="btn1">나의 정보</button></a>
+                  <a href="my_main_page.html"><button class="btn1">나의 정보</button></a>
               </li>
               <li>
-                  <a href="나의 예약 관리.html"><button class="btn2 on">나의 예약 관리</button></a>
+                  <a href="my_reservation_confirmation.html"><button class="btn2 on">나의 예약 관리</button></a>
               </li>
               <li>
-                  <a href="나의 활동.html"><button class="btn3">나의 활동</button></a>
+                  <a href="my_inquery_list.html"><button class="btn3">나의 활동</button></a>
               </li>
               <li>
-                <a href="설정.html"><button class="btn4">설정</button></a>
+                <a href="my_inform_edit.html"><button class="btn4">설정</button></a>
             </li>
             </ul>
         </div>
@@ -351,10 +351,10 @@
         <div class="container_reservation-management">
           <ul>
             <li>
-              <a href="예약확인.html"><button class="confirm-reservation-button on"> 예약 확인 </button></a>
+              <a href="my_reservation_confirmation.html"><button class="confirm-reservation-button on"> 예약 확인 </button></a>
             </li>
             <li>
-              <a href="취소내역.html"><button class="cancel-reservation-button"> 취소 내역 </button></a>
+              <a href="my_reservation_cancel.html"><button class="cancel-reservation-button"> 취소 내역 </button></a>
             </li>
           </ul>
         </div>
@@ -520,7 +520,7 @@
                 <td>2020-12-10</td>
                 <td>16:00 ~ 20:00</td>
                 <td>예약</td>
-                <td><button class="table-check-details-information" type="button" >상세조회</button></td>
+                <td><button class="table-check-details-information" type="button" onclick="location.href='my_reservation_detail.html'">상세조회</button></td>
               </tr>
             </tbody>
           </table>

@@ -1,6 +1,6 @@
 /* 공통적으로 사용되는 코드*/
-.btn_maxsizing {
-  width: 100%;
+.btn_align_center {
+  text-align: center;
 }
 
 /* 회원 관리용 CSS코드 */
