@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>Welcome Passion StudyCafe~!</title>
+  <link rel = "stylesheet" href="/Frontend/CSS/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" 
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+  crossorigin="anonymous"></script>
+  <script>    
+    /****헤더 마우스따라 움직이는 바****/
+    function headerBar(){
+       var onMenu = $('header #menu li.on').offset().left
+                                                   
+       $('.floting_bar').offset( { left: onMenu } );
+   
+       $('header #menu li').on('mouseenter', function () {
+      var a = $(this).offset().left
+      $('.floting_bar').offset( { left: a } );
+
+       })
+       $('header #menu li').on('mouseleave', function () {
+      $('.floting_bar').offset( { left: onMenu } );
+       });   
+    };
+
+    function checkWindowWidth() {
+       var windowWidth = $(window).width();
+       if (windowWidth < 1000) {
+      //창 가로 크기가 1000 미만일 경우
+      $('header #menu li.pc').removeClass('on');
+      if($("header #menu li.job.mo").length == 0) {
+         $('#menu-main .job.mo').addClass('on');
+      }
+       } else {
+      //창 가로 크기가 1000보다 클 경우
+      $('header #menu li.mo').removeClass('on');
+      if($("header #menu li.pc").length == 0) {
+         $('header #menu li.pc').addClass('on');
+      }
+       }
+    };
+
+    /****웹 로드시 작동****/
+    $(function () {
+   
+       //checkWindowWidth();
+       headerBar();
+   
+       /****헤더클릭 페이지 바로가기+중앙배치****/
+       $('header #menu li a.pagemove').click(function () {
+      var makeCenter = ($(window).height() - $(this.hash).outerHeight()) / 2
+      $('html,body').animate({
+         scrollTop: $(this.hash).offset().top - makeCenter
+      }, 400);
+       });
+
+    });
+
+    /****창크기 변화 감지 후 작동****/
+    $(window).resize(function() {
+   
+       //checkWindowWidth();   
+       headerBar();
+   
+    });
+  </script>
+  <style>
+
+          * {
+            margin: 0;
+            padding: 0;
+          }
+
+          header {
+            background: #202020;
+            position: relative;
+            /* top: 0; */
+            /* left: 0; */
+            width: 100%;
+            height: 82px;
+            /* background: rgba(0, 0, 0, 0); */
+            border-bottom: 2px solid #fff;
+            z-index: 9;
+          }
+          header .header_inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 1200px;
+            margin-top: -2.5px;
+            transform: translateX(-50%);
+          }
+          header .header_inner .logo_img {
+            /* display: inline-block; */
+            /* left: 0; */
+            float: left;
+            /* cursor: pointer; */
+          }
+          header .header_inner .logo_img img {    
+            width: 40px;
+            height: 21px;
+          }
+          header .header_inner .logo_img a {
+            font-size: 33px;
+            color: #fff;
+            text-decoration: none;
+            line-height: 0;
+            cursor: pointer;
+          }
+          header .header_inner .menu_wrapper {
+            float: right;
+          }
+          ul {
+            list-style: none;
+          }
+          header #menu li {
+            float: left;
+            width: 110px;
+            text-align: center;
+          }
+          header #menu li a {
+            font-size: 16px;
+            color: #fff;
+          text-decoration: none;
+          }
+          header .floting_bar {
+            position: absolute;
+            top: 43px;
+            width: 110px;
+            height: 2px;
+            background: #ffcc00;
+            transition: 0.5s all;
+          }
+          header #menu li.on a {
+            color: #ffcc00;
+          }
+          header #menu li:hover a {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #ffcc00;
+          }
+
+
+          footer {
+            background: #202020;
+            /* min-height: 200px; */
+          }
+          footer .wrapper {
+            /* position: relative; */
+            width: 1200px;
+            margin: 0 auto;
+            padding: 70px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+          }
+          footer .wrapper::after {
+            content: "";
+            display: block;
+            clear: both;
+          }
+          footer .wrapper .right-section,
+          footer .wrapper .left-section {
+            float: left;
+            /* width: 50%; */
+          }
+          footer .wrapper .left-section span {
+            font-size: 13px;
+            color: #fff;
+            line-height: 26px;
+          }
+          footer .wrapper .left-section span.normal {
+            color: rgba(255, 255, 255, 0.75);
+          }
+          footer .wrapper .left-section span.copyright,
+          footer .wrapper .left-section span.normal {
+            font-weight: 300;
+            letter-spacing: 0.07em;
+          }
+          footer .wrapper .left-section span.bold {
+            padding-left: 5px;
+            font-weight: 200;
+            letter-spacing: 0.07em;
+            /* word-break: keep-all; */
+          }
+          footer .wrapper .left-section span.divide {
+            /* display: inline-block; */
+            margin: 0 5px;
+            color: rgba(255, 255, 255, 0.4);
+            font-weight: 100;
+          }
+          footer .wrapper .right-section {
+            float: right;
+            width: 37%;
+            /* vertical-align: top; */
+          }
+          footer .wrapper .right-section ul.menu > li {
+            display: inline-block;
+            padding-right: 50px;
+            vertical-align: top;
+            /* color: #fff; */
+          }
+          footer .wrapper .right-section ul.menu > li > ul {
+            padding-top: 20px;
+            list-style: none;
+          }
+          footer .wrapper .right-section ul.menu > li > a {
+            /* position: relative; */
+            font-size: 16px;
+            font-weight: 300;
+            /* z-index: 1; */
+          }
+          footer .wrapper .right-section li a {
+            color: #fff;
+            text-decoration: none;
+          }
+          footer .wrapper .right-section ul.menu > li > ul li a {
+            /* display: block; */
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 200;
+            line-height: 24px;
+            /* transition: color 0.3s ease; */
+          }
+          footer .wrapper .right-section ul.menu > li > ul li a:hover {
+            color: #ffffff;
+          }
+          footer .wrapper .right-section .family_site {
+            margin-top: 20px;
+            text-align: right;
+          }
+          footer .wrapper .right-section select.passionstudy_site {
+            /* position: relative; */
+            width: 200px;
+            height: 35px;
+            padding: 0 15px;
+            background-color: transparent;
+            /* box-shadow: none !important; */
+            /* border-radius: 0; */
+            font-size: 13px;
+            color: #ffffff;
+            /* text-align: left; */
+            /* line-height: 35px; */
+          }
+          footer .wrapper .right-section select.passionstudy_site option {
+            /* width: 200px; */
+            /* height: 35px; */
+            /* font-size: 13px; */
+            color: #202020;
+            /* line-height: 35px; */
+          }
+
+        .login_wrap {
+            max-width: 400px;
+            margin: 0 auto 50px;
+            list-style: none;
+            padding-inline-start: 0px;
+            
+        }
+
+        .form_wrap_signup {
+            height: 700px;
+        }
+
+        .login_wrap .member_title {
+            margin-bottom: 20px;
+            color: #000;
+            font-size: 44px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .login_wrap h2 {
+            display: block;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .login_wrap .member_tab_list {
+            width: 100%;
+            overflow: hidden;
+            margin-top: 40px;
+        }
+
+        .login_wrap .member_tab_list li {
+            float: left;
+            width: 50%;
+            box-sizing: border-box;
+            border-bottom: 4px solid #000;
+        }
+
+        .login_wrap .member_tab_list li:first-child a {
+            margin-right: -1px;
+        }
+
+        .login_wrap .member_tab_list a.active {
+            position: relative;
+            background: #000;
+            color: #fff;
+            border-color: #000;
+        }
+
+        .login_wrap .member_tab_list a {
+            color: #303033;
+            display: block;
+            height: 48px;
+            border: 1px solid #d4d4d4;
+            border-bottom: 0;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 46px;
+            text-align: center;
+        }
+
+        .login_wrap .member_tab_cnt {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .login_wrap .member_login_info {
+            padding-bottom: 40px;
+            text-align: center;
+        }
+
+        .login_wrap .btn_me.active {
+            background: #303033;
+        }
+
+        .login_wrap .btn_me {
+            width: 100%;
+            border-radius: 2px;
+            color: #fff;
+            font-size: 14px;
+            line-height: 36px;
+            font-weight: 600;
+        }
+
+        .btn_me {
+            display: inline-block;
+            position: relative;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .member_login_info li {
+            margin-bottom: 40px;
+        }
+
+        .member_field_box .inpbx {
+            vertical-align: top;
+            box-sizing: border-box;
+        }
+
+        .inpbx {
+            position: relative;
+            height: 48px;
+            background: #fff;
+        }
+
+        .inpbx input {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 0 14px;
+            font-size: 14px;
+            color: #1a1a1a;
+            background: transparent;
+            border: 1px solid #d4d4d4;
+            border-radius: 2px;
+        }
+
+        ul, ol, li {
+            list-style: none;
+            padding-inline-start: 0px;
+
+        }
+
+        
+
+
+  </style>
+</head>
+<body>
+    <header>
+        <div class="header_inner">
+            
+            <div class="logo_img">
+            <!-- <img src="https://yt3.ggpht.com/a/AATXAJxe0JQTxF0Apn4-OyQ_wCwQ2mB6OGzZdc7_dpsJCw=s900-c-k-c0x00ffffff-no-rj" onclick="">
+            --><a href="">🔥 열정 스터디</a>
+            </div>
+        
+            <div class="menu_wrapper">
+                <nav id="menu">
+                    <ul id="menu-main" class="menu menu-main">
+                        <li class="main">
+                            <a href=""><span>메인</span></a>
+                        </li>
+                        <li class="roomlist">
+                            <a href="시설소개_라운지.html"><span>시설소개</span></a>
+                        </li>
+                        <li class="guide">
+                            <a href="이용안내_카페.html"><span>이용안내</span></a>
+                        </li>
+                        <li class="reserve">
+                            <a href=""><span>예약/결제</span></a>
+                        </li>
+                        <li class="community">
+                            <a href=""><span>커뮤니티</span></a>
+                        </li>
+                        <li class="mypage">
+                            <a href=""><span>마이페이지</span></a>
+                        </li>
+                        <li class="login on">
+                            <a href=""><span>로그인</span></a>
+                        </li>
+                        <div class="floting_bar" style="left: 400px;"></div>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="login_wrap">
+            <form class="form_wrap_signup">
+                <h2 class="member_title">계정찾기</h2>
+                    <ul class="member_tab_list">
+                        <li>
+                            <a href="" >아이디</a>
+                        </li>
+                        <li>
+                            <a href="" class="active">비밀번호</a>
+                        </li>
+                    </ul>
+                    <div class="member_tab_cnt">
+                        <div class="member_login_info">
+                            <p>
+                                본인인증을 통해 아이디(이메일) 확인 및
+                                <br/>
+                                비밀번호를 변경하실 수 있습니다.
+                            </p>
+                        </div>
+                        <ul class="member_field_section">
+                            <li>
+                                <div class="field_id_box">
+                                    <div class="inpbx">
+                                        <input type="text" id="userid" placeholder="아이디(이메일)" formcontrolname="userid" 
+                                                autocorrect="off" autocapitalize="none"/>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="" class="btn_me active">
+                        <button type="button" class="btn btn_me active">본인인증하기</button>
+                    </a>
+            </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+    <footer class="pc">
+        <div class="wrapper">
+            <div class="left-section">
+                <div>
+                    <span class="normal">상호명 :</span>
+                    <span class="bold">열정스터디</span>
+                    <span class="divide">|</span>
+                    <span class="normal">대표 :</span>
+                    <span class="bold">최주영</span>
+                    <span class="dovide">|</span>
+                    <span class="normal">Tel :</span>
+                    <span class="bold">010-****-****</span>
+                </div>
+                <div>
+                    <span class="normal">사업자등록번호 :</span>
+                    <span class="bold">123-45-67890</span>
+                    <span class="divide">|</span>
+                    <span class="normal">통신판매업 신고번호 :</span>
+                    <span class="bold">제 2017-서울종로-0105호</span>
+                </div>
+                <div>
+                    <span class="normal">개인정보관리처리자 :</span>
+                    <span class="bold">최주빵</span>
+                    <span class="divide">|</span>
+                    <span class="normal">Email</span>
+                    <span class="bold">wndud0159@naver.com</span>
+                </div>
+                <div>
+                    <span class="normal">직업정보제공사업 신고번호 :</span>
+                    <span class="bold">서울청 제2017-1호</span>
+                </div>
+                <div>
+                    <span class="normal">Address :</span>
+                    <span class="bold address">서울특별시 영등포구 선유동2로 57 이레빌딩(구관) 19F
+                    열정스터디</span>
+                </div>
+                <div>
+                    <p>.</p>
+                    <p>.</p>
+                </div>
+                <div>
+                    <span class="copyright">copyright 2019 PASSIONSTUDY. ALL Rights Reserved.</span>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <ul class="menu">
+                    <li class="product">
+                        <a href="">Space</a>
+                        <ul class="sub-depth">
+                            <li>
+                                <a href="">여기</a>
+                            </li>
+                            <li>
+                                <a href="">에</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="">Mentoring</a>
+                        <ul class="sub-depth">
+                            <li>
+                                <a href="">무</a>
+                            </li>
+                            <li>
+                                <a href="">엇</a>
+                            </li>
+                            <li>
+                                <a href="">을</a>
+                            </li>
+                            <li>
+                                <a href="">?</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="">Connect</a>
+                        <ul class="sub-depth">
+                            <li>
+                                <a href="">넣</a>
+                            </li>
+                            <li>
+                                <a href="">을</a>
+                            </li>
+                            <li>
+                                <a href="">까</a>
+                            </li>
+                            <li>
+                                <a href="">요</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="family_site">
+                    <select class="passionstudy_site">
+                        <option>Passion Family</option>
+                        <option value="">강미선, 김민진</option>
+                        <option value="">김종구, 정우혁</option>
+                        <option value="">차예진, 최주영, 한아현</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
