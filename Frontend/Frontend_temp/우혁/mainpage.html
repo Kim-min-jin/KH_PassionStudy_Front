@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mainpage</title>
-    <link rel="stylesheet" href="../../CSS/reset.css">
+    <!--<link rel="stylesheet" href="../../CSS/reset.css">-->
     <style>
         .mainPaddingBottom{
             padding-bottom: 100px;
@@ -29,7 +29,21 @@
             background-color: lightgray;
             border-left: 1px solid gray;
             border-right: 1px solid gray;
+            padding-top: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
         }
+
+        .mainExplanations>h2{
+            text-align: center;
+        }
+
+        .mainExplanations>img{
+            height: 50px;
+            width: 50px;
+            padding-left: 95px;
+        }
+
         .mainFloatLeft{
             float: left;
         }
@@ -42,9 +56,50 @@
             height: 350px;
         }
 
+        .swipeImageButton{
+            border-radius: 100px;
+        }
+
         #swipeImage{
+            position: relative;
             height: 300px;
             width: 1200px;
+        }
+
+        #swipeImage>#swipeImageButtonDiv{
+            position: absolute;
+            top: 75%;
+            left: 45%;
+        }
+
+        #swipeImage>#swipeImageButtonLeft{
+            position: absolute;
+            top: 38%;
+            left: 2%;
+            height: 50px;
+            font-size: 2rem;
+        }
+
+        #swipeImage>#swipeImageButtonRight{
+            position: absolute;
+            top: 38%;
+            left: 96%;
+            height: 50px;
+            font-size: 2rem;
+        }
+
+        #swipeImage>#swipeImageTitle{
+            position: absolute;
+            top: 15%;
+            left: 7%;
+        }
+        #swipeImage>#swipeImageTitle>#swipeImageTitlePassion{
+            color: red;
+            font-size: 3rem;
+        }
+        #swipeImage>#swipeImageTitle>#swipeImageTitleStudyCafe{
+            color: white;
+            font-size: 3rem;
         }
 
         #sideSelectMenu { 
@@ -59,12 +114,62 @@
         #sideSelectMenu li{
             list-style: none;
         }
+
+        #mainInteriorChar{
+            position: relative;
+            box-sizing: border-box;
+            padding-left: 40px;
+            padding-top: 20px;
+        }
+        #mainInteriorChar>a{
+            position: absolute;
+            top: 300px;
+            left: 500px;
+        }
+
+        #mainServiceChar{
+            position: relative;
+            box-sizing: border-box;
+            padding-left: 40px;
+            padding-top: 20px;
+        }
+
+        #mainServiceChar>a{
+            position: absolute;
+            top: 300px;
+            left: 500px;
+        }
+
+        #mainHowToComeMap>img{
+            height: 350px;
+            width: 450px;
+        }
+
+        #mainHowToComeExplanations{
+            box-sizing: border-box;
+            padding: 30px;
+            background-color: lightgray;
+            line-height: 15px;
+        }
+
     </style>
 </head>
 <body>
     <div id='mainpage'>
         <div id='swipeImage' class='mainPaddingBottom imgFullDiv'>
             <img src="https://post-phinf.pstatic.net/MjAxODAzMDhfMjU0/MDAxNTIwNDkzNjU0MzY5.vvQxr_1yhy_VLD2iuaKrDby-YHmBxeum7ObPFCIe8MAg.6vh9mDuY3tIltj1tOiEQkALLnMlA7-wXWHd636mSG0Ig.PNG/4.png?type=w1200" />
+            <div id='swipeImageTitle'>
+                <h1 id='swipeImageTitlePassion'>PASSION</h1>
+                <h1 id='swipeImageTitleStudyCafe'>STUDY CAFE</h1>
+            </div>
+            <button type='button' id='swipeImageButtonLeft'>〈</button>
+            <button type='button' id='swipeImageButtonRight'>〉</button>
+            <div id='swipeImageButtonDiv'>
+                <button type='button' class='swipeImageButton' id='swipeImageButton01'>1</button>
+                <button type='button' class='swipeImageButton' id='swipeImageButton02'>2</button>
+                <button type='button' class='swipeImageButton' id='swipeImageButton03'>3</button>
+                <button type='button' class='swipeImageButton' id='swipeImageButton04'>4</button>
+            </div>
         </div>
         <div id='showMainContainer' class='mainPaddingBottom'>
             <div id='mainInterior' class='mainContainer'>
@@ -97,6 +202,7 @@
     </div>
     <div id='mainExplanations' class='mainContainer mainPaddingBottom'>
         <div id='' class='mainExplanations'>
+            <img src="https://www.flaticon.com/svg/static/icons/svg/3616/3616529.svg" />
             <h2>안전관리</h2>
             <p>- 입 / 퇴실 관리시스템</p>
             <p>- 소방 안전 관리</p>
@@ -104,15 +210,18 @@
             <p>- 회원들의 안전과 편안한 학습환경을 보장</p>
         </div>
         <div id='' class='mainExplanations'>
+            <img src="https://www.flaticon.com/svg/static/icons/svg/2987/2987853.svg" />
             <h2>교육서비스</h2>
             <p>- 수능 수험생 교육서비스</p>
             <p>- 성인 수험생 교육서비스</p>
         </div>
         <div id='' class='mainExplanations'>
+            <img src="https://www.flaticon.com/svg/static/icons/svg/106/106226.svg" />
             <h2>프리미엄 백색 소음기</h2>
             <p>소음 차단과 집중력 향상에 도움을 주는 백색소음기가 중앙컨트롤 형태로 설치되어 있습니다.</p>
         </div>
         <div id='' class='mainExplanations'>
+            <img src="https://www.flaticon.com/svg/static/icons/svg/702/702814.svg" />
             <h2>편안한 조명</h2>
             <p>장시간 이용에도 눈이 편안한 조명 매장 내의 채광, 균등한 조도 설계로 눈이 편안함</p>
         </div>
@@ -120,17 +229,17 @@
     <div id='mainHowToCome' class='mainContainer'>
         <div id='mainHowToComeMap' class='mainContainerContents mainFloatLeft'>
             여기 대충 지도 api
-            <img src="http://placehold.it/450x350" />
+            <img src="https://dimg.donga.com/wps/NEWS/IMAGE/2019/12/25/98961520.1.jpg" />
         </div>
         <div id='mainHowToComeExplanations' class='mainContainerContents mainFloatRight'>
             <h3>오시는길</h3>
-            <h4>버스</h4>
+            <p>버스</p>
             <p>선유고등학교/(구)강서세무서</p>
             <p>🚍지선 7612</p>
-            <p>🚍간선 1000 / 1200 / 1300 / 1301 / 1302 / 1400 / 1500 / 1601 / M6628 / M6724</p>
+            <p>🚍간선 1000 / 1200 / 1300 / 1301 / 1302 / 1400 / 1500 / 1601 </p>
             <p>당산역</p>
             <p>🚍지선 602 / 760 / 5620 / 5714 / 6514 /  6623 / 6631</p>
-            <h4>지하철</h4>
+            <p>지하철</p>
             <p>🚝지하철 2, 9호선 당산역 12번 출구 400m</p>
         </div>
     </div>
