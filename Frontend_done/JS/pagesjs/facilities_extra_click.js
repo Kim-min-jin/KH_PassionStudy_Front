@@ -13,3 +13,5 @@ $(".tabtype_wrapper .btn2").click(function (event) {
   $(".passion_notice_1").css("display", "none");
   $(".passion_notice_2").css("display", "block");
 });
+
+

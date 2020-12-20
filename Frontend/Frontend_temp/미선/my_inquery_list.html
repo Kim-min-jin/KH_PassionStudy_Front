@@ -1,320 +1,322 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <link rel = "stylesheet" href="../../css/headfoot.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-      <title>1:1문의내역</title>
-      <script src="https://code.jquery.com/jquery-3.5.1.js" 
-      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
-      crossorigin="anonymous"></script>
-      <script>    
-        /****헤더 마우스따라 움직이는 바****/
-        function headerBar(){
-          var onMenu = $('header #menu li.on').offset().left
-                                      
-          $('.floting_bar').offset( { left: onMenu } );
-      
-          $('header #menu li').on('mouseenter', function () {
-        var a = $(this).offset().left
-        $('.floting_bar').offset( { left: a } );
+    <link rel="stylesheet" href="../../css/headfoot.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>1:1문의내역</title>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      /****헤더 마우스따라 움직이는 바****/
+      function headerBar() {
+        var onMenu = $("header #menu li.on").offset().left;
 
-          })
-          $('header #menu li').on('mouseleave', function () {
-        $('.floting_bar').offset( { left: onMenu } );
-          });	
-        };
+        $(".floting_bar").offset({ left: onMenu });
 
-        function checkWindowWidth() {
-          var windowWidth = $(window).width();
-          if (windowWidth < 1000) {
-        //창 가로 크기가 1000 미만일 경우
-        $('header #menu li.pc').removeClass('on');
-        if($("header #menu li.job.mo").length == 0) {
-          $('#menu-main .job.mo').addClass('on');
-        }
-          } else {
-        //창 가로 크기가 1000보다 클 경우
-        $('header #menu li.mo').removeClass('on');
-        if($("header #menu li.pc").length == 0) {
-          $('header #menu li.pc').addClass('on');
-        }
+        $("header #menu li").on("mouseenter", function () {
+          var a = $(this).offset().left;
+          $(".floting_bar").offset({ left: a });
+        });
+        $("header #menu li").on("mouseleave", function () {
+          $(".floting_bar").offset({ left: onMenu });
+        });
+      }
+
+      function checkWindowWidth() {
+        var windowWidth = $(window).width();
+        if (windowWidth < 1000) {
+          //창 가로 크기가 1000 미만일 경우
+          $("header #menu li.pc").removeClass("on");
+          if ($("header #menu li.job.mo").length == 0) {
+            $("#menu-main .job.mo").addClass("on");
           }
-        };
-
-        /****웹 로드시 작동****/
-        $(function () {
-      
-          //checkWindowWidth();
-          headerBar();
-      
-          /****헤더클릭 페이지 바로가기+중앙배치****/
-          $('header #menu li a.pagemove').click(function () {
-        var makeCenter = ($(window).height() - $(this.hash).outerHeight()) / 2
-        $('html,body').animate({
-          scrollTop: $(this.hash).offset().top - makeCenter
-        }, 400);
-          });
-
-        });
-
-        /****창크기 변화 감지 후 작동****/
-        $(window).resize(function() {
-      
-          //checkWindowWidth();	
-          headerBar();
-      
-        });
-      </script>
-
-      <script>
-        $(document).ready(function(){
-          $(".state-complete").click(function(){
-            var submenu = $(this).next("ul");
-            if(submenu.is("visible")){
-              submenu.slideUp();
-            }else{
-              submenu.slideDown();
-            }
-          });
-        });
-      </script>
-      <style>
-        
-        .cont_header{
-            background:  #202020;
-            line-height: 7;
-
+        } else {
+          //창 가로 크기가 1000보다 클 경우
+          $("header #menu li.mo").removeClass("on");
+          if ($("header #menu li.pc").length == 0) {
+            $("header #menu li.pc").addClass("on");
+          }
         }
-        .cont_header .cont_wrapper{
-            width: 1200px;
-            margin: 0 auto;
-            font-family: 'Montserrat', Noto Sans KR, sans-serif;
-            text-align: center;
-            color: #fff;
-        }
+      }
 
+      /****웹 로드시 작동****/
+      $(function () {
+        //checkWindowWidth();
+        headerBar();
 
-      
+        /****헤더클릭 페이지 바로가기+중앙배치****/
+        $("header #menu li a.pagemove").click(function () {
+          var makeCenter =
+            ($(window).height() - $(this.hash).outerHeight()) / 2;
+          $("html,body").animate(
+            {
+              scrollTop: $(this.hash).offset().top - makeCenter,
+            },
+            400
+          );
+        });
+      });
+
+      /****창크기 변화 감지 후 작동****/
+      $(window).resize(function () {
+        //checkWindowWidth();
+        headerBar();
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $(".state-complete").click(function () {
+          var submenu = $(this).next("ul");
+          if (submenu.is("visible")) {
+            submenu.slideUp();
+          } else {
+            submenu.slideDown();
+          }
+        });
+      });
+    </script>
+    <style>
+      .cont_header {
+        background: #202020;
+        line-height: 7;
+      }
+      .cont_header .cont_wrapper {
+        width: 1200px;
+        margin: 0 auto;
+        font-family: "Montserrat", Noto Sans KR, sans-serif;
+        text-align: center;
+        color: #fff;
+      }
+
       /* -------------------------탭 설정 임의로 변경 (bottom: 50px-> 30px)----------------------------------- */
-        .tabtype { 
-            margin: 50px 0 30px 0;
-        }
-        .tabtype_wrapper{
-            width: 1000px;
-            margin: 0 auto;
-        }
+      .tabtype {
+        margin: 50px 0 30px 0;
+      }
+      .tabtype_wrapper {
+        width: 1000px;
+        margin: 0 auto;
+      }
 
-        /*나의정보 ~ 설정 버튼 */
-        .tabtype .tabtype_wrapper li {  
-            display: inline-block;
-            width: 24.5%;
-        }
-        .tabtype .tabtype_wrapper button {
-            width: 100%;
-            height: 40px;
-            /* box-shadow: 0 20px 40px rgba(17, 20, 39, 0.10); */
-            background-color: rgb(190, 190, 190);
-            border: 0;
-            font-weight: 900;
-            font-family: 'Montserrat', Noto Sans KR, sans-serif;
-            cursor: pointer;
-            font-size: 20px;
-        }
-        .tabtype .tabtype_wrapper li a{
-            text-decoration: none;
-        }
-        .tabtype .tabtype_wrapper button:hover{
-            background-color: #ffcc00;
-            color: white;
-        }
-        .tabtype button.on {
-            background-color: #202020;
-            color: #ffffff;
-        }
-      
-        
-        .section {
-          width: 1000px;
-          margin: 0 auto;
-        }
-        /* -------------------------탭 설정 임의로 변경 (top: 50px-> 30px)----------------------------------- */
-        .container {
-          padding: 0; 
-          margin: 30px 0 50px 0;
-        }
-        /*---------------------------------두 번째 탭 감싸는 ul---------------------------------*/ 
-        .container .container_mypage-management ul { 
-          margin: 0 0 20px 0;
-        }
+      /*나의정보 ~ 설정 버튼 */
+      .tabtype .tabtype_wrapper li {
+        display: inline-block;
+        width: 24.5%;
+      }
+      .tabtype .tabtype_wrapper button {
+        width: 100%;
+        height: 40px;
+        /* box-shadow: 0 20px 40px rgba(17, 20, 39, 0.10); */
+        background-color: rgb(190, 190, 190);
+        border: 0;
+        font-weight: 900;
+        font-family: "Montserrat", Noto Sans KR, sans-serif;
+        cursor: pointer;
+        font-size: 20px;
+      }
+      .tabtype .tabtype_wrapper li a {
+        text-decoration: none;
+      }
+      .tabtype .tabtype_wrapper button:hover {
+        background-color: #ffcc00;
+        color: white;
+      }
+      .tabtype button.on {
+        background-color: #202020;
+        color: #ffffff;
+      }
 
-        /*-------------------------------두 번째 탭 사이즈 조절하는 코드-----------------------*/ 
-        .container .container_mypage-management li {
-          display: inline-block;
-          width: 1000px;
-        }
-        .container .container_mypage-management button { 
-          width: 100%;
-          height: 35px;
-          background-color: rgb(190, 190, 190);
-          border: 0;
-          font-weight: 900;
-          font-family: 'Montserrat', Noto Sans KR, sans-serif;
-          cursor: pointer;
-          font-size: 15px;
-        }
-        .container .container_mypage-management li a { 
-          text-decoration: none;
-        }
-        .container .container_mypage-management button a {
-          color: black;
-        }
-        .container .container_mypage-management button:hover { 
-          background-color: #ffcc00;
-          color: white;
-        }
-        .container button.on {
-          background-color: #202020;
-          color: #ffffff;
-        }
-        /* ---------------------------------------------------------------------- */
-        /* --------------------------------스타일 먹이기 시작-------- */
-        .reservation-confirm-tool_container {
-          display: flex;
-          background-color: #eeecec;
-          margin: 0 0 55px 0;
-        }
-        .reservation-confirm-tool_container > div:nth-child(1) {
-          flex-basis: 100px;
-          /* flex-grow: 1; */
-        }
-        .reservation-confirm-tool_container > div:nth-child(2) {
-          flex-basis: 800px;
-          /* flex-grow: 2.5; */
-        }
-        .reservation-confirm-tool_container > div:nth-child(3) {
-          flex-basis: 70px;
-          /* flex-grow: 0.5; */
-        }
-        .reservation-confirm-tool-title {
-          text-align: center;
-          margin: 33px 0 0 0 ;
-          font-weight: bold;
-        }
-        /* 가운데 박스 */
-        .reservation-confirm-tool-period {
-          height: 125px;
-          padding: 10px;
-        }
-        .reservation-confirm-tool-period > div {
-          margin: 20px 0;
-        }
-        .selected-month > button {
-          width: 60px; height: 30px;
-          margin: 0 5px;
-          border: none;
-          border-radius: 4px;
-          background-color: white;
-        }
-        .selected-ymd > select {
-          width: 80px; height: 30px;
-          border-radius: 4px;
-          border: 1px solid #cfcdcd;
-        }
-        .selected-ymd > .until {
-          margin: 0 20px;
-        }
-        .selected-ymd  > label {
-          margin-right: 8px;
-        }
-        .reservation-confirm-tool-lookup {
-          margin: 0 auto;
-          margin-right: 0;
-          padding: 32px 0 0 0;
-          text-align: center;
-          font-weight: bold;
-          background-color: #4e4e4e;
-          border-top-right-radius: 6px;
-          border-bottom-right-radius: 6px;
-          color: white;
-        }
-        /* ---------------------------------------날짜 선택 하는 폼 완료------ */
-        .mypage-inquery{
-          border: 3px solid #c4c4c4;
-          border-left: none;
-          border-right: none;
-        }
+      .section {
+        width: 1000px;
+        margin: 0 auto;
+      }
+      /* -------------------------탭 설정 임의로 변경 (top: 50px-> 30px)----------------------------------- */
+      .container {
+        padding: 0;
+        margin: 30px 0 50px 0;
+      }
+      /*---------------------------------두 번째 탭 감싸는 ul---------------------------------*/
+      .container .container_mypage-management ul {
+        margin: 0 0 20px 0;
+      }
 
-        .state-complete {
-          position: relative;
-          height: 40px;
-          padding: 20px 0 20px 30px;
-          font-weight: bold;
-        }
-        .state-complete {
-          cursor: pointer;
-        }
-        .state-complete .state-date {
-          position: absolute;
-          right: 60px;
-          color: #2f3236;
-        }
-        .state-complete strong {
-          display: inline-block;
-          text-align: center;
-          margin: -4px 20px 0 0;
-          background-color: #5dbbf1;
-          color: white;
-          width: 80px; height: 30px;
-          line-height: 30px;
-          border-radius: 6px;
-          border: none;
-        }
-        .expansion {
-          background-color:#f5f5f5;
-          display: none;
-        }
-        .expansion .question {
-          padding: 25px 30px 25px 35px;
-        }
-        .expansion .question p {
-          margin-top: 30px;
-        }
-        .expansion .answer {
-          padding: 25px 30px 25px 35px;
-        }
-        .expansion .answer p {
-          margin-top: 30px;
-        }
-        .answer {
-          position: relative;
-          border-top: 1px solid #c9c9c9;
-        }
-        .answer .answer-date {
-          position: absolute;
-          right: 60px;
-          color: #2f3236;
-        }
-        .answer > strong {
-          font-weight: bold;
-          color:#5dbbf1;
-        }
+      /*-------------------------------두 번째 탭 사이즈 조절하는 코드-----------------------*/
+      .container .container_mypage-management li {
+        display: inline-block;
+        width: 1000px;
+      }
+      .container .container_mypage-management button {
+        width: 100%;
+        height: 35px;
+        background-color: rgb(190, 190, 190);
+        border: 0;
+        font-weight: 900;
+        font-family: "Montserrat", Noto Sans KR, sans-serif;
+        cursor: pointer;
+        font-size: 15px;
+      }
+      .container .container_mypage-management li a {
+        text-decoration: none;
+      }
+      .container .container_mypage-management button a {
+        color: black;
+      }
+      .container .container_mypage-management button:hover {
+        background-color: #ffcc00;
+        color: white;
+      }
+      .container button.on {
+        background-color: #202020;
+        color: #ffffff;
+      }
+      /* ---------------------------------------------------------------------- */
+      /* --------------------------------스타일 먹이기 시작-------- */
+      .reservation-confirm-tool_container {
+        display: flex;
+        background-color: #eeecec;
+        margin: 0 0 55px 0;
+      }
+      .reservation-confirm-tool_container > div:nth-child(1) {
+        flex-basis: 100px;
+        /* flex-grow: 1; */
+      }
+      .reservation-confirm-tool_container > div:nth-child(2) {
+        flex-basis: 800px;
+        /* flex-grow: 2.5; */
+      }
+      .reservation-confirm-tool_container > div:nth-child(3) {
+        flex-basis: 70px;
+        /* flex-grow: 0.5; */
+      }
+      .reservation-confirm-tool-title {
+        text-align: center;
+        margin: 33px 0 0 0;
+        font-weight: bold;
+      }
+      /* 가운데 박스 */
+      .reservation-confirm-tool-period {
+        height: 125px;
+        padding: 10px;
+      }
+      .reservation-confirm-tool-period > div {
+        margin: 20px 0;
+      }
+      .selected-month > button {
+        width: 60px;
+        height: 30px;
+        margin: 0 5px;
+        border: none;
+        border-radius: 4px;
+        background-color: white;
+      }
+      .selected-ymd > select {
+        width: 80px;
+        height: 30px;
+        border-radius: 4px;
+        border: 1px solid #cfcdcd;
+      }
+      .selected-ymd > .until {
+        margin: 0 20px;
+      }
+      .selected-ymd > label {
+        margin-right: 8px;
+      }
+      .reservation-confirm-tool-lookup {
+        margin: 0 auto;
+        margin-right: 0;
+        padding: 32px 0 0 0;
+        text-align: center;
+        font-weight: bold;
+        background-color: #4e4e4e;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        color: white;
+      }
+      /* ---------------------------------------날짜 선택 하는 폼 완료------ */
+      .mypage-inquery {
+        border: 3px solid #c4c4c4;
+        border-left: none;
+        border-right: none;
+      }
 
-        .go-inquery {
-          width: 130px; height: 45px;
-          line-height: 43px;
-          text-align: center;
-          background-color: #5dbbf1;
-          border-radius: 6px;
-          margin: 100px auto 10px;
-        }
-        .go-inquery_button {
-          color: white;
-          text-decoration: none;
-          font-weight: bold;
-        }
+      .state-complete {
+        position: relative;
+        height: 40px;
+        padding: 20px 0 20px 30px;
+        font-weight: bold;
+      }
+      .state-complete {
+        cursor: pointer;
+      }
+      .state-complete .state-date {
+        position: absolute;
+        right: 60px;
+        color: #2f3236;
+      }
+      .state-complete strong {
+        display: inline-block;
+        text-align: center;
+        margin: -4px 20px 0 0;
+        background-color: #5dbbf1;
+        color: white;
+        width: 80px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 6px;
+        border: none;
+      }
+      .expansion {
+        background-color: #f5f5f5;
+        display: none;
+      }
+      .expansion .question {
+        padding: 25px 30px 25px 35px;
+      }
+      .expansion .question p {
+        margin-top: 30px;
+      }
+      .expansion .answer {
+        padding: 25px 30px 25px 35px;
+      }
+      .expansion .answer p {
+        margin-top: 30px;
+      }
+      .answer {
+        position: relative;
+        border-top: 1px solid #c9c9c9;
+      }
+      .answer .answer-date {
+        position: absolute;
+        right: 60px;
+        color: #2f3236;
+      }
+      .answer > strong {
+        font-weight: bold;
+        color: #5dbbf1;
+      }
 
-      </style>
+      .go-inquery {
+        width: 130px;
+        height: 45px;
+        line-height: 43px;
+        text-align: center;
+        background-color: #5dbbf1;
+        border-radius: 6px;
+        margin: 100px auto 10px;
+      }
+      .go-inquery_button {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    </style>
   </head>
 
   <body>
@@ -327,28 +329,28 @@
         <div class="menu_wrapper">
           <nav id="menu">
             <ul id="menu-main" class="menu menu-main">
-                <li class="main">
-                    <a href=""><span>메인</span></a>
-                </li>
-                <li class="roomlist">
-                    <a href=""><span>시설소개</span></a>
-                </li>
-                <li class="guide">
-                    <a href=""><span>이용안내</span></a>
-                </li>
-                <li class="reserve">
-                    <a href=""><span>예약/결제</span></a>
-                </li>
-                <li class="community">
-                    <a href=""><span>커뮤니티</span></a>
-                </li>
-                <li class="mypage on">
-                    <a href=""><span>마이페이지</span></a>
-                </li>
-                <li class="login">
-                    <a href=""><span>로그인</span></a>
-                </li>
-                <div class="floting_bar" style="left: 400px;"></div>
+              <li class="main">
+                <a href=""><span>메인</span></a>
+              </li>
+              <li class="roomlist">
+                <a href=""><span>시설소개</span></a>
+              </li>
+              <li class="guide">
+                <a href=""><span>이용안내</span></a>
+              </li>
+              <li class="reserve">
+                <a href=""><span>예약/결제</span></a>
+              </li>
+              <li class="community">
+                <a href=""><span>커뮤니티</span></a>
+              </li>
+              <li class="mypage on">
+                <a href=""><span>마이페이지</span></a>
+              </li>
+              <li class="login">
+                <a href=""><span>로그인</span></a>
+              </li>
+              <div class="floting_bar" style="left: 400px"></div>
             </ul>
           </nav>
         </div>
@@ -357,45 +359,53 @@
 
     <div class="cont_header">
       <div class="cont_wrapper">
-          <h1>마이페이지</h1>
+        <h1>마이페이지</h1>
       </div>
     </div>
 
-  
     <div class="tabtype">
-        <div class="tabtype_wrapper">
-            <ul>
-              <li>
-                  <a href="my_main_page.html"><button class="btn1">나의 정보</button></a>
-              </li>
-              <li>
-                  <a href="my_reservation_confirmation.html"><button class="btn2">나의 예약 관리</button></a>
-              </li>
-              <li>
-                  <a href="my_inquery_list.html"><button class="btn3 on">나의 활동</button></a>
-              </li>
-              <li>
-                <a href="my_inform_edit.html"><button class="btn4">설정</button></a>
-            </li>
-            </ul>
-        </div>
-    </div>  
+      <div class="tabtype_wrapper">
+        <ul>
+          <li>
+            <a href="my_main_page.html"
+              ><button class="btn1">나의 정보</button></a
+            >
+          </li>
+          <li>
+            <a href="my_reservation_confirmation.html"
+              ><button class="btn2">나의 예약 관리</button></a
+            >
+          </li>
+          <li>
+            <a href="my_inquery_list.html"
+              ><button class="btn3 on">나의 활동</button></a
+            >
+          </li>
+          <li>
+            <a href="my_inform_edit.html"><button class="btn4">설정</button></a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <section class="section">
       <div class="container">
         <div class="container_mypage-management">
           <ul>
             <li>
-              <a href="링크.html"><button class="first-teb-button on">1:1 문의 내역</button></a>
+              <a href="링크.html"
+                ><button class="first-teb-button on">1:1 문의 내역</button></a
+              >
             </li>
           </ul>
         </div>
-         <!---------------------- 날짜 선택 하는 폼 시작------------- -->
+        <!---------------------- 날짜 선택 하는 폼 시작------------- -->
         <div class="reservation-confirm-tool_container">
           <div class="reservation-confirm-tool-title">구매 기간</div>
           <div class="reservation-confirm-tool-period">
-            <div class="selected-month"> <!-- 달 선택 -->
-              <button class = "on" type="button">1개월</button>
+            <div class="selected-month">
+              <!-- 달 선택 -->
+              <button class="on" type="button">1개월</button>
               <button type="button">3개월</button>
               <button type="button">6개월</button>
               <button type="button">12개월</button>
@@ -409,7 +419,7 @@
                 <option value="2020" selected="selected">2020</option>
               </select>
               <label for="selected-ymd-year">년</label>
-    
+
               <select id="selected-ymd-month">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -425,7 +435,7 @@
                 <option value="12">12</option>
               </select>
               <label for="selected-ymd-month">월</label>
-    
+
               <select id="selected-ymd-day">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -460,9 +470,9 @@
                 <option value="31">31</option>
               </select>
               <label for="selected-ymd">일</label>
-    
+
               <span class="until">~</span>
-              
+
               <select id="selected-ymd-end-year">
                 <option value="2016">2016</option>
                 <option value="2017">2017</option>
@@ -471,7 +481,7 @@
                 <option value="2020" selected="selected">2020</option>
               </select>
               <label for="selected-ymd-end-year">년</label>
-    
+
               <select id="selected-ymd-end-month">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -487,7 +497,7 @@
                 <option value="12" selected="selected">12</option>
               </select>
               <label for="selected-ymd-end-month">월</label>
-    
+
               <select id="selected-ymd-end-day">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -526,17 +536,20 @@
           </div>
           <div class="reservation-confirm-tool-lookup">조회</div>
         </div>
-         <!---------------------- 날짜 선택 하는 폼 완료------------- -->
+        <!---------------------- 날짜 선택 하는 폼 완료------------- -->
 
         <div class="mypage-inquery">
-          <ul>  <!--li 1개당 답변완료 틀 1개-->
-            <li id="12345"> <!--클릭 했을 때 펼쳐지게 할 것 (+ cursur: pointer;)-->
+          <ul>
+            <!--li 1개당 답변완료 틀 1개-->
+            <li id="12345">
+              <!--클릭 했을 때 펼쳐지게 할 것 (+ cursur: pointer;)-->
               <p class="state-complete">
                 <strong>답변완료</strong>
                 test: 여기엔 1:1 문의 제목이 노출 된다.
                 <span class="state-date">2020.12.19</span>
               </p>
-              <ul class="expansion">  <!--사용자가 클릭하지 않는 이상 보이지 않는 블록-->
+              <ul class="expansion">
+                <!--사용자가 클릭하지 않는 이상 보이지 않는 블록-->
                 <li class="question">
                   <strong>문의</strong>
                   <!-- <ul></ul> -->
@@ -548,9 +561,9 @@
                     <span class="answer-date">2020.12.20</span>
                   </strong>
                   <p>
-                    반갑습니다. 고객님.
-                    열정스터디 카페 담당자 강파이어 입니다.
-                    문의하신 내용에 대해 블라블라 답변을 블라블라 디비에서 가져온다.
+                    반갑습니다. 고객님. 열정스터디 카페 담당자 강파이어 입니다.
+                    문의하신 내용에 대해 블라블라 답변을 블라블라 디비에서
+                    가져온다.
                   </p>
                 </li>
               </ul>
@@ -560,9 +573,10 @@
         </div>
 
         <div class="go-inquery">
-          <a href="민진님1:1문의페이지.html" class="go-inquery_button">1:1문의하기</a>
+          <a href="민진님1:1문의페이지.html" class="go-inquery_button"
+            >1:1문의하기</a
+          >
         </div>
-
       </div>
     </section>
 
