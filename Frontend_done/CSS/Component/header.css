@@ -16,7 +16,7 @@
   top: 50%;
   left: 50%;
   width: 1200px;
-  margin-top: -2.5px;
+  margin-top: -3.4px;
   transform: translateX(-50%);
 }
 .PassionStudy_header > .header_inner .logo_img {
@@ -35,12 +35,16 @@
   text-decoration: none;
   line-height: 0;
   cursor: pointer;
+  font-weight: bold;
 }
 .PassionStudy_header > .header_inner .menu_wrapper {
   float: right;
 }
 ul {
   list-style: none;
+}
+.PassionStudy_header #PassionStudy_header_menu ul {
+  margin-bottom: -6px; 
 }
 .PassionStudy_header #PassionStudy_header_menu li {
   float: left;
@@ -73,7 +77,7 @@ ul {
 
 .cont_header {
   background: #202020;
-  line-height: 7;
+  padding: 50px;
   align-items: center;
 }
 .cont_header .cont_wrapper {
@@ -82,6 +86,10 @@ ul {
   font-family: "Montserrat", Noto Sans KR, sans-serif;
   text-align: center;
   color: #fff;
+}
+.cont_header .cont_wrapper h1 {
+  font-size: 33px;
+  font-weight: bold;
 }
 
 .tabtype {
@@ -98,8 +106,10 @@ ul {
 .tabtype .tabtype_wrapper button {
   width: 100%;
   height: 40px;
-  box-shadow: 0 20px 40px rgba(17, 20, 39, 0.1);
-  background-color: #fff;
+   /* box-shadow: 0 20px 40px rgba(17, 20, 39, 0.1); */
+  /* background-color: #fff; */
+  background-color: rgb(190, 190, 190);
+  color: black;
   border: 0;
   font-weight: 900;
   font-family: "Montserrat", Noto Sans KR, sans-serif;
