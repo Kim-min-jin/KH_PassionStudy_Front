@@ -16,7 +16,7 @@
   top: 50%;
   left: 50%;
   width: 1200px;
-  margin-top: -2.5px;
+  margin-top: -3.5px;
   transform: translateX(-50%);
 }
 .PassionStudy_header > .header_inner .logo_img {
@@ -41,6 +41,9 @@
 }
 ul {
   list-style: none;
+}
+.PassionStudy_header #PassionStudy_header_menu ul {
+  margin-bottom: -6px; 
 }
 .PassionStudy_header #PassionStudy_header_menu li {
   float: left;
@@ -73,7 +76,7 @@ ul {
 
 .cont_header {
   background: #202020;
-  line-height: 7;
+  padding: 80px;
   align-items: center;
 }
 .cont_header .cont_wrapper {
@@ -82,6 +85,9 @@ ul {
   font-family: "Montserrat", Noto Sans KR, sans-serif;
   text-align: center;
   color: #fff;
+}
+.cont_header .cont_wrapper h1 {
+  font-size: xx-large;
 }
 
 .tabtype {
