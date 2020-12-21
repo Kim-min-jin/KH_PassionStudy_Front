@@ -8,7 +8,7 @@
 }
 
 .form_wrap_signup {
-  height: 700px;
+  height: auto;
 }
 
 .login_wrap .member_title {
@@ -120,7 +120,7 @@
 }
 
 .login_wrap .sns_login {
-  margin: 25px 0 80px;
+  margin: 25px 0 60px;
 }
 
 .login_wrap .sns_login h3 {
@@ -161,13 +161,13 @@
   -webkit-box-pack: center;
   justify-content: center;
   margin: 20px -20px 0;
-  padding: 20px 0;
+  padding: 0;
 }
 
 .login_wrap .linkarea li {
   position: relative;
   display: inline-block;
-  padding: 0 14px;
+  padding: 0 50px;
 }
 
 .login_wrap .linkarea li a {
@@ -263,7 +263,7 @@
 }
 
 .form_wrap_signup {
-  height: 700px;
+  height: auto;
 }
 
 .title_signup {
@@ -417,11 +417,14 @@ button {
 }
 
 .signup_step .btn_next_step {
+  border-radius: 2px;
+  font-weight: 500;
   width: 100%;
   height: 48px;
   background: #c4c4c4;
   font-size: 14px;
   color: #fff;
+  outline: none;
 }
 
 .signup_step .cklist span {
@@ -453,7 +456,7 @@ button {
 }
 
 .form_wrap_signup {
-  height: 600px;
+  height: auto;
 }
 
 .step_wrap {
@@ -623,4 +626,69 @@ button {
   color: #5d5d5d;
   box-sizing: border-box;
   line-height: 48px;
+}
+
+/* 회원가입 비밀번호 span */
+
+.signup_wrap .signup_step .field_signup_wrap_pwd {
+  overflow: hidden;
+  position: relative;
+}
+.signup_wrap .signup_step .field_signup_wrap_pwd .field_vali {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40px;
+  color: #ff4800;
+  font-size: 12px;
+  line-height: 40px;
+}
+
+.signup_wrap .signup_step p{
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.signup_wrap .signup_step .field_signup_wrap_pwd .field_vali span {
+  display: inline;
+  padding-right:  28px;
+  color: #c4c4c4;
+}
+
+/* 가입 웰컴 쿠폰 */
+.join_ly {
+  font-size: 12px;
+}
+
+.join_ly h3 {
+  margin: 16px 0 45px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.coupon_dsc .user_coupon_img {
+  border: 0;
+  vertical-align: top;
+  margin-left: 25px;
+  width: 164px;
+}
+
+.join_ly p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.coupon_dsc a {
+  font-weight: 500;
+  color: #303033;
+  text-decoration: underline;
 }

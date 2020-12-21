@@ -73,13 +73,13 @@
             >
           </li>
           <li>
-            <a href="board_faq.html"
-              ><button class="btn2 on">자주하는 질문</button></a
+            <a href="../FAQ/board_faq.html"
+              ><button class="btn2">자주하는 질문</button></a
             >
           </li>
           <li>
-            <a href="../1on1/board_1on1.html"
-              ><button class="btn3">1:1문의</button></a
+            <a href="board_1on1.html"
+              ><button class="btn3 on">1:1문의</button></a
             >
           </li>
         </ul>
@@ -87,72 +87,46 @@
     </div>
 
     <section>
-      <div id="board_left"></div>
       <div id="board">
+        <!-- 왼쪽 사이드 -->
         <div id="board_right">
-          <div id="buttons">
-            <a href="자주하는 질문(관리자글쓰기) .html">
-              <button type="button" class="write_btn yb" style="float: none">
-                글쓰기
-              </button></a
-            >
-            <button type="button" class="remove_btn yb" style="float: none">
-              삭제
-            </button>
+          <div id="board_form">
             <select
               id="board_select"
               name="board_select"
               title="문의선택"
               class="sel"
             >
+              <option value="please_select">선택해주세요</option>
               <option value="member_inquiry">회원문의</option>
               <option value="reservation_inquiry">예약문의</option>
               <option value="payment_inquiry">결제문의</option>
               <option value="product_inquiry">상품문의</option>
               <option value="cancel_inquiry">취소문의</option>
             </select>
-          </div>
-          <table class="table" width="50%">
-            <th><input type="checkbox" class="checkbox" /></th>
-            <th>카테고리</th>
-            <th>제목</th>
-            <th></th>
-            <tr>
-              <!-- 첫번째 줄 시작-->
-              <td><input type="checkbox" class="checkbox" /></td>
-              <td>회원문의</td>
-              <td>아이디와 비밀번호는 어떻게 찾을 수 있나요?</td>
-              <td></td>
-            </tr>
-            <!-- 첫번째 줄 끝-->
-            <tr>
-              <!-- 두번째 줄 시작-->
-              <td><input type="checkbox" class="checkbox" /></td>
-              <td>서비스 이용 및 기타</td>
-              <td>결제내역을 어떻게 확인하나요?</td>
-              <td></td>
-            </tr>
-            <!-- 두번째 줄 끝-->
-            <tr>
-              <!-- 세번째 줄 시작-->
-              <td><input type="checkbox" class="checkbox" /></td>
-              <td>쿠폰/적립금</td>
-              <td>적립금은 유효기간이 있나요?</td>
-              <td></td>
-            </tr>
-            <!-- 두번째 줄 끝-->
-          </table>
-          <div class="search_bar">
-            <input type="checkbox" id="name" name="searchChk" value="name" />
-            <label for="name">이름　</label>
-            <input type="checkbox" name="search[title]" />
-            <label for="name">제목　</label>
-            <input type="checkbox" name="search[contents]" />
-            <label>내용　</label>
-            <input type="text" id="search-box" />
-            <button type="button" class="search-btn yb" style="float: none">
-              검색
-            </button>
+            <form id="board_form_title" action="writerAction" method="post">
+              <input
+                type="text"
+                name="bdTitle"
+                class="form-control mt-4 mb-2"
+                placeholder="제목을 입력해주세요."
+                required
+              />
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  rows="10"
+                  name="bdContent"
+                  placeholder="내용을 입력해주세요"
+                  required
+                ></textarea>
+              </div>
+              <a href="notice.html"
+                ><button type="button" class="write_btn yb" style="float: none">
+                  등록하기
+                </button></a
+              >
+            </form>
           </div>
         </div>
       </div>

@@ -4,75 +4,12 @@
       <link rel = "stylesheet" href="../../css/headfoot.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-      <title>예약-예약확인</title>
+      <title>예약-취소내역</title>
       <script src="https://code.jquery.com/jquery-3.5.1.js" 
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
       crossorigin="anonymous"></script>
-      <script>    
-        /****헤더 마우스따라 움직이는 바****/
-        function headerBar(){
-          var onMenu = $('header #menu li.on').offset().left
-                                      
-          $('.floting_bar').offset( { left: onMenu } );
-      
-          $('header #menu li').on('mouseenter', function () {
-        var a = $(this).offset().left
-        $('.floting_bar').offset( { left: a } );
-
-          })
-          $('header #menu li').on('mouseleave', function () {
-        $('.floting_bar').offset( { left: onMenu } );
-          });	
-        };
-
-        function checkWindowWidth() {
-          var windowWidth = $(window).width();
-          if (windowWidth < 1000) {
-        //창 가로 크기가 1000 미만일 경우
-        $('header #menu li.pc').removeClass('on');
-        if($("header #menu li.job.mo").length == 0) {
-          $('#menu-main .job.mo').addClass('on');
-        }
-          } else {
-        //창 가로 크기가 1000보다 클 경우
-        $('header #menu li.mo').removeClass('on');
-        if($("header #menu li.pc").length == 0) {
-          $('header #menu li.pc').addClass('on');
-        }
-          }
-        };
-
-        /****웹 로드시 작동****/
-        $(function () {
-      
-          //checkWindowWidth();
-          headerBar();
-      
-          /****헤더클릭 페이지 바로가기+중앙배치****/
-          $('header #menu li a.pagemove').click(function () {
-        var makeCenter = ($(window).height() - $(this.hash).outerHeight()) / 2
-        $('html,body').animate({
-          scrollTop: $(this.hash).offset().top - makeCenter
-        }, 400);
-          });
-
-        });
-
-        /****창크기 변화 감지 후 작동****/
-        $(window).resize(function() {
-      
-          //checkWindowWidth();	
-          headerBar();
-      
-        });
-      </script>
       <style>
         
-        .cont_header{
-            background:  #202020;
-            line-height: 7;
-
-        }
         .cont_header .cont_wrapper{
             width: 1200px;
             margin: 0 auto;
@@ -84,50 +21,8 @@
 
       
       /* --------------------------------탭 설정 임의로 변경----------------------------------------- */
-        .tabtype { 
-            margin: 50px 0 30px 0;
-        }
-        .tabtype_wrapper{
-            width: 1000px;
-            margin: 0 auto;
-        }
-        /*나의정보 ~ 설정 버튼 */
-        .tabtype .tabtype_wrapper li {  
-            display: inline-block;
-            width: 24.5%;
-        }
-        .tabtype .tabtype_wrapper button {
-            width: 100%;
-            height: 40px;
-            /* box-shadow: 0 20px 40px rgba(17, 20, 39, 0.10); */
-            background-color: rgb(190, 190, 190);
-            border: 0;
-            font-weight: 900;
-            font-family: 'Montserrat', Noto Sans KR, sans-serif;
-            cursor: pointer;
-            font-size: 20px;
-        }
-        .tabtype .tabtype_wrapper li a{
-            text-decoration: none;
-        }
-        .tabtype .tabtype_wrapper button:hover{
-            background-color: #ffcc00;
-            color: white;
-        }
-        .tabtype button.on {
-            background-color: #202020;
-            color: #ffffff;
-        }
       
         
-        .section {
-          width: 1000px;
-          margin: 0 auto;
-        }
-        .container {
-          padding: 0; /*변경 4*/
-          margin: 30px 0 50px 0;
-        }
         /*두 번째 탭 감싸는 ul*/
         .container .container_reservation-management ul { 
           margin: 0 0 20px 0; /*변경2*/
@@ -158,13 +53,13 @@
           color: white;
         }
 
-        /* 부 탭메뉴버튼과 그 아래 버튼에 on 설정 했을 때  */
+        /* ----------------부 탭메뉴버튼과 그 아래 버튼에 on 설정 했을 때 -------------------------- */
         .container button.on {
           background-color: #202020;
           color: #ffffff;
         }
         
-        /* --------------------------------스타일 먹이기 시작-------- */
+        /* --------------------------------스타일 먹이기 시작---------------------------- */
         .reservation-confirm-tool_container {
           display: flex;
           background-color: #eeecec;
@@ -241,6 +136,10 @@
           height: 40px;
           padding: 5px;
           border-bottom: 1px solid #bbbbbb;
+        }
+        .reservation-state_table .reservation-state-cancel {
+          color: #ce0d0d;
+          font-weight: bold;
         }
         .table-check-details-information {
           background-color: #54a8ec;
@@ -351,10 +250,10 @@
         <div class="container_reservation-management">
           <ul>
             <li>
-              <a href="my_reservation_confirmation.html"><button class="confirm-reservation-button on"> 예약 확인 </button></a>
+              <a href="my_reservation_confirmation.html"><button class="confirm-reservation-button"> 예약 확인 </button></a>
             </li>
             <li>
-              <a href="my_reservation_cancel.html"><button class="cancel-reservation-button"> 취소 내역 </button></a>
+              <a href="my_reservation_cancel.html"><button class="cancel-reservation-button on"> 취소 내역 </button></a>
             </li>
           </ul>
         </div>
@@ -496,8 +395,7 @@
           <div class="reservation-confirm-tool-lookup">조회</div>
         </div>
 
-        <!------------- 예약 보여주는 테이블 만들기------밤샘 각이다~~~신난다 ^_^ ----------->
-        <!-- 예약 확인 테이블 (상태: 1.예약, 2.취소, 3.결제) / DB에서 자료 꺼내오기 --------->
+        <!------------- 취소 내역 테이블 : '상태: 취소'만 노출 ------------------->
         <div class="reservation-state_container">
           <table class="reservation-state_table">
             <thead>
@@ -506,7 +404,7 @@
                 <th class="table-room">스터디룸명</th>
                 <th class="table-type">스터디룸 타입</th>
                 <th class="table-date">예약일</th>
-                <th class="table-time">이용시간</th>
+                <th class="table-time">취소일</th>  <!--예약 확인과 달라진 탭메뉴-->
                 <th class="table-state">상태</th> 
                 <th class="table-lookup">조회</th>
                 <!--상태: 취소인 경우 red;-->
@@ -515,11 +413,11 @@
             <tbody>
               <tr>
                 <td>1</td>
-                <td>타오르는 열정</td>
+                <td>열정만수르</td>
                 <td>단체실</td>
                 <td>2020-12-10</td>
-                <td>16:00 ~ 20:00</td>
-                <td>예약</td>
+                <td>2020-11-02</td>
+                <td class="reservation-state-cancel">취소</td>
                 <td><button class="table-check-details-information" type="button" onclick="location.href='my_reservation_detail.html'">상세조회</button></td>
               </tr>
             </tbody>
