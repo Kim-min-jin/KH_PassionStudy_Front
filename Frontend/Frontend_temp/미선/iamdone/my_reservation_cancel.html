@@ -8,71 +8,8 @@
       <script src="https://code.jquery.com/jquery-3.5.1.js" 
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
       crossorigin="anonymous"></script>
-      <script>    
-        /****헤더 마우스따라 움직이는 바****/
-        function headerBar(){
-          var onMenu = $('header #menu li.on').offset().left
-                                      
-          $('.floting_bar').offset( { left: onMenu } );
-      
-          $('header #menu li').on('mouseenter', function () {
-        var a = $(this).offset().left
-        $('.floting_bar').offset( { left: a } );
-
-          })
-          $('header #menu li').on('mouseleave', function () {
-        $('.floting_bar').offset( { left: onMenu } );
-          });	
-        };
-
-        function checkWindowWidth() {
-          var windowWidth = $(window).width();
-          if (windowWidth < 1000) {
-        //창 가로 크기가 1000 미만일 경우
-        $('header #menu li.pc').removeClass('on');
-        if($("header #menu li.job.mo").length == 0) {
-          $('#menu-main .job.mo').addClass('on');
-        }
-          } else {
-        //창 가로 크기가 1000보다 클 경우
-        $('header #menu li.mo').removeClass('on');
-        if($("header #menu li.pc").length == 0) {
-          $('header #menu li.pc').addClass('on');
-        }
-          }
-        };
-
-        /****웹 로드시 작동****/
-        $(function () {
-      
-          //checkWindowWidth();
-          headerBar();
-      
-          /****헤더클릭 페이지 바로가기+중앙배치****/
-          $('header #menu li a.pagemove').click(function () {
-        var makeCenter = ($(window).height() - $(this.hash).outerHeight()) / 2
-        $('html,body').animate({
-          scrollTop: $(this.hash).offset().top - makeCenter
-        }, 400);
-          });
-
-        });
-
-        /****창크기 변화 감지 후 작동****/
-        $(window).resize(function() {
-      
-          //checkWindowWidth();	
-          headerBar();
-      
-        });
-      </script>
       <style>
         
-        .cont_header{
-            background:  #202020;
-            line-height: 7;
-
-        }
         .cont_header .cont_wrapper{
             width: 1200px;
             margin: 0 auto;
@@ -84,50 +21,8 @@
 
       
       /* --------------------------------탭 설정 임의로 변경----------------------------------------- */
-        .tabtype { 
-            margin: 50px 0 30px 0;
-        }
-        .tabtype_wrapper{
-            width: 1000px;
-            margin: 0 auto;
-        }
-        /*나의정보 ~ 설정 버튼 */
-        .tabtype .tabtype_wrapper li {  
-            display: inline-block;
-            width: 24.5%;
-        }
-        .tabtype .tabtype_wrapper button {
-            width: 100%;
-            height: 40px;
-            /* box-shadow: 0 20px 40px rgba(17, 20, 39, 0.10); */
-            background-color: rgb(190, 190, 190);
-            border: 0;
-            font-weight: 900;
-            font-family: 'Montserrat', Noto Sans KR, sans-serif;
-            cursor: pointer;
-            font-size: 20px;
-        }
-        .tabtype .tabtype_wrapper li a{
-            text-decoration: none;
-        }
-        .tabtype .tabtype_wrapper button:hover{
-            background-color: #ffcc00;
-            color: white;
-        }
-        .tabtype button.on {
-            background-color: #202020;
-            color: #ffffff;
-        }
       
         
-        .section {
-          width: 1000px;
-          margin: 0 auto;
-        }
-        .container {
-          padding: 0; /*변경 4*/
-          margin: 30px 0 50px 0;
-        }
         /*두 번째 탭 감싸는 ul*/
         .container .container_reservation-management ul { 
           margin: 0 0 20px 0; /*변경2*/
