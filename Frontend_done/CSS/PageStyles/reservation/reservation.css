@@ -105,6 +105,10 @@
   padding: 5px 10px;
   font-weight: bold;
 }
+.reservation_space_content {
+  width: 950px;
+  text-align: left;
+}
 .reservation_space_content .room_title{
   padding-bottom: 0;
 }
