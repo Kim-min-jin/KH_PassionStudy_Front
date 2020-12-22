@@ -109,10 +109,6 @@
   width: 950px;
   text-align: left;
 }
-.reservation_space_content .room_title{
-  padding-bottom: 0;
-}
-
 .room_img {
   padding: 10px;
 }
@@ -121,8 +117,8 @@
 .room_introduce,
 .room_item {
   background-color: #fbfbef;
-  padding: 10px;
-  vertical-align: top;
+  padding: 0 10px;
+  vertical-align: middle;
 }
 
 .room_title .room_person_number {
