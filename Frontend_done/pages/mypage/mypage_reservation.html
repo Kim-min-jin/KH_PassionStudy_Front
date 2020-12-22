@@ -99,16 +99,10 @@
         <div class="container_reservation-management">
           <ul>
             <li>
-              <a href="my_reservation_confirmation.html"
-                ><button class="confirm-reservation-button on">
-                  예약 확인
-                </button></a
-              >
+              <button class="reservation_btn1 on">예약 확인</button>
             </li>
             <li>
-              <a href="my_reservation_cancel.html"
-                ><button class="cancel-reservation-button">취소 내역</button></a
-              >
+              <button class="reservation_btn2">취소 내역</button>
             </li>
           </ul>
         </div>
@@ -116,7 +110,7 @@
     </section>
 
     <!-- 예약 확인-->
-    <section class="section">
+    <section class="section mypage_reservation mypage_reservation1">
       <div class="container">
         <!-- 채워 넣어야 할 바디 시작 -->
         <!---------------------- 날짜 선택 하는 폼 완료------------- -->
@@ -285,7 +279,7 @@
                   <button
                     class="table-check-details-information"
                     type="button"
-                    onclick="location.href='my_reservation_detail.html'"
+                    onclick="location.href='onclick/mypage_reservation_detail.html'"
                   >
                     상세조회
                   </button>
@@ -310,7 +304,7 @@
     </section>
 
     <!-- 예약 취소-->
-    <section class="section">
+    <section class="section mypage_reservation mypage_reservation2">
       <div class="container">
         <!-- 채워 넣어야 할 바디 시작 -->
         <!---------------------- 날짜 선택 하는 폼 완료------------- -->
@@ -479,7 +473,7 @@
                   <button
                     class="table-check-details-information"
                     type="button"
-                    onclick="location.href='my_reservation_detail.html'"
+                    onclick="location.href='onclick/mypage_reservation_detail.html'"
                   >
                     상세조회
                   </button>
@@ -615,6 +609,7 @@
       </div>
     </footer>
   </body>
+  <script src="../../JS/pagesjs/mypage_reservation_click.js"></script>
   <script src="../../JS/menubar.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </html>

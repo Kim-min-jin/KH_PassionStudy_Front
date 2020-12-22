@@ -543,3 +543,90 @@
   border-style: none;
   margin-bottom: 30px;
 }
+
+/*회원 삭제*/
+
+/* 부메뉴-------------------------------------------------------- */
+.withdrawal_wrap,
+.withdrawal-fin_wrap {
+  /* border: 1px solid  #ebe6e6; */
+  width: 600px;
+  padding: 50px;
+  margin: 50px auto;
+}
+.withdrawal-front,
+.withdrawal-fin-front {
+  text-align: center;
+}
+.withdrawal-front-svg,
+.withdrawal-fin-front-svg {
+  margin-bottom: 40px;
+}
+.withdrawal-front_g1,
+.withdrawal-front_g2 {
+  color: #3a3a3a;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.withdrawal-front_g2 {
+  color: #db1a1a;
+}
+.withdrawal-pwd-group_box input {
+  width: 500px;
+  height: 40px;
+  line-height: 30px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid #d6d2d2;
+  margin: 30px auto 10px;
+}
+
+.withdrawal-pwd-group_box input::placeholder {
+  font-size: smaller;
+  padding-left: 10px;
+  color: #c0bfbf;
+  font-weight: bold;
+}
+.withdrawal-pwd-group_warn {
+  color: #db1a1a;
+  font-size: small;
+  padding-left: 10px;
+  font-weight: bold;
+}
+.withdrawal-button {
+  background-color: #c21e1e;
+  width: 500px;
+  height: 40px;
+  font-weight: bold;
+  color: white;
+  border-radius: 6px;
+  border-style: none;
+  margin: 25px auto 65px;
+}
+/* -------------------------------------------------- */
+.withdrawal-fin-front_check {
+  margin-bottom: 30px;
+}
+.withdrawal-fin-front_g1 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.withdrawal-fin-front_g2 {
+  font-size: smaller;
+  font-weight: bolder;
+  margin-bottom: 30px;
+}
+.withdrawal-fin-button {
+  background-color: #5dbbf1;
+  width: 500px;
+  height: 40px;
+  font-weight: bold;
+  border-radius: 6px;
+  border-style: none;
+  margin: 25px auto 65px;
+}
+.withdrawal-fin-button a {
+  color: white;
+  text-decoration: none;
+}
