@@ -52,6 +52,23 @@
   border-radius: 100px;
 }
 
+.mainpageSection{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#showMainContainer{
+  margin-top: 150px;
+}
+
+#mainExplanations{
+  margin-bottom: 150px;
+}
+
+#mainHowToCome{
+  margin-bottom: 150px;
+}
+
 #swipeImage {
   position: relative;
   height: 300px;
