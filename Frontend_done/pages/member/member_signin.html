@@ -30,10 +30,10 @@
               <a href="../index.html"><span>메인</span></a>
             </li>
             <li class="roomlist">
-              <a href="../Facilities/facilities_rooms.html"><span>시설소개</span></a>
+              <a href="facilities_rooms.html"><span>시설소개</span></a>
             </li>
             <li class="guide">
-              <a href="../Facilities/facilities_extra.html"><span>이용안내</span></a>
+              <a href="facilities_extra.html"><span>이용안내</span></a>
             </li>
             <li class="reserve">
               <a href="../reservation/reservation.html"
@@ -41,13 +41,13 @@
               >
             </li>
             <li class="community">
-              <a href="../board/Notice/board_notice.html"><span>커뮤니티</span></a>
+              <a href=""><span>커뮤니티</span></a>
             </li>
             <li class="mypage">
-              <a href="../mypage/mypage.html"><span>마이페이지</span></a>
+              <a href=""><span>마이페이지</span></a>
             </li>
             <li class="login on">
-              <a href="member_login.html"><span>로그인</span></a>
+              <a href=""><span>로그인</span></a>
             </li>
             <div class="floting_bar" style="left: 400px"></div>
           </ul>
@@ -57,7 +57,7 @@
   </header>
 
 
-<!-- 가입동의 부분 -->
+<!-- 이용약관 동의 체크 부분 -->
 
   <section class="signin_sction signin_sction1">
         <div class="signup_wrap">
@@ -74,67 +74,77 @@
                         <br />
                         이용약관에 동의해주세요.
                       </h3>
-                      <div class="ckjoinbox">
-                        
-                          <input
-                            type="checkbox"
-                            name="allckbox"
-                          />
-                          <label title="모두 동의 (선택 정보 포함)">
-                            모두 동의 (선택 정보 포함)
-                          </label>
-                      </div>
-                      <div class="cklist">
-                        <span class="ckbox1">
-                          <input
-                            type="checkbox"
-                            name="ckbox1"
-                          />
-                          <label title="[필수] 만 14세 이상">
-                            [필수] 만 14세 이상
-                          </label>
-                        </span>
-                        <span>
-                          <span class="ckbox1">
-                            <input
-                              type="checkbox"
-                              name="ckbox2"
-                            />
-                            <label title="[필수] 이용약관 동의">
-                              [필수] 이용약관 동의
-                              <button type="button" class="btn_check" data-toggle="modal" data-target="#exampleModalScrollable">보기</button>
-                              <!---->
-                            </label>
+                        <form id="form_ckbox" name="form_ckbox" method="POST" action="">
+                          <div class="ckjoinbox">
+                              <input
+                                type="checkbox"
+                                id="allckbox"
+                              />
+                              <label title="모두 동의 (선택 정보 포함)">
+                                모두 동의 (선택 정보 포함)
+                              </label>
+                          </div>
+                          <div class="cklist">
+                            <span class="ckbox1">
+                              <input
+                                type="checkbox"
+                                name="chktmp"
+                                id="ckbox1"
+                                value="check"
+                                required
+                                />
+                              <label title="[필수] 만 14세 이상" class="checkbox_msg">
+                                [필수] 만 14세 이상
+                              </label>
+                            </span>
+                            <span>
+                              <span class="ckbox1">
+                                <input
+                                  type="checkbox"
+                                  name="chktmp"
+                                  id="ckbox2"
+                                  value="check"
+                                  required
+                                />
+                                <label title="[필수] 이용약관 동의" class="checkbox_msg">
+                                  [필수] 이용약관 동의
+                                  <button type="button" class="btn_check" data-toggle="modal" data-target="#exampleModalScrollable">보기</button>
+                                  <!---->
+                                </label>
 
-                              <!---->
-                            
-                          </span>
-                        </span>
-                        <span>
-                          <span class="ckbox1">
-                            <input
-                              type="checkbox"
-                              name="ckbox3"
-                            />
-                            <label title="[필수] 개인정보 처리방침 동의">
-                              [필수] 개인정보 처리방침 동의
-                              <button type="button" class="btn_check2" data-toggle="modal" data-target="#exampleModalScrollable1">보기</button>
-                            </label>
-                          </span>
-                        </span>
-                        <span>
-                          <span class="ckbox1">
-                            <input
-                              type="checkbox"
-                              name="ckbox4"
-                            />
-                            <label
-                              title="[선택] 광고성 정보 수신 및 마케팅 활용 동의"
-                            >
-                              [선택] 광고성 정보 수신 및 마케팅 활용 동의
-                              <button type="button" class="btn_check3" data-toggle="modal" data-target="#exampleModalScrollable2">보기</button>
-                            </label>
-                          </span>
+                                  <!---->
+                                
+                              </span>
+                            </span>
+                            <span>
+                              <span class="ckbox1">
+                                <input
+                                  type="checkbox"
+                                  name="chktmp"
+                                  id="ckbox3"
+                                  value="check"
+                                  required
+                                />
+                                <label title="[필수] 개인정보 처리방침 동의" class="checkbox_msg">
+                                  [필수] 개인정보 처리방침 동의
+                                  <button type="button" class="btn_check2" data-toggle="modal" data-target="#exampleModalScrollable1">보기</button>
+                                </label>
+                              </span>
+                            </span>
+                            <span>
+                              <span class="ckbox1">
+                                <input
+                                  type="checkbox"
+                                  name="chktmp"
+                                  id="ckbox4"
+                                  value="check"
+                                />
+                                <label title="[선택] 광고성 정보 수신 및 마케팅 활용 동의" class="checkbox_msg">
+                                  [선택] 광고성 정보 수신 및 마케팅 활용 동의
+                                  <button type="button" class="btn_check3" data-toggle="modal" data-target="#exampleModalScrollable2">보기</button>
+                                </label>
+                              </span>
+                          </form>
 
                       <!-- 1번 약관 -->
                       <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
@@ -205,7 +215,7 @@
                         </span>
                       </div>
   
-                        <button type="button" class="btn_next_step sign_btn_1">
+                        <button type="button" class="btn_next_step sign_btn_1" disabled onclick=" ">
                           동의하고 가입하기
                         </button>
 
@@ -236,19 +246,21 @@
                       <div class="signup_step_box">
                           <label for="userid" class="blind signup_step">아이디 (이메일) 입력</label>
                           <div class="field signup_step_box">
+                            <form action="" method="POST">
                               <div class="inpbx">
-                                  <input type="text" 
+                                  <input type="email" 
                                          id="userid" 
                                          placeholder="아이디 (이메일) 입력" 
                                          formcontrolname="userid"
                                          autocorrect="off" 
-                                         autocapitalize="none" 
-                                         class="field_signupbox_id"/>
+                                         class="field_signupbox_id"
+                                         required/>
                               </div>
+                            </form>
                           </div>
                       </div>
 
-                          <button type="button" class="btn_next_step sign_btn_2">다음</button>
+                      <button type="submit" class="btn_next_step sign_btn_2">다음</button>
 
                   </li>
               </ul>
@@ -322,7 +334,10 @@
                           <label for="user_password" class="blind signup_step"></label>
                           <div class="field_signup_wrap_pwd">
                               <div class="inpbx">
-                                  <input rulerfocuson type="password" id="user_password" placeholder="비밀번호 입력" formcontrolname="user_password"/>
+                                  <input rulerfocuson type="password" 
+                                                      id="user_password" 
+                                                      placeholder="비밀번호 입력" 
+                                                      formcontrolname="user_password"/>
                                   <!---->
                               </div>
                               <p class="field_vali">
@@ -580,5 +595,6 @@
   </body>
   <script src="../../JS/menubar.js"></script>
   <script src="../../JS/pagesjs/member_signin_click.js"></script>
+  <script src="../../JS/pagesjs/member_signin_checkbox.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </html>
