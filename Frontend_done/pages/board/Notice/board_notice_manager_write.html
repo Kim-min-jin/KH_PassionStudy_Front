@@ -88,9 +88,7 @@
 
     <section>
       <div id="board">
-        <!-- 왼쪽 사이드 -->
-        <div id="board_left"></div>
-        <div id="board_right">
+        <div id="board_main">
           <div id="board_form">
             <form id="board_form_title" action="writerAction" method="post">
               <input
@@ -109,11 +107,12 @@
                   required
                 ></textarea>
               </div>
-              <a href="notice.html"
-                ><button type="button" class="write_btn yb" style="float: none">
-                  등록하기
-                </button></a
-              >
+              <div class="board_write_btn">
+                <a href="notice.html">
+                  <button type="button" class="write_btn yb">
+                    등록하기
+                  </button></a>
+              </div>
             </form>
           </div>
         </div>

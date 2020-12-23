@@ -25,30 +25,49 @@ section .section-right img {
   width: 55%;
 }
 
-.kakaotalk_inquiry {
-  float: left;
-}
+/* 부메뉴-------------------------------------------------------- */
 
-#board_right {
-  min-width: 1000px;
-  padding-bottom: 120px;
-}
-
-table {
+.tabtype_wrapper{
   text-align: center;
-  width: 500px;
+  width: 100%;
+  min-width: 1500px;
+}
+
+
+#board_main {
+  min-width: 1500px;
+  padding-bottom: 120px;
+  padding-left: 400px;
+  padding-right: 400px;
+}
+
+#main_table {
+  text-align: center;
+  min-width: 700px;
+  
 }
 
 #buttons {
-  padding-left: 847px;
   padding-bottom: 10px;
+  text-align: right;
 }
 
-#search-btn {
+.search-btn {
+  width: 50px;
+  display: inline-block;
+  line-height: 30px;
+  text-align: center;
   background-color: black;
-  color: white;
-  padding-inline: 10px;
+  border: 1px solid black;
+  color:#fff;
+  margin-left: 2px;
+  font-size: 13px;
   border-radius: 3px;
+}
+.search-btn:hover{
+  border: 1px solid #ffcc00;
+  background-color: #ffcc00;
+  color: white;
 }
 
 .write_btn {
@@ -62,6 +81,10 @@ table {
   margin-left: 2px;
   font-size: 13px;
   border-radius: 3px;
+}
+
+.board_write_btn {
+  text-align: center;
 }
 
 .write_btn:hover {
@@ -81,4 +104,8 @@ table {
   margin-left: 2px;
   font-size: 13px;
   border-radius: 3px;
+}
+
+.search_bar {
+  text-align: right;
 }

@@ -87,10 +87,9 @@
     </div>
 
     <section>
-      <div id="board_left"></div>
       <div id="board">
-        <div id="board_right">
-          <table class="table" width="50%">
+        <div id="board_main">
+          <table class="table" id="main_table" width="50%" >
             <th>번호</th>
             <th>제목</th>
             <th>작성자</th>
@@ -116,14 +115,14 @@
             <!-- 두번째 줄 끝-->
           </table>
           <div class="search_bar">
-            <input type="checkbox" id="name" name="searchChk" value="name" />
+            <input type="checkbox" id="name" name="name"/>
             <label for="name">이름　</label>
-            <input type="checkbox" name="search[title]" />
-            <label for="name">제목　</label>
-            <input type="checkbox" name="search[contents]" />
-            <label>내용　</label>
+            <input type="checkbox" name="title" />
+            <label for="title">제목　</label>
+            <input type="checkbox" name="contents" />
+            <label for="contents">내용　</label>
             <input type="text" id="search-box" />
-            <button type="button" class="search-btn yb" style="float: none">
+            <button type="button" class="search-btn yb" style="float: none;">
               검색
             </button>
           </div>
