@@ -27,12 +27,6 @@ section .section-right img {
 
 /* 부메뉴-------------------------------------------------------- */
 
-.tabtype_wrapper{
-  text-align: center;
-  width: 100%;
-  min-width: 1500px;
-}
-
 
 #board_main {
   min-width: 1500px;
