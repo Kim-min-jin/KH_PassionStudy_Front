@@ -14,6 +14,7 @@ $('input[name="chktmp"]').change(function() {
     selectChk ? $('.btn_next_step').removeAttr('disabled'):$('.btn_next_step').attr('disabled', disabled);
 });
 
-
-
-
+//
+$('#allckbox').change(function() {
+    $(this).prop('checked') ? $('.btn_next_step').removeAttr('disabled') : $('.btn_next_step').attr('disabled', disabled);
+});
