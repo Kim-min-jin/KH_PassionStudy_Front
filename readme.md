@@ -16,7 +16,7 @@
                      DB 임포트 후 확인하기
 - [x] 12 / 29      : 프론트엔드 레포지터리 정리 끝
 
-## [이후 JSP 작업내용은 다른 깃허브 레포지터리에서](https://github.com/Ethan-kim9/KH-Semi-Passionstudy)
+## [이후 JSP 작업내용은 다른 깃허브 레포지터리에서](https://github.com/Ethan-kim9/KH_PassionStudy)
 
 
 ```
